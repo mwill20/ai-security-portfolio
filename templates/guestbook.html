@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %}Guestbook - Michael Williams | AI Security Engineer{% endblock %}
+
+{% block content %}
+<section class="guestbook-container">
+    <header class="page-header">
+        <h1>Guestbook</h1>
+        <div class="divider"></div>
+        <p class="section-description">Leave a message and see how our AI analyzes the sentiment of your text!</p>
+    </header>
+    
+    <div class="guestbook-content">
+        <section class="guestbook-form">
+            <h2>Sign the Guestbook</h2>
+            <form method="POST" action="{{ url_for('guestbook') }}" class="message-form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required 
+                           placeholder="Enter your name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="4" required
+                              placeholder="Type your message here..." class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Submit Message</button>
+                </div>
+            </form>
+        </section>
+        
+        <section class="guestbook-entries">
+            <h2>Messages</h2>
+            {% if entries %}
+                <div class="entries-list">
+                    {% for entry in entries %}
+                    <article class="message-card {{ entry['sentiment'] }}">
+                        <div class="message-header">
+                            <h3>{{ entry['name'] }}</h3>
+                            <span class="sentiment-badge {{ entry['sentiment'] }}">
+                                {{ entry['sentiment'].title() }}
+                            </span>
+                            <span class="timestamp">{{ entry['timestamp'] }}</span>
+                        </div>
+                        <div class="message-body">
+                            {{ entry['message'] }}
+                        </div>
+                    </article>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p class="no-messages">No messages yet. Be the first to leave a message!</p>
+            {% endif %}
+        </section>
+    </div>
+    
+    <div class="sentiment-info">
+        <h3>About Sentiment Analysis</h3>
+        <p>This guestbook uses a simple machine learning model to analyze the sentiment of messages. The model classifies messages as <span class="sentiment-label positive">positive</span>, <span class="sentiment-label neutral">neutral</span>, or <span class="sentiment-label negative">negative</span> based on their content.</p>
+        <p><strong>Note:</strong> This is a demonstration of AI capabilities and may not always be accurate. The model is trained on a small dataset for educational purposes.</p>
+    </div>
+</section>
+{% endblock %}

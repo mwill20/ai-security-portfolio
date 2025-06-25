@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Michael Williams | AI Security Engineer{% endblock %}
+
+{% block content %}
+<section class="hero" id="home">
+    <div class="container hero-container">
+        <div class="hero-content">
+            <h1>Michael Williams</h1>
+            <h2>Cybersecurity Analyst | AI Security Specialist</h2>
+            <p class="tagline">Securing the future through innovative AI defense strategies and proactive threat intelligence. Specializing in AI security, vulnerability research, and secure development practices.</p>
+            <div class="cta-buttons">
+                <a href="{{ url_for('projects') }}" class="btn btn-primary">
+                    <i class="fas fa-code"></i> View My Work
+                </a>
+                <div class="contact-tooltip">
+                    <a href="{{ url_for('guestbook') }}" class="btn btn-secondary">
+                        <i class="fas fa-paper-plane"></i> Get In Touch
+                    </a>
+                    <div class="contact-info">
+                        <a href="mailto:mwil.ITmission@gmail.com" class="contact-link">
+                            <i class="fas fa-envelope"></i> mwil.ITmission@gmail.com
+                        </a>
+                        <a href="tel:2064740889" class="contact-link">
+                            <i class="fas fa-phone"></i> (206) 474-0889
+                        </a>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/mwillitmission/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/mwill20" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-3">
+                <a href="#about" class="scroll-down" aria-label="Scroll down to learn more">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="{{ url_for('static', filename='images/MichaelWilliams-16.jpg') }}" 
+                 alt="Michael Williams - AI Security Engineer" 
+                 class="profile-photo"
+                 loading="eager">
+        </div>
+    </div>
+    <!-- Social Media Links -->
+    <div class="hero-social">
+        <a href="https://github.com/mwill20" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/mwillitmission/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </div>
+    
+    <!-- Scroll Indicator -->
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+        <span>Scroll to explore</span>
+        <i class="fas fa-chevron-down"></i>
+    </a>
+</section>
+
+<section class="intro section-padding">
+    <h2>About My Work</h2>
+    <p>
+        I’m actively exploring the design and development of AI Agents, including Agent-to-Agent (A2A) communication, and their orchestration using Model Context Protocol (MCP). My work involves vulnerability assessments, penetration testing, and building secure AI architectures that integrate these emerging technologies.
+    </p>
+    <p>
+        With a strong foundation in both cybersecurity and artificial intelligence, I bridge these critical fields to create safer, more resilient AI-driven systems.
+    </p>
+</section>
+
+<section class="highlights section-padding">
+    <div class="highlight-card">
+        <h3>AI Security</h3>
+        <p>Protecting AI systems from adversarial attacks and ensuring model trustworthiness and integrity.</p>
+    </div>
+    <div class="highlight-card">
+        <h3>Vulnerability Research</h3>
+        <p>Discovering, analyzing, and mitigating security vulnerabilities in emerging AI, IT, and business environments.</p>
+    </div>
+    <div class="highlight-card">
+        <h3>Secure Development</h3>
+        <p>Applying security-first approaches to develop resilient AI and traditional software systems.</p>
+    </div>
+</section>
+{% endblock %}
