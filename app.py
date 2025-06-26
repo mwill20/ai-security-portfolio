@@ -60,7 +60,7 @@ def create_app(test_config=None):
     def init_db():
         db = get_db_connection()
         with app.open_resource('schema.sql', mode='r') as f:
-            db.cursor().executescript(f.read().decode('utf8'))
+            db.cursor().executescript(f.read())
         db.commit()
         db.close()
 
