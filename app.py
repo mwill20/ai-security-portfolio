@@ -11,28 +11,55 @@ from sklearn.linear_model import LogisticRegression
 
 def train_sentiment_model():
     """Initializes and trains a simple sentiment analysis model."""
+    # Step 1: Define the training data with examples of positive, negative, and neutral text.
+    # This data is used to teach the model how to classify sentiment.
     training_data = [
-        ("I love this website!", "positive"),
-        ("Great work!", "positive"),
-        ("This is amazing!", "positive"),
-        ("I don't like this.", "negative"),
-        ("This could be better.", "negative"),
-        ("Not what I expected.", "negative"),
+        # Positive examples
+        ("This is fantastic, thank you!", "positive"),
+        ("I'm so happy with this result.", "positive"),
+        ("Excellent work, keep it up.", "positive"),
+        
+        # Negative examples
+        ("I'm very disappointed with this.", "negative"),
+        ("This is not what I wanted at all.", "negative"),
+        ("I regret using this service.", "negative"),
+        
+        # Neutral examples
+        ("The service is adequate.", "neutral"),
+        ("It's an average experience.", "neutral"),
+        ("I have no strong feelings either way.", "neutral"),
     ]
+
+    # Step 2: Separate the training data into texts and their corresponding labels.
     texts = [text for text, _ in training_data]
     labels = [label for _, label in training_data]
+
+    # Step 3: Convert the text data into numerical vectors using TF-IDF.
+    # TF-IDF (Term Frequency-Inverse Document Frequency) reflects how important a word is to a document in a collection.
+    # This allows the machine learning model to work with the text data.
     vectorizer = TfidfVectorizer()
     X = vectorizer.fit_transform(texts)
+
+    # Step 4: Train a Logistic Regression model.
+    # This model learns to predict the sentiment (label) based on the vectorized text (X).
     model = LogisticRegression()
     model.fit(X, labels)
+
+    # Step 5: Return the trained vectorizer and model so they can be used for predictions.
     return vectorizer, model
 
-# Initialize model and vectorizer globally
+# Initialize the sentiment analysis model and vectorizer globally when the application starts.
+# This ensures the model is trained only once, saving resources on each prediction.
 vectorizer, sentiment_model = train_sentiment_model()
 
 def analyze_sentiment(text):
-    """Analyzes the sentiment of a given text."""
+    """Analyzes the sentiment of a given text using the trained model."""
+    # Step 1: Transform the input text into a numerical vector using the same vectorizer that was trained on.
+    # It's crucial to use the same vectorizer to ensure the input is in the correct format for the model.
     X = vectorizer.transform([text])
+
+    # Step 2: Use the trained model to predict the sentiment of the transformed text.
+    # The `predict` method returns an array of predictions; we take the first element since we're only analyzing one text.
     return sentiment_model.predict(X)[0]
 
 def create_app(test_config=None):
