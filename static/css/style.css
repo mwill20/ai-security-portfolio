@@ -3918,3 +3918,46 @@ footer .container {
         font-size: 1.1rem;
     }
 }
+
+/* ==========================================================================
+   MCP Ecosystem Enhancements
+   ========================================================================== */
+
+/* Define green glow shadow for dark theme */
+body.dark-theme {
+    --glow-shadow: 0 0 20px 3px rgba(16, 255, 169, 0.15), 0 0 5px 1px rgba(16, 255, 169, 0.2);
+    --mcp-container-bg: rgba(20, 38, 70, 0.5); /* Subtle background for the container */
+}
+
+/* Container for the entire MCP section */
+.project-group[data-category="mcp"] {
+    background-color: var(--mcp-container-bg, transparent);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: var(--glow-shadow, none);
+    transition: var(--transition);
+}
+
+/* Individual MCP component cards */
+.mcp-component {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.mcp-component:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--glow-shadow, 0 10px 25px rgba(0, 0, 0, 0.25));
+    border-color: rgba(16, 255, 169, 0.5);
+}
+
+/* Adjusting header margin within the new container */
+.project-group[data-category="mcp"] .project-group-header {
+    margin-bottom: 2rem;
+}
