@@ -1,0 +1,648 @@
+{% extends 'base.html' %}
+
+{% block title %}Projects - Michael Williams | AI Security Engineer{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<title>Projects - Michael Williams | AI Security Engineer</title>
+
+<section class="projects-container">
+    <header class="page-header">
+        <h1>My Projects</h1>
+        <div class="divider"></div>
+        <p class="section-description">A selection of my recent work spanning AI security, machine learning, and cybersecurity.</p>
+    </header>
+    
+    <!-- MCP Ecosystem Section -->
+<div class="mcp-ecosystem-section" style="max-width: 900px; margin: 40px auto; font-family: 'Segoe UI Mono', Consolas, monospace; color: #e0e6f0; line-height: 1.6;">
+    <h2 style="font-weight: 900; font-size: 2.5rem; margin-bottom: 12px; text-align: left;">
+        Model Context Protocol (MCP) Ecosystem
+    </h2>
+    <p style="text-align: left; font-size: 1.1rem; max-width: 850px; margin-bottom: 36px;">
+        The <strong>Model Context Protocol (MCP)</strong> is a scalable framework designed to enable modular AI Agents and tools to communicate and collaborate seamlessly. By providing a unified protocol and architecture, MCP allows diverse AI components—ranging from individual agents to integrated tools—to interoperate effortlessly, supporting applications from simple demos to enterprise-grade systems.
+    </p>
+
+    <div class="ecosystem-feature" style="display: flex; align-items: flex-start; margin-bottom: 30px;">
+        <i class="fas fa-server" style="font-size: 28px; margin-right: 14px; color: #7f99d9;"></i>
+        <div>
+            <h3 style="font-weight: 700; font-size: 1.5rem; margin-bottom: 6px;">Centralized AI Services</h3>
+            <p style="font-size: 1.05rem; max-width: 850px;">
+                Host and manage multiple AI models through a single, unified interface.
+            </p>
+        </div>
+    </div>
+
+    <div class="ecosystem-feature" style="display: flex; align-items: flex-start; margin-bottom: 30px;">
+        <i class="fas fa-plug" style="font-size: 28px; margin-right: 14px; color: #7f99d9;"></i>
+        <div>
+            <h3 style="font-weight: 700; font-size: 1.5rem; margin-bottom: 6px;">Seamless Integration</h3>
+            <p style="font-size: 1.05rem; max-width: 850px;">
+                Facilitates effortless connection and communication between diverse AI tools and services using the MCP protocol.
+            </p>
+        </div>
+    </div>
+
+    <div class="ecosystem-feature" style="display: flex; align-items: flex-start; margin-bottom: 30px;">
+        <i class="fas fa-expand" style="font-size: 28px; margin-right: 14px; color: #7f99d9;"></i>
+        <div>
+            <h3 style="font-weight: 700; font-size: 1.5rem; margin-bottom: 6px;">Scalable Architecture</h3>
+            <p style="font-size: 1.05rem; max-width: 850px;">
+                Designed to grow with your needs, from simple demonstrations to complex, enterprise-scale deployments.
+            </p>
+        </div>
+    </div>
+</div>
+
+        
+        <div class="ecosystem-layout">
+            <!-- MCP Core Server -->
+            <div class="ecosystem-core">
+                <div class="mcp-component" data-component="mcp-core">
+                    <div class="mcp-component-header">
+                        <i class="fas fa-server"></i>
+                        <h3>MCP Core Server</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="mcp-component-content">
+                        <p>Central Python server hosting AI models and exposing them via MCP. Provides a unified interface for AI services and manages communication between different components in the ecosystem.</p>
+                        <div class="component-links">
+                            <a href="https://github.com/mwill20/mcp-tools" target="_blank" class="btn btn-primary">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools Demo Group -->
+            <div class="ecosystem-tools-group">
+                <div class="tools-group-header">
+                    <h3><i class="fas fa-folder"></i> Tools Demo</h3>
+                </div>
+                <div class="mcp-components-container">
+                    <!-- Calculator Tool -->
+                    <div class="mcp-component" data-component="calculator-tool">
+                        <div class="mcp-component-header">
+                            <i class="fas fa-calculator"></i>
+                            <h3>Calculator</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="mcp-component-content">
+                            <p>Advanced calculator tool with support for complex mathematical operations and unit conversions.</p>
+                            <div class="component-links">
+                                <a href="https://huggingface.co/spaces/mwill-AImission/mcp-tools-demo" target="_blank" class="btn btn-primary">Try Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sentiment Analysis Tool -->
+                    <div class="mcp-component" data-component="sentiment-tool">
+                        <div class="mcp-component-header">
+                            <i class="fas fa-comment-dots"></i>
+                            <h3>Sentiment Analysis</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="mcp-component-content">
+                            <p>Analyze the sentiment of text using advanced NLP models. Supports multiple languages and provides confidence scores.</p>
+                            <div class="component-links">
+                                <a href="https://huggingface.co/spaces/mwill-AImission/mcp-tools-demo" target="_blank" class="btn btn-primary">Try Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Weather Tool -->
+                    <div class="mcp-component" data-component="weather-tool">
+                        <div class="mcp-component-header">
+                            <i class="fas fa-cloud-sun"></i>
+                            <h3>Weather Tool</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="mcp-component-content">
+                            <p>Get current weather conditions and forecasts for any location worldwide. Includes detailed metrics and weather alerts.</p>
+                            <div class="component-links">
+                                <a href="https://huggingface.co/spaces/mwill-AImission/mcp-tools-demo" target="_blank" class="btn btn-primary">Try Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agents Row -->
+            <div class="ecosystem-agents">
+                <!-- TypeScript MCP Tiny Agent -->
+                <div class="mcp-component" data-component="mcp-tiny-agent">
+                    <div class="mcp-component-header">
+                        <i class="fas fa-robot"></i>
+                        <h3>TypeScript MCP Agent</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="mcp-component-content">
+                        <p>Lightweight TypeScript agent with web automation capabilities. Connects to the MCP Core Server to perform tasks and process information.</p>
+                        <div class="component-links">
+                            <a href="https://github.com/mwill20/mcp-tiny-agent" target="_blank" class="btn btn-primary">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal Productivity Agent -->
+                <div class="mcp-component" data-component="productivity-agent">
+                    <div class="mcp-component-header">
+                        <i class="fas fa-robot"></i>
+                        <h3>Productivity Agent</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="mcp-component-content">
+                        <p>Automates Windows tasks, analyzes system logs using AI, and helps manage your digital workspace efficiently.</p>
+                        <div class="component-links">
+                            <a href="https://github.com/mwill20/PersonalProductivityAgent" target="_blank" class="btn btn-primary">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security Layer (Coming Soon) -->
+            <div class="ecosystem-security">
+                <h3>Security Layer (Coming Soon)</h3>
+                <p>Advanced security features and monitoring for the MCP Ecosystem</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Security Projects Group -->
+    <div class="project-group">
+        <div class="project-group-header">
+            <h3><i class="fas fa-shield-alt"></i> Security</h3>
+        </div>
+        <div class="project-card-container">
+            <!-- AI-Powered Spam & Phishing Detector -->
+            <article class="project-card">
+                <div class="project-content">
+                    <div class="project-header">
+                        <i class="fas fa-envelope-open-text project-icon"></i>
+                        <h2>AI-Powered Spam & Phishing Detector</h2>
+                    </div>
+                    <div class="project-details">
+                        <p>A machine learning solution that combines BERT with rule-based detection to identify and block malicious emails.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/mwill20/spam-phishing-detector" target="_blank" class="btn btn-primary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Smart Security Camera -->
+            <article class="project-card">
+                <div class="project-content">
+                    <div class="project-header">
+                        <i class="fas fa-video project-icon"></i>
+                        <h2>Smart Security Camera</h2>
+                    </div>
+                    <div class="project-details">
+                        <p>An intelligent security system with face detection and motion tracking, built with Python and OpenCV.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/mwill20/smart-security-camera" target="_blank" class="btn btn-primary">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- OpenDiD Project -->
+            <article class="project-card">
+                <div class="project-content">
+                    <div class="project-header">
+                        <i class="fas fa-shield-alt project-icon"></i>
+                        <h2>OpenDiD: Open Source Defense-in-Depth</h2>
+                    </div>
+                    <div class="project-details">
+                        <p>A battle-tested, production-ready Defense-in-Depth security framework implementing Zero Trust principles with open-source tools.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/mwill20/OpenDiD-Open-Source-Defense-in-Depth-Security-Framework" target="_blank" class="btn btn-primary">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- ML Engineering Projects Group -->
+    <div class="project-group">
+        <div class="project-group-header">
+            <h3><i class="fas fa-cogs"></i> ML Engineering</h3>
+        </div>
+        <div class="project-card-container">
+            <!-- HuggingFace Sentiment Analysis -->
+            <article class="project-card">
+                <div class="project-content">
+                    <div class="project-header">
+                        <i class="fas fa-robot project-icon"></i>
+                        <h2>HuggingFace Sentiment Analysis</h2>
+                    </div>
+                    <div class="project-details">
+                        <p>A Neural Network for emotion detection in text using PyTorch and the HuggingFace Transformers library.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/mwill20/HuggingFace-Sentiment-Analysis" target="_blank" class="btn btn-primary">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- XGBoost Regressor -->
+            <article class="project-card">
+                <div class="project-content">
+                    <div class="project-header">
+                        <i class="fas fa-chart-line project-icon"></i>
+                        <h2>XGBoost Regressor</h2>
+                    </div>
+                    <div class="project-details">
+                        <p>Advanced regression analysis using the XGBoost algorithm, including feature importance and model evaluation.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/mwill20/XGBoost-Regressor" target="_blank" class="btn btn-primary">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- Personal Productivity Agent (Detail View) -->
+    <div id="productivity-agent-detail" class="component-detail">
+        <div class="component-detail-content">
+            <div class="detail-header">
+                <i class="fas fa-brain"></i>
+                <h2>Personal Productivity Agent</h2>
+            </div>
+            <div class="detail-body">
+                <div class="detail-section">
+                    <h3>Overview</h3>
+                    <p>An autonomous agent designed to manage and prioritize tasks by leveraging Large Language Models (LLMs). This agent can be extended with custom tools to automate a wide range of digital workflows.</p>
+                </div>
+                <div class="detail-section">
+                    <h3>Core Features</h3>
+                    <ul>
+                        <li><strong>Task Management:</strong> Automatically creates, prioritizes, and executes tasks based on user goals.</li>
+                        <li><strong>Tool Integration:</strong> Seamlessly integrates with custom tools (e.g., web search, file access) to extend its capabilities.</li>
+                        <li><strong>LLM-Powered:</strong> Utilizes advanced language models for natural language understanding and complex reasoning.</li>
+                        <li><strong>Autonomous Operation:</strong> Capable of running independently to achieve long-term objectives.</li>
+                    </ul>
+                </div>
+                <div class="detail-section tech-stack-section">
+                    <h3>Technologies Used</h3>
+                    <ul class="tech-stack">
+                        <li>Python</li>
+                        <li>LangChain</li>
+                        <li>OpenAI API</li>
+                        <li>Vector Databases</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="detail-footer">
+                <a href="https://github.com/mwill20/PersonalProductivityAgent" target="_blank" class="btn btn-primary">View on GitHub</a>
+                <button class="btn btn-secondary close-detail-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MCP Tools Demo (Detail View) -->
+    <div id="tools-demo-detail" class="component-detail">
+        <div class="project-content">
+            <div class="project-header">
+                <i class="fas fa-tools project-icon"></i>
+                <h2>MCP Tools Demo</h2>
+            </div>
+            <div class="project-meta">
+                <span class="date">2024</span>
+                <span class="tags">
+                    <span class="tag tag-ai">Computer Vision</span>
+                    <span class="tag tag-iot">IoT</span>
+                    <span class="tag tag-python">OpenCV</span>
+                    <span class="tag tag-python">Python</span>
+                    <span class="tag tag-iot">Raspberry Pi</span>
+                </span>
+            </div>
+            <div class="project-details">
+                <h3>Overview</h3>
+                <p>A multi-tool Gradio application with MCP integration featuring Sentiment Analysis, Weather, and Calculator tools. This demo showcases how different AI tools can be integrated into a single, user-friendly interface using the Model Context Protocol.</p>
+                
+                <h3>Key Features</h3>
+                <ul>
+                    <li><strong>Sentiment Analysis Tool:</strong> Evaluates emotional tone of text with confidence scores</li>
+                    <li><strong>Calculator Tool:</strong> Performs basic and advanced mathematical operations</li>
+                    <li><strong>Weather Tool:</strong> Retrieves current weather and forecasts by location</li>
+                    <li>Seamless integration with MCP Core Server</li>
+                    <li>Responsive web interface built with Gradio</li>
+                </ul>
+                
+                <h3>Technologies Used</h3>
+                <div class="tech-grid">
+                    <div class="tech-category">
+                        <h4>Frontend</h4>
+                        <ul class="tech-stack">
+                            <li>Gradio</li>
+                            <li>HTML/CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                    <div class="tech-category">
+                        <h4>Backend</h4>
+                        <ul class="tech-stack">
+                            <li>Python 3.9+</li>
+                            <li>FastAPI</li>
+                            <li>MCP Protocol</li>
+                        </ul>
+                    </div>
+                    <div class="tech-category">
+                        <h4>Services</h4>
+                        <ul class="tech-stack">
+                            <li>HuggingFace Spaces</li>
+                            <li>OpenWeatherMap API</li>
+                            <li>GitHub Pages</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="project-links">
+                    <a href="https://mwill20.github.io/mcp-tools-demo.html" target="_blank" class="btn btn-primary">View Project</a>
+                    <a href="https://github.com/mwill20/mcp-tools" target="_blank" class="btn btn-secondary">View on GitHub</a>
+                    <a href="https://huggingface.co/spaces/mwill-AImission/mcp-tools-demo" target="_blank" class="btn btn-secondary">Live Demo</a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- TypeScript MCP Tiny Agent -->
+    <article class="project-card mcp-ecosystem">
+        <div class="project-content">
+            <div class="project-header">
+                <i class="fas fa-robot project-icon"></i>
+                <h2>TypeScript MCP Tiny Agent</h2>
+            </div>
+            <div class="project-meta">
+                <span class="date">2024</span>
+                <span class="tags">
+                    <span class="tag tag-typescript">TypeScript</span>
+                    <span class="tag tag-ai">AI</span>
+                    <span class="tag tag-automation">Automation</span>
+                    <span class="tag tag-web">Playwright</span>
+                    <span class="tag tag-api">MCP</span>
+                </span>
+            </div>
+            
+            <div class="project-details">
+                <h3>Overview</h3>
+                <p>A lightweight TypeScript agent that implements the Model Context Protocol (MCP) for AI-powered web automation. This agent connects to MCP-compatible servers to perform complex web interactions using natural language instructions.</p>
+                
+                <h3>Key Features</h3>
+                <ul>
+                    <li><strong>Natural Language Processing</strong>: Understands and executes tasks based on natural language instructions</li>
+                    <li><strong>Web Automation</strong>: Built on Playwright for reliable cross-browser automation</li>
+                    <li><strong>Modular Design</strong>: Easily extensible with custom tools and capabilities</li>
+                    <li><strong>MCP Integration</strong>: Seamlessly connects with any MCP-compatible server</li>
+                    <li><strong>Type Safety</strong>: Full TypeScript support for better developer experience</li>
+                </ul>
+                
+                <h3>Technical Implementation</h3>
+                <p>The TypeScript MCP Tiny Agent is built with modern web technologies:</p>
+                <ul>
+                    <li><strong>TypeScript</strong>: For type safety and better maintainability</li>
+                    <li><strong>Playwright</strong>: For reliable web automation across browsers</li>
+                    <li><strong>MCP Protocol</strong>: Implements the Model Context Protocol for AI interactions</li>
+                    <li><strong>ES Modules</strong>: Modern JavaScript modules for better code organization</li>
+                </ul>
+                
+                <h3>Project Value</h3>
+                <p>This project demonstrates how to build intelligent agents that can understand natural language and perform web-based tasks. It serves as a reference implementation for integrating with the MCP ecosystem and shows how to create modular, extensible automation tools.</p>
+                
+                <div class="project-links">
+                    <a href="https://github.com/mwill20/TypeScript-MCP-Tiny-Agent" target="_blank" class="btn btn-primary">View on GitHub</a>
+                    <a href="https://mwill20.github.io/TypeScript-MCP-Tiny-Agent/" target="_blank" class="btn btn-secondary">Live Demo</a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- MCP Core Server & AI Model Hub -->
+    <article class="project-card">
+        <div class="project-content">
+            <div class="project-header">
+                <i class="fas fa-server project-icon"></i>
+                <h2>MCP Core Server & AI Model Hub</h2>
+            </div>
+            <div class="project-meta">
+                <span class="date">2024</span>
+                <span class="tags">
+                    <span class="tag tag-typescript">TypeScript</span>
+                    <span class="tag tag-ai">MCP</span>
+                    <span class="tag tag-automation">Automation</span>
+                    <span class="tag tag-web">Playwright</span>
+                </span>
+            </div>
+            <div class="project-details">
+                <h3>Overview</h3>
+                <p>A central Python-based server hosting AI models (like Qwen for sentiment analysis) and exposing them via the Model Context Protocol.</p>
+                
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Model hosting and versioning</li>
+                    <li>REST API endpoints for model inference</li>
+                    <li>Integration with Hugging Face models</li>
+                    <li>Scalable architecture for multiple concurrent users</li>
+                </ul>
+                
+                <h3>Technologies Used</h3>
+                <ul class="tech-stack">
+                    <li>Python</li>
+                    <li>FastAPI</li>
+                    <li>Hugging Face Transformers</li>
+                    <li>Docker</li>
+                    <li>Kubernetes</li>
+                </ul>
+                
+                <div class="project-links">
+                    <a href="https://mwill20.github.io/sentiment-analysis-mcp.html" target="_blank" class="btn btn-secondary">View Details</a>
+                    <a href="https://github.com/mwill20/Sentiment-Analysis" target="_blank" class="btn btn-primary">View Code</a>
+                    <a href="https://huggingface.co/spaces/mwill-AImission/MCP_Project" target="_blank" class="btn btn-secondary">Live Demo</a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- AI-Powered Spam & Phishing Detector -->
+    <article class="project-card">
+        <div class="project-content">
+            <h2>AI-Powered Spam & Phishing Detector</h2>
+            <div class="project-meta">
+                <span class="date">2024</span>
+                <span class="tags">
+                    <span class="tag tag-nlp">NLP</span>
+                    <span class="tag tag-security">Security</span>
+                    <span class="tag tag-ai">BERT</span>
+                    <span class="tag tag-security">Cybersecurity</span>
+                    <span class="tag tag-ml">Machine Learning</span>
+                </span>
+            </div>
+            <div class="project-details">
+                <h3>Overview</h3>
+                <p>Machine learning solution combining BERT with rule-based detection to identify and filter out spam and phishing attempts.</p>
+                
+                <h3>Key Features</h3>
+                <ul>
+                    <li>BERT-based text classification</li>
+                    <li>Rule-based heuristics for known phishing patterns</li>
+                    <li>High accuracy in detecting sophisticated phishing attempts</li>
+                    <li>Real-time processing capabilities</li>
+                </ul>
+                
+                <h3>Technologies Used</h3>
+                <ul class="tech-stack">
+                    <li>Python</li>
+                    <li>PyTorch</li>
+                    <li>Hugging Face Transformers</li>
+                    <li>Scikit-learn</li>
+                    <li>FastAPI</li>
+                </ul>
+                
+                <div class="project-links">
+                    <a href="https://github.com/mwill20/spam-phishing-detector" target="_blank" class="btn btn-primary">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Smart Security Camera -->
+    <article class="project-card">
+        <div class="project-content">
+            <div class="project-header">
+                <i class="fas fa-video project-icon"></i>
+                <h2>Smart Security Camera</h2>
+            </div>
+            <div class="project-meta">
+                <span class="date">2023</span>
+                <span class="tags">
+                    <span class="tag">Computer Vision</span>
+                    <span class="tag">IoT</span>
+                    <span class="tag">Security</span>
+                </span>
+            </div>
+            <div class="project-details">
+                <h3>Overview</h3>
+                <p>Intelligent security system with face detection and motion tracking capabilities.</p>
+                
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Real-time face detection and recognition</li>
+                    <li>Motion-triggered recording</li>
+                    <li>Object detection for security alerts</li>
+                    <li>Web-based dashboard for monitoring</li>
+                </ul>
+                
+                <h3>Technologies Used</h3>
+                <ul class="tech-stack">
+                    <li>Python</li>
+                    <li>OpenCV</li>
+                    <li>TensorFlow/Keras</li>
+                    <li>Flask</li>
+                    <li>Raspberry Pi</li>
+                </ul>
+                
+                <div class="project-links">
+                    <a href="https://github.com/mwill20/Camera_Alarm" target="_blank" class="btn btn-primary">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Sentiment Analysis with MCP -->
+    <article class="project-card">
+        <div class="project-content">
+            <h2>Sentiment Analysis with MCP</h2>
+            <div class="project-meta">
+                <span class="date">2024</span>
+                <span class="tags">
+                    <span class="tag">NLP</span>
+                    <span class="tag">Sentiment Analysis</span>
+                    <span class="tag">MCP</span>
+                </span>
+            </div>
+            <div class="project-details">
+                <h3>Overview</h3>
+                <p>Real-time sentiment analysis service integrated with MCP Core Server for analyzing text sentiment in various applications.</p>
+                
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Real-time sentiment scoring</li>
+                    <li>Support for multiple languages</n                    <li>RESTful API for easy integration</li>
+                    <li>Scalable architecture</li>
+                </ul>
+                
+                <h3>Technologies Used</h3>
+                <ul class="tech-stack">
+                    <li>Python</li>
+                    <li>FastAPI</li>
+                    <li>Hugging Face Transformers</li>
+                    <li>Docker</li>
+                    <li>Kubernetes</li>
+                </ul>
+                
+                <div class="project-links">
+                    <a href="https://mwill20.github.io/sentiment-analysis-mcp.html" target="_blank" class="btn btn-secondary">View Details</a>
+                    <a href="https://github.com/mwill20/Sentiment-Analysis" target="_blank" class="btn btn-primary">View Code</a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Just for Fun Section -->
+    <div class="project-group" style="margin-top: 60px;">
+        <div class="project-group-header">
+            <h3><i class="fas fa-gamepad"></i> Just for Fun</h3>
+            <p class="section-description">Experimental and fun projects I work on in my free time.</p>
+        </div>
+        <div class="project-card-container">
+            <!-- Easy Squeeze Project -->
+            <article class="project-card">
+                <div class="project-content">
+                    <div class="project-header">
+                        <i class="fas fa-chart-candlestick project-icon"></i>
+                        <h2>Easy Squeeze</h2>
+                    </div>
+                    <div class="project-meta">
+                        <span class="date">2024</span>
+                        <span class="tags">
+                            <span class="tag">Finance</span>
+                            <span class="tag">Trading</span>
+                            <span class="tag">Python</span>
+                        </span>
+                    </div>
+                    <div class="project-details">
+                        <p>A tool for identifying potential short squeeze opportunities in the stock market. This project is a work in progress with regular updates.</p>
+                        
+                        <h3>Current Features</h3>
+                        <ul>
+                            <li>Single stock analysis with key metrics (RSI, short interest, volume)</li>
+                            <li>Interactive price charts with Bollinger Bands</li>
+                            <li>Short squeeze scanner for highly-shorted stocks</li>
+                            <li>Squeeze Score to rank potential opportunities</li>
+                        </ul>
+                        
+                        <h3>Technologies Used</h3>
+                        <ul class="tech-stack">
+                            <li>Python</li>
+                            <li>Gradio</li>
+                            <li>yfinance</li>
+                            <li>Pandas</li>
+                            <li>Plotly</li>
+                        </ul>
+                        
+                        <div class="project-links">
+                            <a href="https://github.com/mwill20/Easy_Squeeze_AI" target="_blank" class="btn btn-primary">View on GitHub</a>
+                            <a href="https://huggingface.co/spaces/mwill-AImission/squeeze-radar-ai" target="_blank" class="btn btn-secondary">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock %}

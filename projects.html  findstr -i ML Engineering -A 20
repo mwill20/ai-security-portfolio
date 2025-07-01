@@ -1,0 +1,43 @@
+c72bac4 Update requirements.txt for better compatibility with Netlify
+M	requirements.txt
+
+68f0be9 Add new project cards for ML projects
+A	netlify.toml
+
+0406ba9 Add Hugging Face Spaces demo link to Easy Squeeze project
+M	templates/projects.html
+
+8a54867 Add Just for Fun section with Easy Squeeze project
+M	templates/projects.html
+
+c525102 Update project links to point to GitHub repositories
+M	templates/projects.html
+
+3f88ce6 fix: Update project links to public GitHub repos
+M	app.py
+
+5174ea5 fix: Remove unnecessary decode in init_db
+M	app.py
+
+ecf00e1 refactor: Use application factory and register db command
+M	app.py
+M	requirements.txt
+
+3d5453c feat: Add production server and build script for Render
+A	build.sh
+M	requirements.txt
+
+42ce848 Initial commit: Add project files
+A	.gitignore
+A	app.py
+A	requirements.txt
+A	schema.sql
+A	static/css/style.css
+A	static/images/MichaelWilliams-16.jpg
+A	static/images/MichaelWilliams-3.jpg
+A	static/js/main.js
+A	templates/about.html
+A	templates/base.html
+A	templates/guestbook.html
+A	templates/index.html
+A	templates/projects.html

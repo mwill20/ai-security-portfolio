@@ -244,7 +244,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Simple console greeting
-console.log("%c👋 Hello there! Thanks for checking out my portfolio.", 
-    "color: #3498db; font-size: 14px; font-weight: bold;");
-console.log("%c🔍 Curious about how this site works? Check out the source code on GitHub!", 
-    "color: #2ecc71; font-size: 12px;");
+console.log("%c👋%c Hello there! Thanks for checking out my portfolio.", 
+            "color: #2ecc71; font-size: 14px; font-weight: bold; margin-right: 5px;",
+            "color: #2ecc71; font-size: 14px; font-weight: normal;");
+console.log("%c🔍%c Curious about how this site works? Check out the source code on GitHub!", 
+            "color: #2ecc71; font-size: 14px; margin-right: 5px;",
+            "color: #2ecc71; font-size: 12px; font-weight: normal;");

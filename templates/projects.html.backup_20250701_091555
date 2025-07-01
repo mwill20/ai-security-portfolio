@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+
+{% block title %}Projects - Michael Williams | AI Security Engineer{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<title>Projects - Michael Williams | AI Security Engineer</title>
+
+<section class="projects-container">
+    <header class="page-header">
+        <h1>My Projects</h1>
+        <div class="divider"></div>
+        <p class="section-description">A selection of my recent work spanning AI security, machine learning, and cybersecurity.</p>
+    </header>
+    
+    <!-- MCP Ecosystem Section -->
+    <div class="mcp-ecosystem-section" style="max-width: 900px; margin: 40px auto; font-family: 'Segoe UI Mono', Consolas, monospace; color: #e0e6f0; line-height: 1.6;">
+        <h2 style="font-weight: 900; font-size: 2.5rem; margin-bottom: 12px; text-align: left;">
+            Model Context Protocol (MCP) Ecosystem
+        </h2>
+        <p style="text-align: left; font-size: 1.1rem; max-width: 850px; margin-bottom: 36px;">
+            The <strong>Model Context Protocol (MCP)</strong> is a scalable framework designed to enable modular AI Agents and tools to communicate and collaborate seamlessly. By providing a unified protocol and architecture, MCP allows diverse AI components—ranging from individual agents to integrated tools—to interoperate effortlessly, supporting applications from simple demos to enterprise-grade systems.
+        </p>
+    </div>
+
+    <!-- ML Engineering Projects Group -->
+    <div class="project-group">
+        <div class="project-group-header">
+            <h3><i class="fas fa-cogs"></i> ML Engineering</h3>
+        </div>
+        <div class="project-card-container">
+            <!-- HuggingFace Sentiment Analysis -->
+            <article class="project-card">
+                <div class="project-content">
+                    <div class="project-header">
+                        <i class="fas fa-robot project-icon"></i>
+                        <h2>HuggingFace Sentiment Analysis</h2>
+                    </div>
+                    <div class="project-details">
+                        <p>A Neural Network for emotion detection in text using PyTorch and the HuggingFace Transformers library.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/mwill20/HuggingFace-Sentiment-Analysis" target="_blank" class="btn btn-primary">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- XGBoost Regressor -->
+            <article class="project-card">
+                <div class="project-content">
+                    <div class="project-header">
+                        <i class="fas fa-chart-line project-icon"></i>
+                        <h2>XGBoost Regressor</h2>
+                    </div>
+                    <div class="project-details">
+                        <p>Advanced regression analysis using the XGBoost algorithm, including feature importance and model evaluation.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/mwill20/XGBoost-Regressor" target="_blank" class="btn btn-primary">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Bank Churn Neural Network -->
+            <article class="project-card">
+                <div class="project-content">
+                    <div class="project-header">
+                        <i class="fas fa-network-wired project-icon"></i>
+                        <h2>Bank Churn Neural Network</h2>
+                    </div>
+                    <div class="project-details">
+                        <p>Predicting customer churn using a neural network model built with TensorFlow/Keras, helping banks identify at-risk customers.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/mwill20/Bank_Churn_NN" target="_blank" class="btn btn-primary">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- XGBoost Visa Approval Prediction -->
+            <article class="project-card">
+                <div class="project-content">
+                    <div class="project-header">
+                        <i class="fas fa-passport project-icon"></i>
+                        <h2>Visa Approval Prediction</h2>
+                    </div>
+                    <div class="project-details">
+                        <p>Machine learning model using XGBoost to predict visa approval outcomes based on applicant data and historical patterns.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/mwill20/XGBoost_Visa_Approval_Prediction" target="_blank" class="btn btn-primary">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Decision Tree Loan Acceptance -->
+            <article class="project-card">
+                <div class="project-content">
+                    <div class="project-header">
+                        <i class="fas fa-hand-holding-usd project-icon"></i>
+                        <h2>Loan Acceptance Predictor</h2>
+                    </div>
+                    <div class="project-details">
+                        <p>Decision tree model for predicting loan approval decisions, including feature importance analysis and model interpretation.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/mwill20/Loan_Acceptance_DecisionTree" target="_blank" class="btn btn-primary">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- FoodHub Data Analysis -->
+            <article class="project-card">
+                <div class="project-content">
+                    <div class="project-header">
+                        <i class="fas fa-utensils project-icon"></i>
+                        <h2>FoodHub Data Analysis</h2>
+                    </div>
+                    <div class="project-details">
+                        <p>Comprehensive analysis of FoodHub's food delivery data, including customer behavior, order patterns, and restaurant performance metrics.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/mwill20/FoodHub-Data-Analysis" target="_blank" class="btn btn-primary">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- NLP RAG Medical Assistant -->
+            <article class="project-card">
+                <div class="project-content">
+                    <div class="project-header">
+                        <i class="fas fa-stethoscope project-icon"></i>
+                        <h2>NLP RAG Medical Assistant</h2>
+                    </div>
+                    <div class="project-details">
+                        <p>Retrieval-Augmented Generation (RAG) system for medical information retrieval and question answering using NLP and vector databases.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/mwill20/NLP_RAG_Medical_Assistant" target="_blank" class="btn btn-primary">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- Rest of the file remains the same -->
+    <!-- Personal Productivity Agent (Detail View) -->
+    <div id="productivity-agent-detail" class="component-detail">
+        <!-- ... existing content ... -->
+    </div>
+
+    <!-- MCP Tools Demo (Detail View) -->
+    <div id="tools-demo-detail" class="component-detail">
+        <!-- ... existing content ... -->
+    </div>
+</section>
+
+{% endblock %}
