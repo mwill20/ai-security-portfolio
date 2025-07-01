@@ -241,6 +241,33 @@ document.addEventListener('DOMContentLoaded', function() {
     if (yearElement) {
         yearElement.textContent = currentYear;
     }
+
+    // Project Filtering Logic
+    const filterContainer = document.querySelector('#project-filters');
+    if (filterContainer) {
+        const filterButtons = filterContainer.querySelectorAll('.filter-btn');
+        const projectGroups = document.querySelectorAll('.project-group');
+
+        filterContainer.addEventListener('click', (e) => {
+            if (!e.target.matches('.filter-btn')) return;
+
+            const selectedFilter = e.target.dataset.filter;
+
+            // Update active button state
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            e.target.classList.add('active');
+
+            // Filter project groups
+            projectGroups.forEach(group => {
+                const groupCategory = group.dataset.category;
+                if (selectedFilter === 'all' || selectedFilter === groupCategory) {
+                    group.style.display = 'block';
+                } else {
+                    group.style.display = 'none';
+                }
+            });
+        });
+    }
 });
 
 // Simple console greeting

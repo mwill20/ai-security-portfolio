@@ -40,6 +40,14 @@
         <div class="divider"></div>
         <p class="section-description">A selection of my recent work spanning AI security, machine learning, and cybersecurity.</p>
     </header>
+
+    <!-- Project Filters -->
+    <div id="project-filters" class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ml">ML Engineering</button>
+        <button class="filter-btn" data-filter="security">Security</button>
+        <button class="filter-btn" data-filter="fun">Just for Fun</button>
+    </div>
     
     <!-- MCP Ecosystem Section -->
     <div class="mcp-ecosystem-section" style="max-width: 900px; margin: 40px auto; font-family: 'Segoe UI Mono', Consolas, monospace; color: #e0e6f0; line-height: 1.6;">
@@ -193,7 +201,7 @@
     </div>
 
     <!-- ML Engineering Projects Group -->
-    <div class="project-group">
+    <div class="project-group" data-category="ml">
         <div class="project-group-header">
             <h3><i class="fas fa-cogs project-icon"></i> ML Engineering</h3>
         </div>
@@ -313,7 +321,7 @@
     </div>
 
     <!-- Security Projects Group -->
-    <div class="project-group">
+    <div class="project-group" data-category="security">
         <div class="project-group-header">
             <h3><i class="fas fa-shield-alt project-icon"></i> Security</h3>
         </div>
@@ -369,7 +377,7 @@
     </div>
 
     <!-- Just for Fun Section -->
-    <div class="project-group">
+    <div class="project-group" data-category="fun">
         <div class="project-group-header">
             <h3><i class="fas fa-gamepad project-icon"></i> Just for Fun</h3>
         </div>

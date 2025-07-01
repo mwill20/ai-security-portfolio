@@ -3616,6 +3616,39 @@ footer .container {
     }
 }
 
+/* Project Filters */
+.project-filters {
+    text-align: center;
+    margin-bottom: 2.5rem; /* Increased margin for better spacing */
+}
+
+.filter-btn {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-light);
+    padding: 0.6rem 1.2rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    border-radius: 20px;
+    font-family: 'Segoe UI Mono', Consolas, monospace;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: var(--accent-color-dark);
+    border-color: var(--accent-color);
+    color: #fff;
+}
+
+.filter-btn.active {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #fff;
+    font-weight: 600;
+}
+
 /* Project Group Styling */
 .project-group {
     background: var(--card-bg);
