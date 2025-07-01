@@ -1349,8 +1349,45 @@ section:not(:last-child) {
     }
 }
 
-/* Dark Mode Overrides */
-@media (prefers-color-scheme: dark) {
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 5px;
+    color: var(--text-light);
+    font-size: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.theme-toggle .fa-sun {
+    display: none; /* Hidden by default */
+}
+
+.theme-toggle .fa-moon {
+    display: block;
+}
+
+body.dark-mode .theme-toggle .fa-sun {
+    display: block;
+}
+
+body.dark-mode .theme-toggle .fa-moon {
+    display: none;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
     .about-section {
         background-color: var(--primary-color);
     }
@@ -1587,43 +1624,42 @@ section:not(:last-child) {
     font-style: italic;
 }
 
-/* --- Dark Mode Overrides --- */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --primary-color: #0a192f;
-        --secondary-color: #112240;
-        --accent-color: #64ffda;
-        --accent-hover: #52d1b4;
-        --light-color: #ccd6f6;
-        --dark-color: #8892b0;
-        --text-color: #ccd6f6;
-        --text-light: #8892b0;
-        --heading-color: #ffffff;
-        --card-bg: #112240;
-        --border-color: #1e2a47;
-        --box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
-        --footer-bg: linear-gradient(135deg, #1a2a3a 0%, #1e3c72 100%);
-        --footer-text: #ecf0f1;
-        --footer-border: rgba(100, 255, 218, 0.1);
-    }
+/* --- Dark Mode Styles --- */
+/* Applied via JS based on user preference or system setting */
+body.dark-mode {
+    --primary-color: #0a192f;
+    --secondary-color: #112240;
+    --accent-color: #64ffda;
+    --accent-hover: #52d1b4;
+    --light-color: #ccd6f6;
+    --dark-color: #8892b0;
+    --text-color: #ccd6f6;
+    --text-light: #8892b0;
+    --heading-color: #ffffff;
+    --card-bg: #112240;
+    --border-color: #1e2a47;
+    --box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+    --footer-bg: linear-gradient(135deg, #1a2a3a 0%, #1e3c72 100%);
+    --footer-text: #ecf0f1;
+    --footer-border: rgba(100, 255, 218, 0.1);
+}
 
-    .sentiment-badge.positive,
-    .sentiment-label.positive {
-        background-color: rgba(46, 204, 113, 0.2);
-        color: #2ecc71;
-    }
+body.dark-mode .sentiment-badge.positive,
+body.dark-mode .sentiment-label.positive {
+    background-color: rgba(46, 204, 113, 0.2);
+    color: #2ecc71;
+}
 
-    .sentiment-badge.neutral,
-    .sentiment-label.neutral {
-        background-color: rgba(243, 156, 18, 0.2);
-        color: #f1c40f;
-    }
+body.dark-mode .sentiment-badge.neutral,
+body.dark-mode .sentiment-label.neutral {
+    background-color: rgba(243, 156, 18, 0.2);
+    color: #f1c40f;
+}
 
-    .sentiment-badge.negative,
-    .sentiment-label.negative {
-        background-color: rgba(231, 76, 60, 0.2);
-        color: #e74c3c;
-    }
+body.dark-mode .sentiment-badge.negative,
+body.dark-mode .sentiment-label.negative {
+    background-color: rgba(231, 76, 60, 0.2);
+    color: #e74c3c;
 }
 
 /* --- Responsive Design --- */

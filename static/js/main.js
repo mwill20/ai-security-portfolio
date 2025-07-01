@@ -242,6 +242,39 @@ document.addEventListener('DOMContentLoaded', function() {
         yearElement.textContent = currentYear;
     }
 
+        // Theme Toggle Logic
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    const applyTheme = () => {
+        // 1. Check localStorage for a user preference
+        const savedTheme = localStorage.getItem('theme');
+        // 2. Check system preference if no user preference is stored
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+            body.classList.add('dark-mode');
+        } else {
+            body.classList.remove('dark-mode');
+        }
+    };
+
+    // Toggle theme on button click
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            // Save the user's preference to localStorage
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    }
+
+    // Apply the correct theme on initial load
+    applyTheme();
+
     // Project Filtering Logic
     const filterContainer = document.querySelector('#project-filters');
     if (filterContainer) {
@@ -259,12 +292,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Filter project groups
             projectGroups.forEach(group => {
-                const groupCategory = group.dataset.category;
-                if (selectedFilter === 'all' || selectedFilter === groupCategory) {
-                    group.style.display = 'block';
-                } else {
-                    group.style.display = 'none';
-                }
+                const isVisible = selectedFilter === 'all' || group.dataset.category === selectedFilter;
+                group.classList.toggle('hidden', !isVisible);
             });
         });
     }
