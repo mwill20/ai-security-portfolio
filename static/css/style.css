@@ -1928,7 +1928,6 @@ input:focus, textarea:focus {
         border-color: var(--accent-color);
         box-shadow: 0 0 0 2px rgba(100, 255, 218, 0.2);
     }
-}
 
 /* Responsive Design - About Section */
 @media (max-width: 1024px) {
@@ -3303,18 +3302,20 @@ footer .container {
 }
 
 .mcp-component {
-    background: var(--card-bg);
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    margin-bottom: 1.5rem;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius, 8px);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--box-shadow);
     overflow: hidden;
     transition: all 0.3s ease;
-    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
 }
 
 .mcp-component:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 12px 35px -15px rgba(2, 12, 27, 0.8), 0 0 12px rgba(100, 255, 218, 0.25);
 }
 
 .mcp-component.coming-soon {
