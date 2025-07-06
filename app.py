@@ -136,5 +136,58 @@ def create_app(test_config=None):
         conn.close()
         return render_template('guestbook.html', entries=entries)
 
+    # SQL Injection Demo Page
+    @app.route('/sqli-demo')
+    def sqli_demo():
+        return render_template('sqli_demo.html')
+    
+    # VULNERABLE endpoint for SQL injection demo
+    @app.route('/search/vulnerable')
+    def vulnerable_search():
+        query = request.args.get('q', '')
+        results = []
+        
+        if query:
+            try:
+                conn = get_db_connection()
+                # WARNING: This is intentionally vulnerable to SQL injection!
+                # DO NOT use this pattern in production code!
+                cursor = conn.execute(f"SELECT * FROM guestbook WHERE message LIKE '%{query}%'")
+                results = cursor.fetchall()
+                conn.close()
+            except Exception as e:
+                results = [f"Error: {str(e)}"]
+        
+        return render_template('search_results.html', 
+                            query=query, 
+                            results=results,
+                            endpoint='vulnerable',
+                            is_vulnerable=True)
+    
+    # SECURE endpoint for SQL injection demo
+    @app.route('/search/secure')
+    def secure_search():
+        query = request.args.get('q', '')
+        results = []
+        
+        if query:
+            try:
+                conn = get_db_connection()
+                # This is the secure way to handle user input in SQL queries
+                cursor = conn.execute(
+                    "SELECT * FROM guestbook WHERE message LIKE ?", 
+                    (f'%{query}%',)
+                )
+                results = cursor.fetchall()
+                conn.close()
+            except Exception as e:
+                results = [f"Error: {str(e)}"]
+        
+        return render_template('search_results.html', 
+                            query=query, 
+                            results=results,
+                            endpoint='secure',
+                            is_vulnerable=False)
+    
     return app
 

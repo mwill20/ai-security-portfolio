@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="mb-4">SQL Injection Demo</h1>
+    
+    <div class="alert alert-warning">
+        <strong>Warning:</strong> This page is for educational purposes only. 
+        Never use vulnerable code in production environments.
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header bg-danger text-white">
+                    <h4>Vulnerable Search</h4>
+                </div>
+                <div class="card-body">
+                    <p class="text-danger">This search is vulnerable to SQL injection!</p>
+                    <form action="{{ url_for('vulnerable_search') }}" method="get" class="mb-3">
+                        <div class="input-group">
+                            <input type="text" name="q" class="form-control" placeholder="Search messages..." value="{{ query }}">
+                            <button type="submit" class="btn btn-danger">Search</button>
+                        </div>
+                    </form>
+                    <div class="small text-muted">
+                        <p>Try these examples:</p>
+                        <ul>
+                            <li><code>test</code> - Normal search</li>
+                            <li><code>' OR '1'='1</code> - Shows all entries</li>
+                            <li><code>'; DROP TABLE guestbook; --</code> - Dangerous! (Don't worry, we're using SQLite in-memory for this demo)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h4>Secure Search</h4>
+                </div>
+                <div class="card-body">
+                    <p class="text-success">This search is protected against SQL injection</p>
+                    <form action="{{ url_for('secure_search') }}" method="get" class="mb-3">
+                        <div class="input-group">
+                            <input type="text" name="q" class="form-control" placeholder="Search messages..." value="{{ query }}">
+                            <button type="submit" class="btn btn-success">Search</button>
+                        </div>
+                    </form>
+                    <div class="small text-muted">
+                        <p>Try the same examples as above. Notice the difference in results.</p>
+                        <p>This version uses parameterized queries to prevent SQL injection.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <h3>How It Works</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <h5>Vulnerable Code:</h5>
+                <pre class="bg-light p-3"><code># UNSAFE - Vulnerable to SQL injection
+query = request.args.get('q', '')
+cursor = conn.execute(f"SELECT * FROM guestbook WHERE message LIKE '%{query}%'")</code></pre>
+            </div>
+            <div class="col-md-6">
+                <h5>Secure Code:</h5>
+                <pre class="bg-light p-3"><code># SAFE - Uses parameterized queries
+query = request.args.get('q', '')
+cursor = conn.execute(
+    "SELECT * FROM guestbook WHERE message LIKE ?", 
+    (f'%{query}%',)
+)</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

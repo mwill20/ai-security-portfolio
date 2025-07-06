@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card">
+                <div class="card-header {% if is_vulnerable %}bg-danger text-white{% else %}bg-success text-white{% endif %}">
+                    <h4>{% if is_vulnerable %}Vulnerable{% else %}Secure{% endif %} Search Results</h4>
+                </div>
+                <div class="card-body">
+                    <form action="{{ url_for(endpoint + '_search') }}" method="get" class="mb-4">
+                        <div class="input-group">
+                            <input type="text" name="q" class="form-control" value="{{ query }}" placeholder="Search messages...">
+                            <button type="submit" class="btn {% if is_vulnerable %}btn-danger{% else %}btn-success{% endif %}">Search Again</button>
+                        </div>
+                    </form>
+
+                    {% if query %}
+                        <h5>Search results for: <code>{{ query }}</code></h5>
+                        
+                        {% if results %}
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                            <th>Message</th>
+                                            <th>Sentiment</th>
+                                            <th>Timestamp</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for row in results %}
+                                        <tr>
+                                            <td>{{ row[0] }}</td>
+                                            <td>{{ row[1] }}</td>
+                                            <td>{{ row[2] }}</td>
+                                            <td>
+                                                <span class="badge {% if row[4] == 'positive' %}bg-success{% elif row[4] == 'negative' %}bg-danger{% else %}bg-secondary{% endif %}">
+                                                    {{ row[4] }}
+                                                </span>
+                                            </td>
+                                            <td>{{ row[3] }}</td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        {% else %}
+                            <div class="alert alert-info">
+                                No results found for your search.
+                            </div>
+                        {% endif %}
+                    {% else %}
+                        <div class="alert alert-warning">
+                            Please enter a search term.
+                        </div>
+                    {% endif %}
+
+                    <div class="mt-4">
+                        <a href="{{ url_for('sqli_demo') }}" class="btn btn-outline-secondary">
+                            ← Back to SQL Injection Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            {% if is_vulnerable %}
+                <div class="alert alert-danger mt-4">
+                    <h5>⚠️ Warning: This search is vulnerable to SQL injection!</h5>
+                    <p class="mb-2">The search above directly includes your input in an SQL query, which is dangerous.</p>
+                    <p class="mb-0">Try these examples to see the vulnerability:</p>
+                    <ul>
+                        <li>Show all messages: <code>' OR '1'='1</code></li>
+                        <li>Show database structure: <code>' UNION SELECT name, sql, 3, 4, 5 FROM sqlite_master WHERE type='table' --</code></li>
+                    </ul>
+                </div>
+            {% else %}
+                <div class="alert alert-success mt-4">
+                    <h5>✅ This search is protected against SQL injection</h5>
+                    <p class="mb-0">The search above uses parameterized queries to safely handle user input. 
+                    Try the same SQL injection attempts - they won't work here!</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
