@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: ai-security-portfolio
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.13
+      - key: PYTHONUNBUFFERED
+        value: true
+      - key: PIP_DISABLE_PIP_VERSION_CHECK
+        value: 1
+      - key: PIP_NO_CACHE_DIR
+        value: 1
+    plan: free
