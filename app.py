@@ -72,12 +72,15 @@ def create_app(test_config=None):
 
     if test_config is not None:
         app.config.from_mapping(test_config)
+    else:
+        # Load the instance config, if it exists, when not testing
+        app.config.from_pyfile('config.py', silent=True)
 
     # Ensure the instance folder exists
     try:
-        os.makedirs(app.instance_path)
-    except OSError:
-        pass
+        os.makedirs(app.instance_path, exist_ok=True)
+    except OSError as e:
+        print(f"Error creating instance directory: {e}")
 
     def get_db_connection():
         conn = sqlite3.connect(app.config['DATABASE'])
@@ -85,12 +88,18 @@ def create_app(test_config=None):
         return conn
 
     def init_db():
-        db = get_db_connection()
-        with app.open_resource('schema.sql', mode='r', encoding='utf-8') as f:
-            sql_script = f.read()
-            db.executescript(sql_script)
-        db.commit()
-        db.close()
+        try:
+            db = get_db_connection()
+            with app.open_resource('schema.sql', mode='r', encoding='utf-8') as f:
+                sql_script = f.read()
+                db.executescript(sql_script)
+            db.commit()
+            click.echo('Database initialized successfully.')
+        except Exception as e:
+            click.echo(f'Error initializing database: {e}')
+        finally:
+            if 'db' in locals():
+                db.close()
 
     @click.command('init-db')
     @with_appcontext
