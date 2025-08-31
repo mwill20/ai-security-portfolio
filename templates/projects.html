@@ -385,6 +385,68 @@
             <h3><i class="fas fa-shield-alt project-icon"></i> Security</h3>
         </div>
         <div class="project-card-container">
+        
+        <style>
+        .malware-research-series {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 2px solid #dee2e6;
+        }
+        
+        .research-flow {
+            flex-wrap: wrap;
+        }
+        
+        .flow-step {
+            text-align: center;
+            min-width: 120px;
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0 auto 8px;
+        }
+        
+        .step-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #495057;
+        }
+        
+        .component-card {
+            border-left: 4px solid #007bff !important;
+            transition: transform 0.2s ease;
+        }
+        
+        .component-card:hover {
+            transform: translateY(-2px);
+        }
+        
+        .integration-project .project-card {
+            border: 2px solid #28a745 !important;
+            background: linear-gradient(135deg, #f8fff9 0%, #e8f5e8 100%);
+        }
+        
+        @media (max-width: 768px) {
+            .research-flow {
+                flex-direction: column;
+            }
+            .research-flow .fas.fa-arrow-right {
+                transform: rotate(90deg);
+                margin: 1rem 0;
+            }
+        }
+        </style>
             <!-- AI-Powered Spam & Phishing Detector -->
             <article class="project-card">
                 <div class="project-content">
@@ -433,54 +495,99 @@
                 </div>
             </article>
 
-            <!-- Malware Analysis LightGBM -->
-            <article class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-bug project-icon"></i>
-                        <h2>Malware Analysis LightGBM</h2>
-                    </div>
-                    <div class="project-details">
-                        <p>AI-powered malware detection using LightGBM and static PE file analysis for enterprise endpoint security. Achieves 98%+ F1-score with millisecond prediction times.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/mwill20/Malware_analysis_LightGBM" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View on GitHub</a>
+            <!-- Malware Detection Research Series -->
+            <div class="malware-research-series mb-5">
+                <div class="series-header mb-4">
+                    <h4 class="text-center mb-3">
+                        <i class="fas fa-project-diagram me-2"></i>
+                        Malware Detection Research Series
+                    </h4>
+                    <div class="research-flow d-flex justify-content-center align-items-center mb-4">
+                        <div class="flow-step">
+                            <div class="step-number">1</div>
+                            <div class="step-title">Baseline ML</div>
+                        </div>
+                        <i class="fas fa-arrow-right mx-3 text-primary"></i>
+                        <div class="flow-step">
+                            <div class="step-number">2</div>
+                            <div class="step-title">Feature Engineering</div>
+                        </div>
+                        <i class="fas fa-arrow-right mx-3 text-primary"></i>
+                        <div class="flow-step">
+                            <div class="step-number">3</div>
+                            <div class="step-title">Integration & Optimization</div>
                         </div>
                     </div>
                 </div>
-            </article>
 
-            <!-- PE File Metadata Analysis -->
-            <article class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-file-code project-icon"></i>
-                        <h2>PE File Metadata Analysis</h2>
+                <!-- Component Projects Row -->
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="card h-100 shadow-sm border-0 component-card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h6 class="card-title text-primary">
+                                        <i class="fas fa-bug me-2"></i>LightGBM Analysis
+                                    </h6>
+                                    <span class="badge bg-light text-dark">Component 1</span>
+                                </div>
+                                <p class="card-text small">Baseline ML performance with LightGBM and static PE analysis. 98%+ F1-score foundation.</p>
+                                <a href="https://github.com/mwill20/Malware_analysis_LightGBM" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm">
+                                    <i class="fab fa-github"></i> View
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-details">
-                        <p>Comprehensive malware detection using PE file metadata with advanced feature engineering, visualization, and model validation. Multi-method feature selection with PCA, t-SNE, and ensemble methods.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/mwill20/Malware_Detection_using_PE_File_Metadata" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View on GitHub</a>
+                    <div class="col-md-6">
+                        <div class="card h-100 shadow-sm border-0 component-card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h6 class="card-title text-primary">
+                                        <i class="fas fa-file-code me-2"></i>PE Metadata Analysis
+                                    </h6>
+                                    <span class="badge bg-light text-dark">Component 2</span>
+                                </div>
+                                <p class="card-text small">Advanced feature engineering with PCA, t-SNE, and ensemble validation methods.</p>
+                                <a href="https://github.com/mwill20/Malware_Detection_using_PE_File_Metadata" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm">
+                                    <i class="fab fa-github"></i> View
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </article>
 
-            <!-- High-Recall Malware Detector -->
-            <article class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-crosshairs project-icon"></i>
-                        <h2>High-Recall Malware Detector</h2>
-                    </div>
-                    <div class="project-details">
-                        <p><strong>Integration Capstone:</strong> Combines supervised and unsupervised ML approaches with recall-first optimization for SOC environments. Synthesizes insights from LightGBM and PE metadata projects into a unified detection framework achieving 99.95% recall.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/mwill20/High-Recall_Malware_Detector_Supervised_Unsupervised" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View on GitHub</a>
-                            <a href="https://github.com/mwill20/High-Recall_Malware_Detector_Supervised_Unsupervised/blob/main/reports/High_Recall_Malware_Detector_Supervised_and_Unsupervised.md" target="_blank" rel="noopener noreferrer" class="btn btn-outline-info btn-sm">Analysis Report</a>
-                        </div>
-                    </div>
+                <!-- Integration Arrow -->
+                <div class="text-center mb-3">
+                    <i class="fas fa-arrow-down fa-2x text-success"></i>
+                    <div class="small text-muted mt-1">Synthesized Into</div>
                 </div>
-            </article>
+
+                <!-- Main Integration Project -->
+                <div class="integration-project">
+                    <article class="project-card border-success">
+                        <div class="project-content">
+                            <div class="project-header">
+                                <i class="fas fa-crosshairs project-icon text-success"></i>
+                                <h2>High-Recall Malware Detector</h2>
+                                <span class="badge bg-success ms-2">Integration Capstone</span>
+                            </div>
+                            <div class="project-details">
+                                <p><strong>Recall-First Optimization:</strong> Combines supervised and unsupervised ML approaches achieving <strong>99.95% recall</strong> for SOC environments. Synthesizes baseline performance and advanced features into a unified detection framework prioritizing zero missed malware.</p>
+                                <div class="mb-3">
+                                    <span class="badge bg-secondary me-1">Supervised Learning</span>
+                                    <span class="badge bg-secondary me-1">Unsupervised Learning</span>
+                                    <span class="badge bg-secondary me-1">Recall Optimization</span>
+                                    <span class="badge bg-secondary">Model Integration</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/mwill20/High-Recall_Malware_Detector_Supervised_Unsupervised" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View on GitHub</a>
+                                    <a href="https://github.com/mwill20/High-Recall_Malware_Detector_Supervised_Unsupervised/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="btn btn-outline-info btn-sm">Technical Overview</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </div>
     </div>
 
