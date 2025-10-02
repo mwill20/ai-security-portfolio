@@ -125,6 +125,10 @@ def create_app(test_config=None):
     @app.route('/projects')
     def projects():
         return render_template('projects.html')
+        
+    @app.route('/sagevault')
+    def sagevault():
+        return render_template('sagevault.html')
 
     @app.route('/guestbook', methods=['GET', 'POST'])
     def guestbook():
