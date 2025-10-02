@@ -90,16 +90,31 @@ def create_app(test_config=None):
     def init_db():
         try:
             db = get_db_connection()
-            with app.open_resource('schema.sql', mode='r', encoding='utf-8') as f:
-                sql_script = f.read()
-                db.executescript(sql_script)
-            db.commit()
-            click.echo('Database initialized successfully.')
+            with app.open_resource('schema.sql', mode='r') as f:
+                db.executescript(f.read())
+            db.close()
+            print("Database initialized successfully!")
         except Exception as e:
-            click.echo(f'Error initializing database: {e}')
-        finally:
-            if 'db' in locals():
-                db.close()
+            print(f"Error initializing database: {e}")
+            raise
+
+    def ensure_db_exists():
+        """Ensure database tables exist, create if missing."""
+        try:
+            conn = get_db_connection()
+            # Check if guestbook table exists
+            cursor = conn.execute(
+                "SELECT name FROM sqlite_master WHERE type='table' AND name='guestbook'"
+            )
+            if not cursor.fetchone():
+                print("Guestbook table missing, initializing database...")
+                conn.close()
+                init_db()
+            else:
+                conn.close()
+        except Exception as e:
+            print(f"Database check failed, reinitializing: {e}")
+            init_db()
 
     @click.command('init-db')
     @with_appcontext
@@ -132,6 +147,9 @@ def create_app(test_config=None):
 
     @app.route('/guestbook', methods=['GET', 'POST'])
     def guestbook():
+        # Ensure database exists before any operations
+        ensure_db_exists()
+        
         conn = get_db_connection()
         if request.method == 'POST':
             name = request.form['name']
@@ -158,6 +176,9 @@ def create_app(test_config=None):
     # VULNERABLE endpoint for SQL injection demo
     @app.route('/search/vulnerable')
     def vulnerable_search():
+        # Ensure database exists before any operations
+        ensure_db_exists()
+        
         query = request.args.get('q', '')
         results = []
         
@@ -181,6 +202,9 @@ def create_app(test_config=None):
     # SECURE endpoint for SQL injection demo
     @app.route('/search/secure')
     def secure_search():
+        # Ensure database exists before any operations
+        ensure_db_exists()
+        
         query = request.args.get('q', '')
         results = []
         
