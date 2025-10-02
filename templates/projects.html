@@ -123,53 +123,57 @@
                 </div>
                 
                 <!-- Middle Row: MCP Core with Side Agents -->
-                <div style="display: flex; justify-content: center; align-items: center; gap: 40px; width: 100%;">
+                <div style="display: flex; justify-content: center; align-items: flex-start; gap: 30px; width: 100%;">
                     <!-- TypeScript MCP Agent -->
-                    <div class="agent-card" style="background: #1e3a5f; padding: 20px; border-radius: 12px; width: 200px; text-align: center; border: 2px solid #3a7bd5;">
+                    <div class="agent-card" style="background: #1e3a5f; padding: 20px; border-radius: 12px; width: 220px; text-align: center; border: 2px solid #3a7bd5;">
                         <i class="fab fa-js" style="font-size: 2rem; color: #f0db4f; margin-bottom: 10px;"></i>
                         <h4>TypeScript MCP Agent</h4>
-                        <p style="font-size: 0.9rem;">JavaScript/TypeScript integration layer for MCP</p>
+                        <p style="font-size: 0.9rem; min-height: 40px;">JavaScript/TypeScript integration layer for MCP</p>
                         <div style="margin-top: 10px;">
                             <a href="https://github.com/mwill20/mcp-ts-agent" target="_blank" class="btn btn-sm btn-outline-light">
                                 <i class="fab fa-github"></i> Code
                             </a>
                         </div>
-                        <div class="connection-arrow" style="position: absolute; right: -20px; top: 50%; transform: translateY(-50%);">
+                        <div class="connection-arrow" style="position: absolute; right: -15px; top: 50%; transform: translateY(-50%);">
                             <i class="fas fa-arrow-right" style="color: #7f8c8d;"></i>
                         </div>
                     </div>
                     
                     <!-- MCP Core -->
-                    <div class="mcp-core" style="background: #1a1a2e; padding: 25px; border-radius: 12px; width: 40%; text-align: center; border: 2px solid #4a4a8a; position: relative;">
-                        <div class="mcp-component-header">
-                            <i class="fas fa-server" style="font-size: 2.5rem; color: #9b59b6; margin-bottom: 15px;"></i>
-                            <h3>MCP Core Server</h3>
-                            <p>Centralized AI model hosting and management</p>
+                    <div style="display: flex; flex-direction: column; align-items: center; width: 300px;">
+                        <div class="mcp-core" style="background: #1a1a2e; padding: 25px; border-radius: 12px; width: 100%; text-align: center; border: 2px solid #4a4a8a; position: relative;">
+                            <div class="mcp-component-header">
+                                <i class="fas fa-server" style="font-size: 2.5rem; color: #9b59b6; margin-bottom: 15px;"></i>
+                                <h3>MCP Core Server</h3>
+                                <p>Centralized AI model hosting and management</p>
+                            </div>
+                            <div class="connection-arrow" style="position: absolute; left: -15px; top: 50%; transform: translateY(-50%);">
+                                <i class="fas fa-arrow-left" style="color: #7f8c8d;"></i>
+                            </div>
+                            <div class="connection-arrow" style="position: absolute; right: -15px; top: 50%; transform: translateY(-50%);">
+                                <i class="fas fa-arrow-right" style="color: #7f8c8d;"></i>
+                            </div>
                         </div>
-                        <div class="connection-arrow" style="position: absolute; left: -20px; top: 50%; transform: translateY(-50%);">
-                            <i class="fas fa-arrow-left" style="color: #7f8c8d;"></i>
+                        <!-- GitHub Button Below MCP Core -->
+                        <div style="margin-top: 15px; width: 100%; text-align: center;">
+                            <a href="https://github.com/mwill20/mcp-tools" target="_blank" class="btn btn-primary">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
                         </div>
-                    </div>
-                    
-                    <!-- GitHub Button Moved Here -->
-                    <div style="margin-top: 15px; width: 100%; text-align: center;">
-                        <a href="https://github.com/mwill20/mcp-tools" target="_blank" class="btn btn-primary">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
                     </div>
                     
                     <!-- Productivity Agent -->
-                    <div class="agent-card" style="background: #1f4e3d; padding: 20px; border-radius: 12px; width: 200px; text-align: center; border: 2px solid #2ecc71; position: relative;">
+                    <div class="agent-card" style="background: #1f4e3d; padding: 20px; border-radius: 12px; width: 220px; text-align: center; border: 2px solid #2ecc71; position: relative;">
                         <i class="fas fa-robot" style="font-size: 2rem; color: #2ecc71; margin-bottom: 10px;"></i>
                         <h4>Productivity Agent</h4>
-                        <p style="font-size: 0.9rem;">Automates tasks and analyzes system logs</p>
+                        <p style="font-size: 0.9rem; min-height: 40px;">Automates tasks and analyzes system logs</p>
                         <div style="margin-top: 10px;">
                             <a href="https://github.com/mwill20/PersonalProductivityAgent" target="_blank" class="btn btn-sm btn-outline-light">
                                 <i class="fab fa-github"></i> Code
                             </a>
                         </div>
-                        <div class="connection-arrow" style="position: absolute; left: -20px; top: 50%; transform: translateY(-50%);">
-                            <i class="fas fa-arrow-right" style="color: #7f8c8d; transform: scaleX(-1);"></i>
+                        <div class="connection-arrow" style="position: absolute; left: -15px; top: 50%; transform: translateY(-50%);">
+                            <i class="fas fa-arrow-left" style="color: #7f8c8d;"></i>
                         </div>
                     </div>
                 </div>
