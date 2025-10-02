@@ -4,6 +4,21 @@
 
 {% block content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css', v='1.3') }}">
+<style>
+    .demo-video {
+        width: 100%;
+        max-width: 800px;
+        margin: 2rem auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .demo-section {
+        background: var(--card-bg);
+        padding: 2rem;
+        border-radius: 8px;
+        margin: 2rem 0;
+    }
+</style>
 
 <article class="project-article">
     <header class="project-header">
@@ -118,6 +133,19 @@
         </div>
     </section>
 
+    <section class="project-section demo-section">
+        <div class="container">
+            <h2>Demo</h2>
+            <p>Watch SageVault in action with this demo video:</p>
+            <div class="video-container">
+                <video class="demo-video" controls>
+                    <source src="{{ url_for('static', filename='videos/sagevault-demo.mp4') }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
     <section class="project-section project-cta">
         <div class="container">
             <h2>Ready to Experience Secure AI?</h2>
@@ -126,8 +154,8 @@
                 <a href="https://github.com/mwill20/SageVault" target="_blank" class="btn btn-primary">
                     <i class="fab fa-github"></i> View on GitHub
                 </a>
-                <a href="#" class="btn btn-outline">
-                    <i class="fas fa-laptop-code"></i> Live Demo (Coming Soon)
+                <a href="#demo" class="btn btn-outline">
+                    <i class="fas fa-play-circle"></i> Watch Demo
                 </a>
             </div>
         </div>
