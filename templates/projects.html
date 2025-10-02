@@ -90,7 +90,106 @@
             </div>
         </div>
 
-        <div class="ecosystem-layout">
+        <!-- MCP Ecosystem Diagram -->
+        <div class="ecosystem-diagram" style="margin: 40px 0; position: relative;">
+            <div style="text-align: center; margin-bottom: 20px;">
+                <h3>MCP Ecosystem Architecture</h3>
+                <p>How MCP connects and manages various AI tools and services</p>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+                <!-- Top Row: Tools -->
+                <div style="display: flex; justify-content: center; gap: 30px; width: 100%;">
+                    <div class="tool-card" style="background: #2c3e50; padding: 15px; border-radius: 8px; width: 200px; text-align: center;">
+                        <i class="fas fa-calculator" style="font-size: 2rem; margin-bottom: 10px; color: #3498db;"></i>
+                        <h4>Calculator</h4>
+                        <p>Mathematical operations</p>
+                    </div>
+                    <div class="tool-card" style="background: #2c3e50; padding: 15px; border-radius: 8px; width: 200px; text-align: center;">
+                        <i class="fas fa-comment-dots" style="font-size: 2rem; margin-bottom: 10px; color: #2ecc71;"></i>
+                        <h4>Sentiment Analysis</h4>
+                        <p>Text analysis</p>
+                    </div>
+                    <div class="tool-card" style="background: #2c3e50; padding: 15px; border-radius: 8px; width: 200px; text-align: center;">
+                        <i class="fas fa-cloud-sun" style="font-size: 2rem; margin-bottom: 10px; color: #f39c12;"></i>
+                        <h4>Weather Tool</h4>
+                        <p>Forecast data</p>
+                    </div>
+                </div>
+                
+                <!-- Middle: Connection Arrows -->
+                <div style="height: 50px; display: flex; justify-content: center; align-items: center; position: relative;">
+                    <i class="fas fa-arrow-down" style="font-size: 2rem; color: #7f8c8d;"></i>
+                </div>
+                
+                <!-- Middle Row: MCP Core with Side Agents -->
+                <div style="display: flex; justify-content: center; align-items: center; gap: 40px; width: 100%;">
+                    <!-- TypeScript MCP Agent -->
+                    <div class="agent-card" style="background: #1e3a5f; padding: 20px; border-radius: 12px; width: 200px; text-align: center; border: 2px solid #3a7bd5;">
+                        <i class="fab fa-js" style="font-size: 2rem; color: #f0db4f; margin-bottom: 10px;"></i>
+                        <h4>TypeScript MCP Agent</h4>
+                        <p style="font-size: 0.9rem;">JavaScript/TypeScript integration layer for MCP</p>
+                        <div style="margin-top: 10px;">
+                            <a href="https://github.com/mwill20/mcp-ts-agent" target="_blank" class="btn btn-sm btn-outline-light">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                        <div class="connection-arrow" style="position: absolute; right: -20px; top: 50%; transform: translateY(-50%);">
+                            <i class="fas fa-arrow-right" style="color: #7f8c8d;"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- MCP Core -->
+                    <div class="mcp-core" style="background: #1a1a2e; padding: 25px; border-radius: 12px; width: 40%; text-align: center; border: 2px solid #4a4a8a; position: relative;">
+                        <div class="mcp-component-header">
+                            <i class="fas fa-server" style="font-size: 2.5rem; color: #9b59b6; margin-bottom: 15px;"></i>
+                            <h3>MCP Core Server</h3>
+                            <p>Centralized AI model hosting and management</p>
+                            <div style="margin-top: 15px;">
+                                <a href="https://github.com/mwill20/mcp-tools" target="_blank" class="btn btn-primary">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                        <div class="connection-arrow" style="position: absolute; left: -20px; top: 50%; transform: translateY(-50%);">
+                            <i class="fas fa-arrow-left" style="color: #7f8c8d;"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Productivity Agent -->
+                    <div class="agent-card" style="background: #1f4e3d; padding: 20px; border-radius: 12px; width: 200px; text-align: center; border: 2px solid #2ecc71; position: relative;">
+                        <i class="fas fa-robot" style="font-size: 2rem; color: #2ecc71; margin-bottom: 10px;"></i>
+                        <h4>Productivity Agent</h4>
+                        <p style="font-size: 0.9rem;">Automates tasks and analyzes system logs</p>
+                        <div style="margin-top: 10px;">
+                            <a href="https://github.com/mwill20/PersonalProductivityAgent" target="_blank" class="btn btn-sm btn-outline-light">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                        <div class="connection-arrow" style="position: absolute; left: -20px; top: 50%; transform: translateY(-50%);">
+                            <i class="fas fa-arrow-right" style="color: #7f8c8d; transform: scaleX(-1);"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bottom: Connection Arrows -->
+                <div style="height: 50px; display: flex; justify-content: center; align-items: center; position: relative;">
+                    <i class="fas fa-arrow-down" style="font-size: 2rem; color: #7f8c8d;"></i>
+                </div>
+                
+                <!-- Bottom Row: Demo Interface -->
+                <div style="background: #2c3e50; padding: 20px; border-radius: 8px; width: 300px; text-align: center; margin-top: 10px;">
+                    <i class="fas fa-laptop-code" style="font-size: 2rem; color: #e74c3c; margin-bottom: 10px;"></i>
+                    <h4>Unified Demo Interface</h4>
+                    <p>Access all tools through a single interface</p>
+                    <a href="https://huggingface.co/spaces/mwill-AImission/mcp-tools-demo" target="_blank" class="btn btn-outline-light" style="margin-top: 10px;">
+                        <i class="fas fa-external-link-alt"></i> Try Live Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="ecosystem-layout" style="margin-top: 40px;">
             <!-- MCP Core Server -->
             <div class="ecosystem-core">
                 <div class="mcp-component" data-component="mcp-core">
@@ -103,44 +202,6 @@
                         <p>Central Python server hosting AI models and exposing them via MCP. Provides a unified interface for AI services and manages communication between different components in the ecosystem.</p>
                         <div class="component-links">
                             <a href="https://github.com/mwill20/mcp-tools" target="_blank" class="btn btn-primary">View on GitHub</a>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100 shadow-sm border-0">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-start mb-3">
-                                        <h5 class="card-title text-primary">High-Recall Malware Detector</h5>
-                                        <span class="badge bg-danger">Critical Security</span>
-                                    </div>
-                                    <p class="card-text">
-                                        <strong>Integration Project:</strong> Combines supervised and unsupervised ML approaches with recall-first optimization for SOC environments. Merges insights from LightGBM and PE metadata analysis projects.
-                                    </p>
-                                    <div class="mb-3">
-                                        <span class="badge bg-secondary me-1">Supervised Learning</span>
-                                        <span class="badge bg-secondary me-1">Unsupervised Learning</span>
-                                        <span class="badge bg-secondary me-1">Recall Optimization</span>
-                                        <span class="badge bg-secondary">Model Integration</span>
-                                    </div>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group" role="group">
-                                            <a href="https://github.com/username/High-Recall_Malware_Detector_Supervised_Unsupervised" 
-                                               class="btn btn-outline-primary btn-sm" 
-                                               target="_blank" 
-                                               rel="noopener noreferrer">
-                                                <i class="fab fa-github"></i> Code
-                                            </a>
-                                            <a href="https://github.com/username/High-Recall_Malware_Detector_Supervised_Unsupervised/blob/main/reports/High_Recall_Malware_Detector_Supervised_and_Unsupervised.md" 
-                                               class="btn btn-outline-info btn-sm" 
-                                               target="_blank" 
-                                               rel="noopener noreferrer">
-                                                <i class="fas fa-chart-line"></i> Analysis
-                                            </a>
-                                        </div>
-                                        <small class="text-muted">
-                                            <i class="fas fa-shield-alt"></i> 99.95% Recall
-                                        </small>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -232,10 +293,17 @@
                 </div>
             </div>
 
-            <!-- Security Layer (Coming Soon) -->
-            <div class="ecosystem-security">
-                <h3>Security Layer (Coming Soon)</h3>
-                <p>Advanced security features and monitoring for the MCP Ecosystem</p>
+            <!-- Security Layer -->
+            <div class="ecosystem-security" style="text-align: center; margin-top: 40px; padding: 20px; background: rgba(44, 62, 80, 0.1); border-radius: 8px;">
+                <i class="fas fa-shield-alt" style="font-size: 2rem; color: #2ecc71; margin-bottom: 15px;"></i>
+                <h3>Security Layer</h3>
+                <p>Integrated security monitoring and access control for all MCP services</p>
+                <div class="security-features" style="display: flex; justify-content: center; gap: 20px; margin-top: 15px; flex-wrap: wrap;">
+                    <span class="badge bg-primary">Authentication</span>
+                    <span class="badge bg-success">Authorization</span>
+                    <span class="badge bg-info">Rate Limiting</span>
+                    <span class="badge bg-warning">Audit Logs</span>
+                </div>
             </div>
         </div>
     </div>
