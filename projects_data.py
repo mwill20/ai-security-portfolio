@@ -176,6 +176,24 @@ projects = {
                     {"label": "View on GitHub", "url": "https://github.com/mwill20/Trust_Bench", "class": "btn-primary"},
                     {"label": "Watch Demo", "url": "https://1drv.ms/v/c/2c8c41c39e8a63cb/EQil7I1iewdEuzPdQGBqVOYBHaRg9tBcyogZvmKUXKFLyw?e=8Dl8P5", "class": "btn-secondary"}
                 ]
+            },
+            {
+                "title": "TypeScript MCP Agent",
+                "description": "Lightweight TypeScript agent with web automation capabilities. Connects to the MCP Core Server to perform tasks and process information.",
+                "tech": ["TypeScript", "Node.js", "MCP Protocol"],
+                "icon": "fab fa-js",
+                "links": [
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/mcp-tiny-agent", "class": "btn-primary"}
+                ]
+            },
+             {
+                "title": "Productivity Agent",
+                "description": "Automates Windows tasks, analyzes system logs using AI, and helps manage your digital workspace efficiently.",
+                "tech": ["Python", "System Automation", "Log Analysis"],
+                "icon": "fas fa-robot",
+                "links": [
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/PersonalProductivityAgent", "class": "btn-primary"}
+                ]
             }
         ]
     },

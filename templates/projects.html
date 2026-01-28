@@ -312,46 +312,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Center Column: Core Server -->
-        <div class="mcp-column center-hub">
-            <div class="mcp-card core-server">
-                <i class="fas fa-server icon" style="font-size: 3rem; margin-bottom: 20px;"></i>
-                <h4 style="font-size: 1.5rem;">MCP Core Server</h4>
-                <p style="font-size: 1rem;">The central nervous system orchestrating all tool executions and
-                    agent communications.</p>
-                <div style="margin-top: 20px;">
-                    <a href="https://github.com/mwill20/mcp-tools" target="_blank" class="btn btn-primary">View
-                        Core on GitHub</a>
-                </div>
-            </div>
-            <div class="arrow-down"
-                style="height: 40px; width: 2px; background: var(--accent-color); margin: 0 auto; opacity: 0.5;">
-            </div>
-            <div class="mcp-card tool" style="width: auto; padding: 15px 30px;">
-                <i class="fas fa-desktop icon"></i>
-                <h4 style="margin: 0;">Unified Demo Interface</h4>
-            </div>
-        </div>
-
-        <!-- Right Column: Agents -->
-        <div class="mcp-column right-agents">
-            <div class="mcp-card agent">
-                <i class="fab fa-js icon"></i>
-                <h4>TypeScript Agent</h4>
-                <p>Lightweight web automation agent</p>
-                <a href="https://github.com/mwill20/mcp-tiny-agent" target="_blank" class="btn-mini">View
-                    Code</a>
-            </div>
-            <div class="mcp-card agent">
-                <i class="fas fa-robot icon"></i>
-                <h4>Productivity Agent</h4>
-                <p>Windows automation & log analysis</p>
-                <a href="https://github.com/mwill20/PersonalProductivityAgent" target="_blank" class="btn-mini">View
-                    Code</a>
-            </div>
-        </div>
-    </div>
     </div>
     </div>
 
@@ -424,7 +384,7 @@
 
                 // Show/Hide Featured Section
                 // If filter is 'all', 'security' (since PurpleLens/DevSecOps are likely security), 
-                // we show featured. But for simplicity, let's show on 'all' and 'security'.
+                // show featured.
                 if (filter === 'all' || filter === 'security') {
                     if (featuredSection) featuredSection.style.display = 'block';
                 } else {
