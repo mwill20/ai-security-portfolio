@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Williams - AI Security Engineer</title>
+    <link rel="stylesheet" href="static/css/style.css?v=2.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">MW</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about/index.html">About</a></li>
+                    <li><a href="projects/index.html">Projects</a></li>
+                    <li><a href="index.html#contact" class="btn btn-small btn-secondary"
+                            style="padding: 0.5rem 1rem; border-color: var(--accent-color); color: var(--accent-color);">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="content">
+        
+
+
+<section class="hero">
+    <div class="container hero-wrapper"
+        style="display: flex; align-items: center; justify-content: space-between; gap: 60px; flex-wrap: wrap-reverse;">
+
+        <!-- Hero Text Column -->
+        <div class="hero-text" style="flex: 1 1 500px;">
+            <h1
+                style="font-size: clamp(50px, 8vw, 90px); margin-bottom: 10px; line-height: 1.1; color: var(--text-primary);">
+                Michael Williams</h1>
+            <h2
+                style="font-size: clamp(25px, 4vw, 45px); margin-bottom: 30px; font-weight: normal; color: var(--text-secondary);">
+                Cybersecurity Analyst II → <br><span style="color: var(--accent-color);">AI Security Engineer</span>
+            </h2>
+
+            <p class="hero-intro"
+                style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8; margin-top: 30px;">
+                I build AI security systems by treating guardrails as first-class engineering
+                problems, not afterthoughts. My work focuses on production LLM pipelines,
+                multi-agent architectures, and guardrail enforcement that prevents unsafe
+                actions in operational environments.
+            </p>
+
+            <p class="hero-highlight"
+                style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8; margin-top: 20px;">
+                Architected <strong style="color: var(--accent-color);">PurpleLens</strong>, a guardrail-first
+                investigation
+                pipeline achieving <span style="color: var(--accent-color); font-weight: bold;">7x</span> investigation
+                time
+                reduction. Public POC demonstrates multi-layer guardrail architecture. Production implementation details
+                remain proprietary for security reasons.
+            </p>
+
+            <div class="cta-buttons">
+                <a href="projects/index.html" class="btn slide-hover">View Public POC</a>
+                <a href="https://github.com/mwill20/purplelens-soc" target="_blank" class="btn btn-secondary"><i
+                        class="fab fa-github"></i> GitHub</a>
+            </div>
+        </div>
+
+        <!-- Hero Image Column -->
+        <div class="hero-image" style="flex: 0 0 350px; position: relative; max-width: 100%;">
+            <div class="image-wrapper"
+                style="position: relative; border-radius: 4px; box-shadow: 20px 20px 0 var(--accent-color);">
+                <img src="static/images/MichaelWilliams-16.jpg" alt="Michael Williams"
+                    style="display: block; width: 100%; height: auto; border-radius: 4px; filter: contrast(1.0); transition: all 0.3s ease;">
+            </div>
+
+            <style>
+                .image-wrapper {
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                }
+
+                .image-wrapper:hover {
+                    transform: translate(-2px, -2px);
+                    box-shadow: 22px 22px 0 var(--accent-color);
+                }
+
+                .image-wrapper:hover img {
+                    filter: contrast(1.1) brightness(1.1);
+                }
+            </style>
+        </div>
+    </div>
+</section>
+
+<section id="contact" style="text-align: center; margin-bottom: 50px;">
+    <div class="container" style="max-width: 600px;">
+
+        <h2 style="font-size: 40px; margin-bottom: 20px;">Get In Touch</h2>
+        <p>
+            I'm currently looking for new opportunities to work on securing the next generation of AI.
+            Whether you have a question or just want to say hi, my inbox is always open!
+        </p>
+        <div style="margin-top: 50px;">
+            <a href="mailto:mwil.ITmission@gmail.com" class="btn">Say Hello</a>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="social-links" style="margin-bottom: 20px;">
+                <a href="https://github.com/mwill20" aria-label="GitHub" target="_blank"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/mwillitmission/" aria-label="LinkedIn" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p>Designed & Built by Michael Williams & Antigravity</p>
+        </div>
+    </footer>
+
+    
+    <script src="static/js/main.js"></script>
+</body>
+
+</html>
