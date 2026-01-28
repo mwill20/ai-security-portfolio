@@ -10,7 +10,6 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon.png') }}">
 </head>
 
 <body>
@@ -22,7 +21,6 @@
                     <li><a href="{{ url_for('home') }}">Home</a></li>
                     <li><a href="{{ url_for('about') }}">About</a></li>
                     <li><a href="{{ url_for('projects') }}">Projects</a></li>
-                    <li><a href="{{ url_for('guestbook') }}">Guestbook</a></li>
                     <li><a href="{{ url_for('home') }}#contact" class="btn btn-small btn-secondary"
                             style="padding: 0.5rem 1rem; border-color: var(--accent-color); color: var(--accent-color);">Contact</a>
                     </li>
