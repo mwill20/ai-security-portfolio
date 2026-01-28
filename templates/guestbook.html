@@ -4,61 +4,64 @@
 
 {% block content %}
 <section class="guestbook-container">
-    <header class="page-header">
-        <h1>Guestbook</h1>
-        <div class="divider"></div>
-        <p class="section-description">Leave a message and see how our AI analyzes the sentiment of your text!</p>
+    <header class="page-header" style="text-align: center; margin-bottom: 50px;">
+        <h1 class="big-heading">Guestbook</h1>
+        <p class="subtitle" style="color: var(--accent-color); font-family: var(--font-mono);">Leave a message & test
+            the sentiment AI</p>
     </header>
-    
-    <div class="guestbook-content">
-        <section class="guestbook-form">
-            <h2>Sign the Guestbook</h2>
-            <form method="POST" action="{{ url_for('guestbook') }}" class="message-form">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required 
-                           placeholder="Enter your name" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" rows="4" required
-                              placeholder="Type your message here..." class="form-control"></textarea>
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Submit Message</button>
-                </div>
-            </form>
+
+    <div class="guestbook-content" style="max-width: 800px; margin: 0 auto;">
+        <section class="guestbook-form" style="margin-bottom: 50px;">
+            <div class="project-card" style="border: 1px solid var(--accent-color);">
+                <h2 style="margin-bottom: 20px;">Sign the Guestbook</h2>
+                <form method="POST" action="{{ url_for('guestbook') }}" class="message-form">
+                    <div class="form-group">
+                        <label for="name" style="display: block; margin-bottom: 8px; color: var(--text-primary);">Your
+                            Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your name"
+                            class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="message"
+                            style="display: block; margin-bottom: 8px; color: var(--text-primary);">Your Message</label>
+                        <textarea id="message" name="message" rows="4" required placeholder="Type your message here..."
+                            class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Message</button>
+                    </div>
+                </form>
+            </div>
         </section>
-        
-        <section class="guestbook-entries">
-            <h2>Messages</h2>
-            {% if entries %}
-                <div class="entries-list">
-                    {% for entry in entries %}
-                    <article class="message-card {{ entry['sentiment'] }}">
-                        <div class="message-header">
-                            <h3>{{ entry['name'] }}</h3>
-                            <span class="sentiment-badge {{ entry['sentiment'] }}">
-                                {{ entry['sentiment'].title() }}
-                            </span>
-                            <span class="timestamp">{{ entry['timestamp'] }}</span>
-                        </div>
-                        <div class="message-body">
-                            {{ entry['message'] }}
-                        </div>
-                    </article>
-                    {% endfor %}
-                </div>
-            {% else %}
-                <p class="no-messages">No messages yet. Be the first to leave a message!</p>
-            {% endif %}
+
+
+        {# Contact Links Section #}
+        <section class="contact-links" style="margin-top: 50px; text-align: center;">
+            <h2 style="margin-bottom: 30px;">Connect With Me</h2>
+            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                <a href="https://www.linkedin.com/in/mwillitmission/" target="_blank" class="contact-card"
+                    style="display: flex; flex-direction: column; items-align: center; padding: 20px; background: var(--bg-secondary); border-radius: 8px; border: 1px solid var(--card-border); min-width: 150px; transition: var(--transition-medium); text-decoration: none;">
+                    <i class="fab fa-linkedin-in" style="font-size: 32px; color: #0077b5; margin-bottom: 10px;"></i>
+                    <span style="color: var(--text-primary); font-family: var(--font-mono);">LinkedIn</span>
+                </a>
+
+                <a href="https://github.com/mwill20" target="_blank" class="contact-card"
+                    style="display: flex; flex-direction: column; items-align: center; padding: 20px; background: var(--bg-secondary); border-radius: 8px; border: 1px solid var(--card-border); min-width: 150px; transition: var(--transition-medium); text-decoration: none;">
+                    <i class="fab fa-github"
+                        style="font-size: 32px; color: var(--text-primary); margin-bottom: 10px;"></i>
+                    <span style="color: var(--text-primary); font-family: var(--font-mono);">GitHub</span>
+                </a>
+
+                <a href="mailto:mwil.ITmission@gmail.com" class="contact-card"
+                    style="display: flex; flex-direction: column; items-align: center; padding: 20px; background: var(--bg-secondary); border-radius: 8px; border: 1px solid var(--card-border); min-width: 150px; transition: var(--transition-medium); text-decoration: none;">
+                    <i class="fas fa-envelope"
+                        style="font-size: 32px; color: var(--accent-color); margin-bottom: 10px;"></i>
+                    <span style="color: var(--text-primary); font-family: var(--font-mono);">Email</span>
+                </a>
+            </div>
         </section>
-    </div>
-    
-    <div class="sentiment-info">
-        <h3>About Sentiment Analysis</h3>
-        <p>This guestbook uses a simple machine learning model to analyze the sentiment of messages. The model classifies messages as <span class="sentiment-label positive">positive</span>, <span class="sentiment-label neutral">neutral</span>, or <span class="sentiment-label negative">negative</span> based on their content.</p>
-        <p><strong>Note:</strong> This is a demonstration of AI capabilities and may not always be accurate. The model is trained on a small dataset for educational purposes.</p>
+
+        {# Hidden entries for strict compliance if needed later, but removed from view per user request #}
     </div>
 </section>
 {% endblock %}

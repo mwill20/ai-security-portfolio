@@ -8,62 +8,47 @@ from flask.cli import with_appcontext
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 
+# Import projects data
+try:
+    from projects_data import projects as projects_list
+except ImportError:
+    projects_list = {}
 
 def train_sentiment_model():
     """Initializes and trains a simple sentiment analysis model."""
-    # Step 1: Define the training data with examples of positive, negative, and neutral text.
-    # This data is used to teach the model how to classify sentiment.
     training_data = [
-        # Positive examples
         ("This is fantastic, thank you!", "positive"),
         ("I'm so happy with this result.", "positive"),
         ("Excellent work, keep it up.", "positive"),
-        
-        # Negative examples
         ("I'm very disappointed with this.", "negative"),
         ("This is not what I wanted at all.", "negative"),
         ("I regret using this service.", "negative"),
-        
-        # Neutral examples
         ("The service is adequate.", "neutral"),
         ("It's an average experience.", "neutral"),
         ("I have no strong feelings either way.", "neutral"),
     ]
-
-    # Step 2: Separate the training data into texts and their corresponding labels.
     texts = [text for text, _ in training_data]
     labels = [label for _, label in training_data]
-
-    # Step 3: Convert the text data into numerical vectors using TF-IDF.
-    # TF-IDF (Term Frequency-Inverse Document Frequency) reflects how important a word is to a document in a collection.
-    # This allows the machine learning model to work with the text data.
     vectorizer = TfidfVectorizer()
     X = vectorizer.fit_transform(texts)
-
-    # Step 4: Train a Logistic Regression model.
-    # This model learns to predict the sentiment (label) based on the vectorized text (X).
     model = LogisticRegression()
     model.fit(X, labels)
-
-    # Step 5: Return the trained vectorizer and model so they can be used for predictions.
     return vectorizer, model
 
-# Initialize the sentiment analysis model and vectorizer globally when the application starts.
-# This ensures the model is trained only once, saving resources on each prediction.
-vectorizer, sentiment_model = train_sentiment_model()
+# Initialize model globally (mock training for demo purposes if sklearn fails in some envs, but here we assume it works)
+try:
+    vectorizer, sentiment_model = train_sentiment_model()
+except Exception as e:
+    print(f"Warning: Sentiment model training failed: {e}")
+    vectorizer, sentiment_model = None, None
 
 def analyze_sentiment(text):
-    """Analyzes the sentiment of a given text using the trained model."""
-    # Step 1: Transform the input text into a numerical vector using the same vectorizer that was trained on.
-    # It's crucial to use the same vectorizer to ensure the input is in the correct format for the model.
+    if not vectorizer or not sentiment_model:
+        return "neutral"
     X = vectorizer.transform([text])
-
-    # Step 2: Use the trained model to predict the sentiment of the transformed text.
-    # The `predict` method returns an array of predictions; we take the first element since we're only analyzing one text.
     return sentiment_model.predict(X)[0]
 
 def create_app(test_config=None):
-    """Create and configure an instance of the Flask application."""
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_mapping(
         SECRET_KEY=os.urandom(24),
@@ -73,14 +58,12 @@ def create_app(test_config=None):
     if test_config is not None:
         app.config.from_mapping(test_config)
     else:
-        # Load the instance config, if it exists, when not testing
         app.config.from_pyfile('config.py', silent=True)
 
-    # Ensure the instance folder exists
     try:
         os.makedirs(app.instance_path, exist_ok=True)
-    except OSError as e:
-        print(f"Error creating instance directory: {e}")
+    except OSError:
+        pass
 
     def get_db_connection():
         conn = sqlite3.connect(app.config['DATABASE'])
@@ -88,38 +71,23 @@ def create_app(test_config=None):
         return conn
 
     def init_db():
-        try:
-            db = get_db_connection()
-            with app.open_resource('schema.sql', mode='r') as f:
-                db.executescript(f.read())
-            db.close()
-            print("Database initialized successfully!")
-        except Exception as e:
-            print(f"Error initializing database: {e}")
-            raise
-
-    def ensure_db_exists():
-        """Ensure database tables exist, create if missing."""
-        try:
-            conn = get_db_connection()
-            # Check if guestbook table exists
-            cursor = conn.execute(
-                "SELECT name FROM sqlite_master WHERE type='table' AND name='guestbook'"
+        db = get_db_connection()
+        # Create table if not exists (schema.sql content typically)
+        db.execute('''
+            CREATE TABLE IF NOT EXISTS guestbook (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                name TEXT NOT NULL,
+                message TEXT NOT NULL,
+                sentiment TEXT,
+                timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
-            if not cursor.fetchone():
-                print("Guestbook table missing, initializing database...")
-                conn.close()
-                init_db()
-            else:
-                conn.close()
-        except Exception as e:
-            print(f"Database check failed, reinitializing: {e}")
-            init_db()
+        ''')
+        db.commit()
+        db.close()
 
     @click.command('init-db')
     @with_appcontext
     def init_db_command():
-        """Clear existing data and create new tables."""
         init_db()
         click.echo('Initialized the database.')
 
@@ -139,7 +107,7 @@ def create_app(test_config=None):
 
     @app.route('/projects')
     def projects():
-        return render_template('projects.html')
+        return render_template('projects.html', projects=projects_list)
         
     @app.route('/sagevault')
     def sagevault():
@@ -147,9 +115,13 @@ def create_app(test_config=None):
 
     @app.route('/guestbook', methods=['GET', 'POST'])
     def guestbook():
-        # Ensure database exists before any operations
-        ensure_db_exists()
-        
+        # Ensure table exists cheaply
+        try:
+             with sqlite3.connect(app.config['DATABASE']) as conn:
+                conn.execute("SELECT 1 FROM guestbook LIMIT 1")
+        except sqlite3.OperationalError:
+            init_db()
+
         conn = get_db_connection()
         if request.method == 'POST':
             name = request.form['name']
@@ -168,64 +140,8 @@ def create_app(test_config=None):
         conn.close()
         return render_template('guestbook.html', entries=entries)
 
-    # SQL Injection Demo Page
-    @app.route('/sqli-demo')
-    def sqli_demo():
-        return render_template('sqli_demo.html')
-    
-    # VULNERABLE endpoint for SQL injection demo
-    @app.route('/search/vulnerable')
-    def vulnerable_search():
-        # Ensure database exists before any operations
-        ensure_db_exists()
-        
-        query = request.args.get('q', '')
-        results = []
-        
-        if query:
-            try:
-                conn = get_db_connection()
-                # WARNING: This is intentionally vulnerable to SQL injection!
-                # DO NOT use this pattern in production code!
-                cursor = conn.execute(f"SELECT * FROM guestbook WHERE message LIKE '%{query}%'")
-                results = cursor.fetchall()
-                conn.close()
-            except Exception as e:
-                results = [f"Error: {str(e)}"]
-        
-        return render_template('search_results.html', 
-                            query=query, 
-                            results=results,
-                            endpoint='vulnerable',
-                            is_vulnerable=True)
-    
-    # SECURE endpoint for SQL injection demo
-    @app.route('/search/secure')
-    def secure_search():
-        # Ensure database exists before any operations
-        ensure_db_exists()
-        
-        query = request.args.get('q', '')
-        results = []
-        
-        if query:
-            try:
-                conn = get_db_connection()
-                # This is the secure way to handle user input in SQL queries
-                cursor = conn.execute(
-                    "SELECT * FROM guestbook WHERE message LIKE ?", 
-                    (f'%{query}%',)
-                )
-                results = cursor.fetchall()
-                conn.close()
-            except Exception as e:
-                results = [f"Error: {str(e)}"]
-        
-        return render_template('search_results.html', 
-                            query=query, 
-                            results=results,
-                            endpoint='secure',
-                            is_vulnerable=False)
-    
     return app
 
+if __name__ == '__main__':
+    app = create_app()
+    app.run(debug=True)

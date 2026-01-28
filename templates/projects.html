@@ -3,896 +3,445 @@
 {% block title %}Projects - Michael Williams | AI Security Engineer{% endblock %}
 
 {% block content %}
+<section class="projects-section" id="projects">
+    <div class="container">
+        <header class="page-header" style="text-align: center; margin-bottom: 50px;">
+            <h1 class="big-heading">My Projects</h1>
+            <div class="divider"></div>
+            <p class="section-description">A selection of my recent work spanning AI security, machine learning, and
+                cybersecurity.</p>
+        </header>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<title>Projects - Michael Williams | AI Security Engineer</title>
-<style>
-    /* Ecosystem feature layout */
-    .ecosystem-feature {
-        display: flex;
-        align-items: flex-start;
-        margin-bottom: 30px;
-    }
-    
-    .ecosystem-feature > div {
-        flex: 1;
-    }
-    
-    /* Toggle icon animation */
-    .mcp-component.active .toggle-icon {
-        transform: rotate(180deg);
-    }
-    
-    .toggle-icon {
-        transition: transform 0.3s ease;
-        color: var(--icon-color);
-    }
-    
-    /* Project group headers */
-    .project-group-header h3 .project-icon {
-        margin-right: 0.75rem;
-    }
-</style>
+        <!-- Project Filters -->
+        <div id="all-projects" class="project-filters" style="text-align: center; margin-bottom: 40px;">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="mcp">MCP Ecosystem</button>
+            <button class="filter-btn" data-filter="security">Security</button>
+            <button class="filter-btn" data-filter="agents">AI Agents</button>
+            <button class="filter-btn" data-filter="ml">ML Engineering</button>
+            <button class="filter-btn" data-filter="cloud">Cloud</button>
+            <button class="filter-btn" data-filter="fun">Just for Fun</button>
+        </div>
 
-<section class="projects-container">
-    <header class="page-header">
-        <h1>My Projects</h1>
-        <div class="divider"></div>
-        <p class="section-description">A selection of my recent work spanning AI security, machine learning, and cybersecurity.</p>
-    </header>
+        <section class="featured-projects" id="featured-projects" style="margin-bottom: 80px;">
+            <h2 style="margin-bottom: 40px; border-bottom: 2px solid var(--accent-color); padding-bottom: 10px;">
+                Featured: Production-Deployed Systems</h2>
 
-            <!-- Project Filters -->
-    <div id="project-filters" class="project-filters">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="mcp">MCP Ecosystem</button>
-        <button class="filter-btn" data-filter="ml">ML Engineering</button>
-        <button class="filter-btn" data-filter="security">Security</button>
-        <button class="filter-btn" data-filter="agents">AI Agents</button>
-        <button class="filter-btn" data-filter="cloud">Cloud</button>
-        <button class="filter-btn" data-filter="fun">Just for Fun</button>
-    </div>
-    
-    <!-- MCP Ecosystem Section -->
-<div class="project-group" data-category="mcp">
-    <div class="project-group-header">
-        <h3><i class="fas fa-cogs project-icon"></i> MCP Ecosystem</h3>
-    </div>
-    <div class="mcp-ecosystem-section" style="max-width: 900px; margin: 20px auto; font-family: 'Segoe UI Mono', Consolas, monospace; color: #e0e6f0; line-height: 1.6;">
-        <p style="text-align: left; font-size: 1.1rem; max-width: 850px; margin-bottom: 36px;">
-            The <strong>Model Context Protocol (MCP)</strong> is a scalable framework designed to enable modular AI Agents and tools to communicate and collaborate seamlessly. By providing a unified protocol and architecture, MCP allows diverse AI components—ranging from individual agents to integrated tools—to interoperate effortlessly, supporting applications from simple demos to enterprise-grade systems.
-        </p>
+            <!-- PROJECT 1: PURPLELENS -->
+            <div class="project-card featured"
+                style="background: var(--bg-secondary); border: 1px solid var(--accent-color); padding: 40px; border-radius: 8px; margin-bottom: 40px; position: relative; overflow: hidden;">
+                <!-- Badge -->
+                <div
+                    style="position: absolute; top: 20px; right: 20px; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 20px; font-family: var(--font-mono); font-size: 12px; border: 1px solid var(--accent-color);">
+                    PUBLIC POC
+                </div>
 
-        <div class="ecosystem-feature">
-            <i class="fas fa-server"></i>
-            <div>
-                <h3 style="font-weight: 700; font-size: 1.5rem; margin-bottom: 6px;">Centralized AI Services</h3>
-                <p style="font-size: 1.05rem; max-width: 850px;">
-                    Host and manage multiple AI models through a single, unified interface.
+                <div class="project-header" style="flex-direction: column; align-items: flex-start;">
+                    <h3 style="font-size: 28px; margin-bottom: 10px;">PurpleLens — Guardrail-First Investigation
+                        Pipeline
+                    </h3>
+                    <p class="project-tagline"
+                        style="font-size: 18px; color: var(--text-secondary); margin-bottom: 25px;">
+                        Open-source POC demonstrating production-grade guardrail architecture</p>
+                </div>
+
+                <div class="project-metric"
+                    style="display: flex; align-items: center; margin-bottom: 30px; background: rgba(10, 25, 47, 0.5); padding: 20px; border-radius: 8px;">
+                    <span class="metric-number"
+                        style="font-size: 48px; font-weight: 700; color: var(--accent-color); margin-right: 20px;">7x</span>
+                    <span class="metric-label" style="font-size: 16px; color: var(--text-primary);">reduction in analyst
+                        investigation time</span>
+                </div>
+
+                <div class="project-details"
+                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 30px;">
+                    <div class="detail-section">
+                        <h4 style="color: var(--accent-color); margin-bottom: 15px;">The Challenge</h4>
+                        <p style="color: var(--text-secondary);">
+                            Security analysts face repetitive manual event correlation across
+                            fragmented telemetry sources, with investigation workflows averaging
+                            30-45 minutes per alert batch. Traditional automation breaks analyst
+                            trust when tools produce unreliable outputs.
+                        </p>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4 style="color: var(--accent-color); margin-bottom: 15px;">The Solution</h4>
+                        <p style="color: var(--text-secondary);">
+                            Multi-source telemetry ingestion with normalization, constrained LLM
+                            analysis protected by deterministic, semantic, and policy-based guardrails,
+                            and full provenance tracking. Each guardrail layer can veto outputs
+                            before they reach analysts.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="detail-section" style="margin-bottom: 30px;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                        <div>
+                            <h4 style="color: var(--accent-color); margin-bottom: 15px;">Architecture Approach</h4>
+                            <p style="color: var(--text-secondary);">
+                                Three-layer guardrail enforcement: (1) deterministic validation for
+                                known patterns, (2) semantic schema enforcement preventing malformed
+                                outputs, (3) policy-based controls enforcing organizational rules.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--accent-color); margin-bottom: 15px;">Demonstrated Impact</h4>
+                            <ul style="color: var(--text-secondary); list-style: none;">
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check"
+                                        style="color: var(--accent-color); margin-right: 10px;"></i> 7x reduction in
+                                    investigation time (30-45 min → ~6 min per batch)</li>
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check"
+                                        style="color: var(--accent-color); margin-right: 10px;"></i> Zero hallucinated
+                                    actions through strict guardrail enforcement</li>
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check"
+                                        style="color: var(--accent-color); margin-right: 10px;"></i> Full auditability
+                                    with
+                                    provenance tracking for compliance</li>
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check"
+                                        style="color: var(--accent-color); margin-right: 10px;"></i> Designed for
+                                    production SOC environments</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="note-box"
+                    style="background: rgba(100, 255, 218, 0.05); padding: 15px; border-left: 3px solid var(--accent-color); border-radius: 4px; margin-bottom: 30px; color: var(--text-secondary);">
+                    <strong style="color: var(--accent-color);">Note:</strong> The GitHub repository contains the
+                    proof-of-concept
+                    demonstrating the guardrail architecture and evaluation methodology.
+                    Operational deployment details remain proprietary.
+                </div>
+
+                <div class="tech-stack" style="margin-bottom: 30px;">
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">Python</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">LLM
+                        Guardrails</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">Multi-Cloud
+                        Telemetry</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">Provenance
+                        Tracking</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/mwill20/purplelens-soc" class="btn btn-primary"
+                        style="margin-right: 15px;"><i class="fab fa-github"></i> View POC on GitHub</a>
+                </div>
+            </div>
+
+            <!-- PROJECT 2: AI DEVSECOPS PLATFORM -->
+            <div class="project-card featured"
+                style="background: var(--bg-secondary); border: 1px solid var(--accent-color); padding: 40px; border-radius: 8px; position: relative; overflow: hidden;">
+                <!-- Badge -->
+                <div
+                    style="position: absolute; top: 20px; right: 20px; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 20px; font-family: var(--font-mono); font-size: 12px; border: 1px solid var(--accent-color);">
+                    PRODUCTION READY
+                </div>
+
+                <div class="project-header" style="flex-direction: column; align-items: flex-start;">
+                    <h3 style="font-size: 28px; margin-bottom: 10px;">AI DevSecOps Platform — 5-Layer Security Mesh</h3>
+                    <p class="project-tagline"
+                        style="font-size: 18px; color: var(--text-secondary); margin-bottom: 25px;">
+                        Hybrid governance platform detecting threats traditional tools miss</p>
+                </div>
+
+                <div class="project-metric"
+                    style="display: flex; align-items: center; margin-bottom: 30px; background: rgba(10, 25, 47, 0.5); padding: 20px; border-radius: 8px;">
+                    <span class="metric-number"
+                        style="font-size: 48px; font-weight: 700; color: var(--accent-color); margin-right: 20px;">57</span>
+                    <span class="metric-label" style="font-size: 16px; color: var(--text-primary);">adversarial test
+                        cases validated</span>
+                </div>
+
+                <div class="project-details"
+                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 30px;">
+                    <div class="detail-section">
+                        <h4 style="color: var(--accent-color); margin-bottom: 15px;">The Problem</h4>
+                        <p style="color: var(--text-secondary);">
+                            Traditional static analysis tools miss AI-specific threats (prompt injection,
+                            model poisoning, shadow code modifications), while pure LLM-based security
+                            tools lack deterministic guarantees and audit trails required for production
+                            CI/CD pipelines.
+                        </p>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4 style="color: var(--accent-color); margin-bottom: 15px;">The Solution</h4>
+                        <p style="color: var(--text-secondary);">
+                            5-layer architecture combining deterministic analysis (AST, compiled regex),
+                            semantic taint tracking, operational guardrails (ShellGuard), AI reasoning
+                            with Pydantic constraints, and SOC Ledger with cryptographic provenance chain.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="detail-section" style="margin-bottom: 30px;">
+                    <h4 style="color: var(--accent-color); margin-bottom: 15px;">Key Innovation: Taint Handshake
+                        Protocol</h4>
+                    <p style="color: var(--text-secondary); margin-bottom: 20px;">
+                        AST provides factual data flows (deterministic), LLM provides semantic
+                        intent analysis (contextual). Shadow Code detection flags unauthorized
+                        AI modifications through provenance verification. Semantic Drift tracking
+                        monitors AI vs. AST disagreements as red-team radar for model blind spots.
+                    </p>
+                    <div style="background: rgba(10, 25, 47, 0.3); padding: 20px; border-radius: 6px;">
+                        <h5 style="color: var(--text-primary); margin-bottom: 10px;">Validation Results:</h5>
+                        <ul
+                            style="color: var(--text-secondary); list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            <li><i class="fas fa-check-circle"
+                                    style="color: var(--accent-color); margin-right: 8px;"></i> Tested across 57
+                                adversarial scenarios</li>
+                            <li><i class="fas fa-check-circle"
+                                    style="color: var(--accent-color); margin-right: 8px;"></i> Zero false negatives on
+                                OWASP LLM Top 10</li>
+                            <li><i class="fas fa-check-circle"
+                                    style="color: var(--accent-color); margin-right: 8px;"></i> Detects washed secrets &
+                                logic bombs</li>
+                            <li><i class="fas fa-check-circle"
+                                    style="color: var(--accent-color); margin-right: 8px;"></i> CI/CD-ready with
+                                sys.exit(1) on CRITICAL</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tech-stack" style="margin-bottom: 30px;">
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">Python
+                        3.12+</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">DeepSeek-R1
+                        (Ollama)</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">SQLite</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">AST</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">Pydantic</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/mwill20/AI-Operation-Center" class="btn btn-primary"
+                        style="margin-right: 15px;"><i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- MCP Ecosystem Section (Hardcoded Viz) -->
+        <div class="project-group" data-category="mcp" id="mcp-ecosystem">
+            <div class="project-group-header">
+                <h3><i class="fas fa-cogs project-icon"></i> MCP Ecosystem</h3>
+            </div>
+
+            <div class="mcp-ecosystem-section"
+                style="max-width: 1200px; margin: 20px auto; color: #e0e6f0; line-height: 1.6; border: none; background: transparent;">
+                <h3 style="text-align: center; margin-bottom: 20px;">The Model Context Protocol (MCP) Ecosystem</h3>
+                <p
+                    style="text-align: center; max-width: 800px; margin: 0 auto 40px auto; color: var(--text-secondary);">
+                    A unified framework connecting specialized AI Agents and Tools through a central Core Server,
+                    enabling
+                    seamless interoperability and secure orchestration.
                 </p>
+
+                <!-- MCP Network Visualization -->
+                <div class="mcp-network-container">
+
+                    <!-- Left Column: Tools -->
+                    <div class="mcp-column left-tools">
+                        <div class="mcp-card tool">
+                            <i class="fas fa-calculator icon"></i>
+                            <h4>Calculator Tool</h4>
+                            <p>Complex math & unit conversions</p>
+                        </div>
+                        <div class="mcp-card tool">
+                            <i class="fas fa-smile icon"></i>
+                            <h4>Sentiment Analysis</h4>
+                            <p>NLP-powered emotion detection</p>
+                        </div>
+                        <div class="mcp-card tool">
+                            <i class="fas fa-cloud-sun icon"></i>
+                            <h4>Weather Tool</h4>
+                            <p>Global forecasts & alerts</p>
+                        </div>
+                    </div>
+
+                    <!-- Center Column: Core Server -->
+                    <div class="mcp-column center-hub">
+                        <div class="mcp-card core-server">
+                            <i class="fas fa-server icon" style="font-size: 3rem; margin-bottom: 20px;"></i>
+                            <h4 style="font-size: 1.5rem;">MCP Core Server</h4>
+                            <p style="font-size: 1rem;">The central nervous system orchestrating all tool executions and
+                                agent communications.</p>
+                            <div style="margin-top: 20px;">
+                                <a href="https://github.com/mwill20/mcp-tools" target="_blank"
+                                    class="btn btn-primary">View
+                                    Core on GitHub</a>
+                            </div>
+                        </div>
+                        <div class="arrow-down"
+                            style="height: 40px; width: 2px; background: var(--accent-color); margin: 0 auto; opacity: 0.5;">
+                        </div>
+                        <div class="mcp-card tool" style="width: auto; padding: 15px 30px;">
+                            <i class="fas fa-desktop icon"></i>
+                            <h4 style="margin: 0;">Unified Demo Interface</h4>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Agents -->
+                    <div class="mcp-column right-agents">
+                        <div class="mcp-card agent">
+                            <i class="fab fa-js icon"></i>
+                            <h4>TypeScript Agent</h4>
+                            <p>Lightweight web automation agent</p>
+                            <a href="https://github.com/mwill20/mcp-tiny-agent" target="_blank" class="btn-mini">View
+                                Code</a>
+                        </div>
+                        <div class="mcp-card agent">
+                            <i class="fas fa-robot icon"></i>
+                            <h4>Productivity Agent</h4>
+                            <p>Windows automation & log analysis</p>
+                            <a href="https://github.com/mwill20/PersonalProductivityAgent" target="_blank"
+                                class="btn-mini">View Code</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="ecosystem-feature">
-            <i class="fas fa-plug"></i>
-            <div>
-                <h3 style="font-weight: 700; font-size: 1.5rem; margin-bottom: 6px;">Seamless Integration</h3>
-                <p style="font-size: 1.05rem; max-width: 850px;">
-                    Facilitates effortless connection and communication between diverse AI tools and services using the MCP protocol.
-                </p>
+        <!-- Center Column: Core Server -->
+        <div class="mcp-column center-hub">
+            <div class="mcp-card core-server">
+                <i class="fas fa-server icon" style="font-size: 3rem; margin-bottom: 20px;"></i>
+                <h4 style="font-size: 1.5rem;">MCP Core Server</h4>
+                <p style="font-size: 1rem;">The central nervous system orchestrating all tool executions and
+                    agent communications.</p>
+                <div style="margin-top: 20px;">
+                    <a href="https://github.com/mwill20/mcp-tools" target="_blank" class="btn btn-primary">View
+                        Core on GitHub</a>
+                </div>
+            </div>
+            <div class="arrow-down"
+                style="height: 40px; width: 2px; background: var(--accent-color); margin: 0 auto; opacity: 0.5;">
+            </div>
+            <div class="mcp-card tool" style="width: auto; padding: 15px 30px;">
+                <i class="fas fa-desktop icon"></i>
+                <h4 style="margin: 0;">Unified Demo Interface</h4>
             </div>
         </div>
 
-        <div class="ecosystem-feature">
-            <i class="fas fa-expand"></i>
-            <div>
-                <h3 style="font-weight: 700; font-size: 1.5rem; margin-bottom: 6px;">Scalable Architecture</h3>
-                <p style="font-size: 1.05rem; max-width: 850px;">
-                    Designed to grow with your needs, from simple demonstrations to complex, enterprise-scale deployments.
-                </p>
+        <!-- Right Column: Agents -->
+        <div class="mcp-column right-agents">
+            <div class="mcp-card agent">
+                <i class="fab fa-js icon"></i>
+                <h4>TypeScript Agent</h4>
+                <p>Lightweight web automation agent</p>
+                <a href="https://github.com/mwill20/mcp-tiny-agent" target="_blank" class="btn-mini">View
+                    Code</a>
             </div>
-        </div>
-
-        <!-- MCP Ecosystem Diagram -->
-        <div class="ecosystem-diagram" style="margin: 40px 0; position: relative;">
-            <div style="text-align: center; margin-bottom: 20px;">
-                <h3>MCP Ecosystem Architecture</h3>
-                <p>How MCP connects and manages various AI tools and services</p>
-            </div>
-            
-            <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
-                <!-- Top Row: Tools -->
-                <div style="display: flex; justify-content: center; gap: 30px; width: 100%;">
-                    <div class="tool-card" style="background: #2c3e50; padding: 15px; border-radius: 8px; width: 200px; text-align: center;">
-                        <i class="fas fa-calculator" style="font-size: 2rem; margin-bottom: 10px; color: #3498db;"></i>
-                        <h4>Calculator</h4>
-                        <p>Mathematical operations</p>
-                    </div>
-                    <div class="tool-card" style="background: #2c3e50; padding: 15px; border-radius: 8px; width: 200px; text-align: center;">
-                        <i class="fas fa-comment-dots" style="font-size: 2rem; margin-bottom: 10px; color: #2ecc71;"></i>
-                        <h4>Sentiment Analysis</h4>
-                        <p>Text analysis</p>
-                    </div>
-                    <div class="tool-card" style="background: #2c3e50; padding: 15px; border-radius: 8px; width: 200px; text-align: center;">
-                        <i class="fas fa-cloud-sun" style="font-size: 2rem; margin-bottom: 10px; color: #f39c12;"></i>
-                        <h4>Weather Tool</h4>
-                        <p>Forecast data</p>
-                    </div>
-                </div>
-                
-                <!-- Middle: Connection Arrows -->
-                <div style="height: 50px; display: flex; justify-content: center; align-items: center; position: relative;">
-                    <i class="fas fa-arrow-down" style="font-size: 2rem; color: #7f8c8d;"></i>
-                </div>
-                
-                <!-- Middle Row: MCP Core with Side Agents -->
-                <div style="display: flex; justify-content: center; align-items: flex-start; gap: 30px; width: 100%;">
-                    <!-- TypeScript MCP Agent -->
-                    <div class="agent-card" style="background: #1e3a5f; padding: 20px; border-radius: 12px; width: 220px; text-align: center; border: 2px solid #3a7bd5;">
-                        <i class="fab fa-js" style="font-size: 2rem; color: #f0db4f; margin-bottom: 10px;"></i>
-                        <h4>TypeScript MCP Agent</h4>
-                        <p style="font-size: 0.9rem; min-height: 40px;">JavaScript/TypeScript integration layer for MCP</p>
-                        <div style="margin-top: 10px;">
-                            <a href="https://github.com/mwill20/mcp-ts-agent" target="_blank" class="btn btn-sm btn-outline-light">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                        </div>
-                        <div class="connection-arrow" style="position: absolute; right: -15px; top: 50%; transform: translateY(-50%);">
-                            <i class="fas fa-arrow-right" style="color: #7f8c8d;"></i>
-                        </div>
-                    </div>
-                    
-                    <!-- MCP Core -->
-                    <div style="display: flex; flex-direction: column; align-items: center; width: 300px;">
-                        <div class="mcp-core" style="background: #1a1a2e; padding: 25px; border-radius: 12px; width: 100%; text-align: center; border: 2px solid #4a4a8a; position: relative;">
-                            <div class="mcp-component-header">
-                                <i class="fas fa-server" style="font-size: 2.5rem; color: #9b59b6; margin-bottom: 15px;"></i>
-                                <h3>MCP Core Server</h3>
-                                <p>Centralized AI model hosting and management</p>
-                            </div>
-                            <div class="connection-arrow" style="position: absolute; left: -15px; top: 50%; transform: translateY(-50%);">
-                                <i class="fas fa-arrow-left" style="color: #7f8c8d;"></i>
-                            </div>
-                            <div class="connection-arrow" style="position: absolute; right: -15px; top: 50%; transform: translateY(-50%);">
-                                <i class="fas fa-arrow-right" style="color: #7f8c8d;"></i>
-                            </div>
-                        </div>
-                        <!-- GitHub Button Below MCP Core -->
-                        <div style="margin-top: 15px; width: 100%; text-align: center;">
-                            <a href="https://github.com/mwill20/mcp-tools" target="_blank" class="btn btn-primary">
-                                <i class="fab fa-github"></i> View on GitHub
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Productivity Agent -->
-                    <div class="agent-card" style="background: #1f4e3d; padding: 20px; border-radius: 12px; width: 220px; text-align: center; border: 2px solid #2ecc71; position: relative;">
-                        <i class="fas fa-robot" style="font-size: 2rem; color: #2ecc71; margin-bottom: 10px;"></i>
-                        <h4>Productivity Agent</h4>
-                        <p style="font-size: 0.9rem; min-height: 40px;">Automates tasks and analyzes system logs</p>
-                        <div style="margin-top: 10px;">
-                            <a href="https://github.com/mwill20/PersonalProductivityAgent" target="_blank" class="btn btn-sm btn-outline-light">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                        </div>
-                        <div class="connection-arrow" style="position: absolute; left: -15px; top: 50%; transform: translateY(-50%);">
-                            <i class="fas fa-arrow-left" style="color: #7f8c8d;"></i>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Bottom: Connection Arrows -->
-                <div style="height: 50px; display: flex; justify-content: center; align-items: center; position: relative;">
-                    <i class="fas fa-arrow-down" style="font-size: 2rem; color: #7f8c8d;"></i>
-                </div>
-                
-                <!-- Bottom Row: Demo Interface -->
-                <div style="background: #2c3e50; padding: 20px; border-radius: 8px; width: 300px; text-align: center; margin-top: 10px;">
-                    <i class="fas fa-laptop-code" style="font-size: 2rem; color: #e74c3c; margin-bottom: 10px;"></i>
-                    <h4>Unified Demo Interface</h4>
-                    <p>Access all tools through a single interface</p>
-                    <a href="https://huggingface.co/spaces/mwill-AImission/mcp-tools-demo" target="_blank" class="btn btn-outline-light" style="margin-top: 10px;">
-                        <i class="fas fa-external-link-alt"></i> Try Live Demo
-                    </a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="ecosystem-layout" style="margin-top: 40px;">
-            <!-- MCP Core Server -->
-            <div class="ecosystem-core">
-                <div class="mcp-component" data-component="mcp-core">
-                    <div class="mcp-component-header">
-                        <i class="fas fa-server"></i>
-                        <h3>MCP Core Server</h3>
-                        <i class="fas fa-chevron-down toggle-icon"></i>
-                    </div>
-                    <div class="mcp-component-content">
-                        <p>Central Python server hosting AI models and exposing them via MCP. Provides a unified interface for AI services and manages communication between different components in the ecosystem.</p>
-                        <div class="component-links">
-                            <a href="https://github.com/mwill20/mcp-tools" target="_blank" class="btn btn-primary">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tools Demo Group -->
-            <div class="ecosystem-tools-group">
-                <div class="tools-group-header">
-                    <h3><i class="fas fa-folder"></i> Tools Demo</h3>
-                </div>
-                <div class="mcp-components-container">
-                    <!-- Calculator Tool -->
-                    <div class="mcp-component" data-component="calculator-tool">
-                        <div class="mcp-component-header">
-                            <i class="fas fa-calculator"></i>
-                            <h3>Calculator</h3>
-                            <i class="fas fa-chevron-down toggle-icon"></i>
-                        </div>
-                        <div class="mcp-component-content">
-                            <p>Advanced calculator tool with support for complex mathematical operations and unit conversions.</p>
-                            <div class="component-links">
-                                <a href="https://huggingface.co/spaces/mwill-AImission/mcp-tools-demo" target="_blank" class="btn btn-primary">Try Demo</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Sentiment Analysis Tool -->
-                    <div class="mcp-component" data-component="sentiment-tool">
-                        <div class="mcp-component-header">
-                            <i class="fas fa-comment-dots"></i>
-                            <h3>Sentiment Analysis</h3>
-                            <i class="fas fa-chevron-down toggle-icon"></i>
-                        </div>
-                        <div class="mcp-component-content">
-                            <p>Analyze the sentiment of text using advanced NLP models. Supports multiple languages and provides confidence scores.</p>
-                            <div class="component-links">
-                                <a href="https://huggingface.co/spaces/mwill-AImission/mcp-tools-demo" target="_blank" class="btn btn-primary">Try Demo</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Weather Tool -->
-                    <div class="mcp-component" data-component="weather-tool">
-                        <div class="mcp-component-header">
-                            <i class="fas fa-cloud-sun"></i>
-                            <h3>Weather Tool</h3>
-                            <i class="fas fa-chevron-down toggle-icon"></i>
-                        </div>
-                        <div class="mcp-component-content">
-                            <p>Get current weather conditions and forecasts for any location worldwide. Includes detailed metrics and weather alerts.</p>
-                            <div class="component-links">
-                                <a href="https://huggingface.co/spaces/mwill-AImission/mcp-tools-demo" target="_blank" class="btn btn-primary">Try Demo</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Agents Row -->
-            <div class="ecosystem-agents">
-                <!-- TypeScript MCP Tiny Agent -->
-                <div class="mcp-component" data-component="mcp-tiny-agent">
-                    <div class="mcp-component-header">
-                        <i class="fas fa-robot"></i>
-                        <h3>TypeScript MCP Agent</h3>
-                        <i class="fas fa-chevron-down toggle-icon"></i>
-                    </div>
-                    <div class="mcp-component-content">
-                        <p>Lightweight TypeScript agent with web automation capabilities. Connects to the MCP Core Server to perform tasks and process information.</p>
-                        <div class="component-links">
-                            <a href="https://github.com/mwill20/mcp-tiny-agent" target="_blank" class="btn btn-primary">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Personal Productivity Agent -->
-                <div class="mcp-component" data-component="productivity-agent">
-                    <div class="mcp-component-header">
-                        <i class="fas fa-robot"></i>
-                        <h3>Productivity Agent</h3>
-                        <i class="fas fa-chevron-down toggle-icon"></i>
-                    </div>
-                    <div class="mcp-component-content">
-                        <p>Automates Windows tasks, analyzes system logs using AI, and helps manage your digital workspace efficiently.</p>
-                        <div class="component-links">
-                            <a href="https://github.com/mwill20/PersonalProductivityAgent" target="_blank" class="btn btn-primary">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Security Layer -->
-            <div class="ecosystem-security" style="text-align: center; margin-top: 40px; padding: 20px; background: rgba(44, 62, 80, 0.1); border-radius: 8px;">
-                <i class="fas fa-shield-alt" style="font-size: 2rem; color: #2ecc71; margin-bottom: 15px;"></i>
-                <h3>Security Layer</h3>
-                <p>Integrated security monitoring and access control for all MCP services</p>
-                <div class="security-features" style="display: flex; justify-content: center; gap: 20px; margin-top: 15px; flex-wrap: wrap;">
-                    <span class="badge bg-primary">Authentication</span>
-                    <span class="badge bg-success">Authorization</span>
-                    <span class="badge bg-info">Rate Limiting</span>
-                    <span class="badge bg-warning">Audit Logs</span>
-                </div>
+            <div class="mcp-card agent">
+                <i class="fas fa-robot icon"></i>
+                <h4>Productivity Agent</h4>
+                <p>Windows automation & log analysis</p>
+                <a href="https://github.com/mwill20/PersonalProductivityAgent" target="_blank" class="btn-mini">View
+                    Code</a>
             </div>
         </div>
     </div>
-</div>
-
-    <!-- ML Engineering Projects Group -->
-    <div class="project-group" data-category="ml">
-        <div class="project-group-header">
-            <h3><i class="fas fa-cogs project-icon"></i> ML Engineering</h3>
-        </div>
-        <div class="project-card-container">
-            <!-- HuggingFace Sentiment Analysis -->
-            <article class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-tools project-icon"></i>
-                        <h2>HuggingFace Sentiment Analysis</h2>
-                    </div>
-                    <div class="project-details">
-                        <p>A Neural Network for emotion detection in text using PyTorch and the HuggingFace Transformers library.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/mwill20/HuggingFace-Sentiment-Analysis" target="_blank" class="btn btn-primary">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- XGBoost Regressor -->
-            <article class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-chart-candlestick project-icon"></i>
-                        <h2>XGBoost Regressor</h2>
-                    </div>
-                    <div class="project-details">
-                        <p>Advanced regression analysis using the XGBoost algorithm, including feature importance and model evaluation.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/mwill20/XGBoost-Regressor" target="_blank" class="btn btn-primary">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Bank Churn Neural Network -->
-            <article class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-network-wired project-icon"></i>
-                        <h2>Bank Churn Neural Network</h2>
-                    </div>
-                    <div class="project-details">
-                        <p>Predicting customer churn using a neural network model built with TensorFlow/Keras, helping banks identify at-risk customers.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/mwill20/Bank_Churn_NN" target="_blank" class="btn btn-primary">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- XGBoost Visa Approval Prediction -->
-            <article class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-passport project-icon"></i>
-                        <h2>Visa Approval Prediction</h2>
-                    </div>
-                    <div class="project-details">
-                        <p>Machine learning model using XGBoost to predict visa approval outcomes based on applicant data and historical patterns.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/mwill20/XGBoost_Visa_Approval_Prediction" target="_blank" class="btn btn-primary">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Decision Tree Loan Acceptance -->
-            <article class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-hand-holding-usd project-icon"></i>
-                        <h2>Loan Acceptance Predictor</h2>
-                    </div>
-                    <div class="project-details">
-                        <p>Decision tree model for predicting loan approval decisions, including feature importance analysis and model interpretation.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/mwill20/Loan_Acceptance_DecisionTree" target="_blank" class="btn btn-primary">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- FoodHub Data Analysis -->
-            <article class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-utensils project-icon"></i>
-                        <h2>FoodHub Data Analysis</h2>
-                    </div>
-                    <div class="project-details">
-                        <p>Comprehensive analysis of FoodHub's food delivery data, including customer behavior, order patterns, and restaurant performance metrics.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/mwill20/FoodHub-Data-Analysis" target="_blank" class="btn btn-primary">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- NLP RAG Medical Assistant -->
-            <article class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-stethoscope project-icon"></i>
-                        <h2>NLP RAG Medical Assistant</h2>
-                    </div>
-                    <div class="project-details">
-                        <p>Retrieval-Augmented Generation (RAG) system for medical information retrieval and question answering using NLP and vector databases. <small class="text-muted">(Documentation in progress)</small></p>
-                        <div class="project-links">
-                            <a href="https://github.com/mwill20/NLP_RAG_Medical_Assistant" target="_blank" class="btn btn-primary">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            
-            <!-- SuperKart Model Deployment -->
-            <article class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-chart-line project-icon"></i>
-                        <h2>SuperKart Sales Forecasting</h2>
-                    </div>
-                    <div class="project-details">
-                        <p>End-to-end machine learning solution for retail sales prediction. Features include data preprocessing, feature engineering, and model deployment with FastAPI. Built with Python, Scikit-learn, and deployed on Hugging Face Spaces.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/mwill20/Model-Deployment/tree/master" target="_blank" class="btn btn-primary">View on GitHub (master)</a>
-                            <a href="https://huggingface.co/spaces/mwill-AImission/superkart-sales-forecast-frontend" target="_blank" class="btn btn-secondary">Live Demo</a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            
-        </div>
+    </div>
     </div>
 
-    <!-- Security Projects Group -->
-    <div class="project-group" data-category="security">
+    {# Other Categories Loop #}
+    {% for key, category in projects.items() %}
+    {# Skip MCP as it is hardcoded above #}
+    {% if key != 'mcp' %}
+    <div class="project-group" data-category="{{ key }}">
         <div class="project-group-header">
-            <h3><i class="fas fa-shield-alt project-icon"></i> Security</h3>
+            <h3><i class="{{ category.icon }} project-icon"></i> {{ category.title }}</h3>
         </div>
-        <div class="project-card-container">
-            <!-- SageVault - Secure RAG -->
-            <article class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-lock project-icon"></i>
-                        <h2>SageVault - Secure RAG</h2>
-                    </div>
-                    <div class="project-details">
-                        <p>Security-focused RAG application with built-in guardrails for safe document and codebase analysis with AI.</p>
-                        <div class="project-links">
-                            <a href="{{ url_for('sagevault') }}" class="btn btn-primary">View Project</a>
-                            <a href="https://github.com/mwill20/SageVault" target="_blank" class="btn btn-primary">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </article>
 
-            <!-- AI-Powered Spam & Phishing Detector -->
-            <article class="project-card">
-                <div class="project-content">
+        <div class="projects-grid">
+            {% for project in category.projects %}
+            <div class="project-card">
+                <header>
                     <div class="project-header">
-                        <i class="fas fa-envelope-open-text project-icon"></i>
-                        <h2>AI-Powered Spam & Phishing Detector</h2>
-                    </div>
-                    <div class="project-details">
-                        <p>A machine learning solution that combines BERT with rule-based detection to identify and block malicious emails.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/mwill20/spam-phishing-detector" target="_blank" class="btn btn-primary">View Code</a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Smart Security Camera -->
-            <article class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-server project-icon"></i>
-                        <h2>Smart Security Camera</h2>
-                    </div>
-                    <div class="project-details">
-                        <p>An intelligent security system with face detection and motion tracking, built with Python and OpenCV.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/mwill20/smart-security-camera" target="_blank" class="btn btn-primary">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- DiD Security Stack -->
-            <article class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-shield-alt project-icon"></i>
-                        <h2>DiD Security Stack</h2>
-                    </div>
-                    <div class="project-details">
-                        <p>A comprehensive Defense-in-Depth security stack implementation with multiple layers of protection.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/mwill20/did-security-stack" target="_blank" class="btn btn-primary">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Malware Analysis LightGBM -->
-            <article class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-bug project-icon"></i>
-                        <h2>Malware Analysis LightGBM</h2>
-                    </div>
-                    <div class="project-details">
-                        <p>AI-powered malware detection using LightGBM and static PE file analysis for enterprise endpoint security. Achieves 98%+ F1-score with millisecond prediction times.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/mwill20/Malware_analysis_LightGBM" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- PE File Metadata Analysis -->
-            <article class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-file-code project-icon"></i>
-                        <h2>PE File Metadata Analysis</h2>
-                    </div>
-                    <div class="project-details">
-                        <p>Comprehensive malware detection using PE file metadata with advanced feature engineering, visualization, and model validation. Multi-method feature selection with PCA, t-SNE, and ensemble methods.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/mwill20/Malware_Detection_using_PE_File_Metadata" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- High-Recall Malware Detector -->
-            <article class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-crosshairs project-icon"></i>
-                        <h2>High-Recall Malware Detector</h2>
-                    </div>
-                    <div class="project-details">
-                        <p><strong>Integration Capstone:</strong> Combines supervised and unsupervised ML approaches with recall-first optimization for SOC environments. Synthesizes insights from LightGBM and PE metadata projects into a unified detection framework achieving 99.95% recall.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/mwill20/High-Recall_Malware_Detector_Supervised_Unsupervised" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View on GitHub</a>
-                            <a href="https://github.com/mwill20/High-Recall_Malware_Detector_Supervised_Unsupervised/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="btn btn-outline-info btn-sm">Technical Overview</a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Unsupervised Anomaly Detection -->
-            <article class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-search project-icon"></i>
-                        <h2>Unsupervised Anomaly Detection</h2>
-                    </div>
-                    <div class="project-details">
-                        <p><strong>Proactive Malware Defense:</strong> Signature-free malware detection using unsupervised learning for Aegis AI Security's Sentinel Endpoint Agent. Achieves 93% AUC with Isolation Forest for real-time pre-execution threat analysis.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/mwill20/Unsupervised_Anomaly_Detection_Proactive_Malware_Defense" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View on GitHub</a>
-                            <a href="https://github.com/mwill20/Unsupervised_Anomaly_Detection_Proactive_Malware_Defense/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="btn btn-outline-info btn-sm">Technical Overview</a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- ML Malware Detection System -->
-            <article class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-shield-virus project-icon"></i>
-                        <h2>ML Malware Detection System</h2>
-                    </div>
-                    <div class="project-details">
-                        <p><strong>Enterprise-Grade Security:</strong> Advanced ensemble ML system with 9 trained models, grey-zone decision gating, and SHAP explainability. Features Streamlit web interface, CLI tools, and production-ready deployment achieving 95%+ recall for SOC environments.</p>
-                        <div class="project-tech-stack">
-                            <span class="badge bg-primary me-1">Ensemble Learning</span>
-                            <span class="badge bg-primary me-1">SHAP</span>
-                            <span class="badge bg-primary me-1">Streamlit</span>
-                            <span class="badge bg-primary">CI/CD</span>
+                        <div class="folder-icon">
+                            <i class="{{ project.icon }}"></i>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/mwill20/ml-malware-detection-system" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View on GitHub</a>
-                            <a href="https://ml-malware-detection-system-jokkbsjues7uiddb7sduh4.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn-success">Live Demo</a>
-                            <a href="https://github.com/mwill20/ml-malware-detection-system/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="btn btn-outline-info btn-sm">Technical Overview</a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Structural Anomaly Detection -->
-            <article class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-microscope project-icon"></i>
-                        <h2>Structural Anomaly Detection</h2>
-                    </div>
-                    <div class="project-details">
-                        <p><strong>Malware Triage:</strong> Advanced ensemble-based PE file analysis combining Isolation Forest, K-Means, and One-Class SVM. Features interpretable anomaly scoring and confidence-based triage for SOC environments with rich visualization suite.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/mwill20/Unsupervised_Structural_Anomaly_Detection_PE_Files_Malware_Triage" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View on GitHub</a>
-                            <a href="https://github.com/mwill20/Unsupervised_Structural_Anomaly_Detection_PE_Files_Malware_Triage/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="btn btn-outline-info btn-sm">Technical Overview</a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- PurpleLens SOC -->
-            <article class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-shield-alt project-icon"></i>
-                        <h2>PurpleLens SOC</h2>
-                    </div>
-                    <div class="project-details">
-                        <p>AI-assisted SOC analysis pipeline that ingests real cloud and endpoint telemetry, normalizes it into structured evidence, and produces deterministic, audit-ready security findings without allowing the model to take autonomous actions or hallucinate outcomes.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/mwill20/purplelens-soc" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- AI Guardrails -->
-            <article class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-shield-virus project-icon"></i>
-                        <h2>AI Guardrails</h2>
-                    </div>
-                    <div class="project-details">
-                        <p>Layered security framework for LLMs and agents that combines deterministic rules, semantic classifiers, and policy enforcement to detect prompt injection, malicious intent, and unsafe reasoning before outputs reach users or systems.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/mwill20/ai-guardrails" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- SecureCLI-Tuner -->
-            <article class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-terminal project-icon"></i>
-                        <h2>SecureCLI-Tuner</h2>
-                    </div>
-                    <div class="project-details">
-                        <p>Security-first LLM fine-tuned for Agentic DevOps that translates natural language into safe, valid Bash commands while achieving a 100% adversarial attack blocking rate. Implements a "Defense in Depth" architecture with sanitized QLoRA fine-tuning and three-layer runtime guardrail system.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/mwill20/SecureCLI-Tuner" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- AI DevSecOps -->
-            <article class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-shield-alt project-icon"></i>
-                        <h2>AI DevSecOps</h2>
-                        <span class="project-badge bg-success">Production</span>
-                    </div>
-                    <div class="project-details">
-                        <p><strong>Hybrid Governance Platform:</strong> Python 3.12+ security engine combining deterministic analysis with AI-powered reasoning, persistence, and observability. Implements 5-layer security mesh protecting against traditional vulnerabilities and AI-specific threats with SOC Ledger and Shadow Code detection.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/mwill20/AI-Operation-Center" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </div>
-
-    <!-- AI Agents Section -->
-    <div class="project-group" data-category="agents">
-        <div class="project-group-header">
-            <h3><i class="fas fa-robot project-icon"></i> AI Agents</h3>
-        </div>
-        <div class="project-card-container">
-            <!-- Trust Bench -->
-            <article class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-shield-alt project-icon"></i>
-                        <h2>Trust Bench</h2>
-                        <span class="project-badge">Demo</span>
-                    </div>
-                    <div class="project-description">
-                        <p>A LangGraph-based multi-agent workflow that inspects software repositories for security leaks, code quality gaps, and documentation health. Features a collaborative system of specialized agents working together to provide comprehensive repository analysis.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">LangGraph</span>
-                            <span class="tech-tag">Multi-Agent Systems</span>
-                            <span class="tech-tag">Security Analysis</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/mwill20/Trust_Bench" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
-                        <a href="https://1drv.ms/v/c/2c8c41c39e8a63cb/EQil7I1iewdEuzPdQGBqVOYBHaRg9tBcyogZvmKUXKFLyw?e=8Dl8P5" target="_blank" class="project-link">
-                            <i class="fas fa-play-circle"></i> Watch Demo
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- TrustBench SecureEval Ops -->
-            <article class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-shield-virus project-icon"></i>
-                        <h2>TrustBench SecureEval Ops v3.0</h2>
-                        <span class="project-badge bg-success">Production</span>
-                    </div>
-                    <div class="project-description">
-                        <p><strong>Production-Grade Multi-Agent Security Evaluation Framework:</strong> Advanced evolution of Trust Bench featuring SecureEval guardrails, intelligent agent routing, consensus building, and operational excellence. Features specialized security, quality, and documentation agents with cross-agent collaboration, weighted scoring, confidence metrics, and comprehensive export capabilities. Includes structured logging, health probes, CI/CD pipeline, and 79% test coverage.</p>
-                        <div class="project-tech-stack">
-                            <span class="badge bg-primary me-1">Python</span>
-                            <span class="badge bg-primary me-1">LangGraph</span>
-                            <span class="badge bg-primary me-1">Multi-Agent Systems</span>
-                            <span class="badge bg-primary me-1">FastAPI</span>
-                            <span class="badge bg-primary me-1">Security Analysis</span>
-                            <span class="badge bg-primary">CI/CD</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/mwill20/Trust-Bench-SecureEval-Ops" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
-                        <a href="https://app.readytensor.ai/publications/trust-bench-secureeval-ops-v30-production-grade-multi-agent-security-evaluation-framework-Gj5sQtaeBnZH" target="_blank" class="project-link">
-                            <i class="fas fa-book"></i> Publication
-                        </a>
-                        <a href="https://1drv.ms/v/c/2c8c41c39e8a63cb/ESYtX-fABvxAiHpMaXF7EpoBE9IqpsSJRF9m9_Sisyapkg?e=u4sjhv" target="_blank" class="project-link">
-                            <i class="fas fa-play-circle"></i> Watch Demo
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Aegis MultiAgent SOC -->
-            <article class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-shield-alt project-icon"></i>
-                        <h2>Aegis MultiAgent SOC</h2>
-                        <span class="project-badge bg-success">Competition Finalist (v1)</span>
-                    </div>
-                    <div class="project-description">
-                        <p>Secure multi-agent SOC triage with A2A guardrails and structured observability, designed as a v1 competition finalist with v2 upgrades planned for expanded SOC automation.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python 3.13</span>
-                            <span class="tech-tag">Google ADK</span>
-                            <span class="tech-tag">a2a-sdk</span>
-                            <span class="tech-tag">Gemini 2.5 Flash-Lite</span>
-                            <span class="tech-tag">Uvicorn</span>
-                            <span class="tech-tag">Pytest</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/mwill20/MultiAgent_SOC" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
-                        <a href="https://kaggle.com/competitions/agents-intensive-capstone-project/writeups/multi-agent-soc-assistant" target="_blank" class="project-link">
-                            <i class="fas fa-book"></i> Kaggle Writeup
-                        </a>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </div>
-
-    <!-- Cloud Projects Section -->
-    <div class="project-group" data-category="cloud">
-        <div class="project-group-header">
-            <h3><i class="fas fa-cloud project-icon"></i> Cloud</h3>
-        </div>
-        <div class="project-card-container">
-            <!-- Azure Resource Optimization Lab -->
-            <article class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-server project-icon"></i>
-                        <h2>Azure Resource Optimization Lab</h2>
-                    </div>
-                    <div class="project-description">
-                        <p>End-to-end Azure fundamentals — ARM-based VM deployment with tagging, governance policies, and Azure Monitor alerts. Demonstrates cloud architecture, cost optimization, and observability with Infrastructure-as-Code (IaC).</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Azure</span>
-                            <span class="tech-tag">ARM Templates</span>
-                            <span class="tech-tag">IaC</span>
-                            <span class="tech-tag">Azure Monitor</span>
-                            <span class="tech-tag">Governance</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/mwill20/Azure-Resource-Optimization-Lab" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </div>
-
-    <!-- Just for Fun Section -->
-    <div class="project-group" data-category="fun">
-        <div class="project-group-header">
-            <h3><i class="fas fa-gamepad project-icon"></i> Just for Fun</h3>
-        </div>
-        <div class="project-card-container">
-            <!-- Python-Dojo - Security Dojo Playground -->
-            <article class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-dumbbell project-icon"></i>
-                        <h2>Python-Dojo – Security Reps Playground</h2>
-                        <span class="project-badge">v1</span>
-                    </div>
-                    <div class="project-details">
-                        <p>A playful security "gym" for AI engineers to build muscle memory around sanitization, API management, and guardrail patterns using a Mastery Loop training engine.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Security</span>
-                            <span class="tech-tag">AI Training</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://python-gym-1074039722538.us-west1.run.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            {% for link in project.links %}
+                            <a href="{{ link.url }}" aria-label="{{ link.label }}" target="_blank">
+                                <i
+                                    class="{% if 'GitHub' in link.label %}fab fa-github{% else %}fas fa-external-link-alt{% endif %}"></i>
                             </a>
-                            <a href="https://github.com/mwill20/Python-Dojo" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                                <i class="fab fa-github"></i> View on GitHub
-                            </a>
+                            {% endfor %}
                         </div>
                     </div>
-                </div>
-            </article>
-
-            <!-- Easy Squeeze / SqueezeRadarAI -->
-            <article class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-chart-line project-icon"></i>
-                        <h2>SqueezeRadarAI 🚀</h2>
-                    </div>
+                    <h3>
+                        <a href="{{ project.links[0].url }}" target="_blank">{{ project.title }}</a>
+                    </h3>
                     <div class="project-description">
-                        <p>A simple yet powerful tool for identifying potential short squeeze opportunities in the stock market. Features single stock analysis with RSI, short interest, and interactive price charts with Bollinger Bands, plus a short squeeze scanner that ranks candidates by "Squeeze Score".</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Gradio</span>
-                            <span class="tech-tag">yfinance</span>
-                            <span class="tech-tag">Stock Analysis</span>
-                        </div>
+                        <p>{{ project.description }}</p>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/mwill20/Easy_Squeeze_AI" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
-                        <a href="https://huggingface.co/spaces/mwill-AImission/squeeze-radar-ai" target="_blank" class="project-link">
-                            <i class="fas fa-rocket"></i> Try Live Demo
-                        </a>
-                    </div>
-                </div>
-            </article>
+                </header>
+                <footer>
+                    {% if project.tech %}
+                    <ul class="project-tech-list">
+                        {% for tech in project.tech %}
+                        <li>{{ tech }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </footer>
+            </div>
+            {% endfor %}
         </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+
     </div>
 </section>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectGroups = document.querySelectorAll('.project-group');
+        const featuredSection = document.getElementById('featured-projects');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+
+                // Show/Hide Featured Section
+                // If filter is 'all', 'security' (since PurpleLens/DevSecOps are likely security), 
+                // we show featured. But for simplicity, let's show on 'all' and 'security'.
+                if (filter === 'all' || filter === 'security') {
+                    if (featuredSection) featuredSection.style.display = 'block';
+                } else {
+                    if (featuredSection) featuredSection.style.display = 'none';
+                }
+
+                // Show/Hide Groups
+                projectGroups.forEach(group => {
+                    const category = group.dataset.category;
+                    if (filter === 'all' || category === filter) {
+                        group.style.display = 'block';
+                    } else {
+                        group.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+</script>
 {% endblock %}

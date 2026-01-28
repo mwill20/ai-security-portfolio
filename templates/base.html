@@ -1,81 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Michael Williams - AI Security Engineer{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css', v='1.3') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Source+Code+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=2.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon.png') }}">
 </head>
+
 <body>
     <header>
         <nav class="navbar">
             <div class="container">
                 <a href="{{ url_for('home') }}" class="logo">MW</a>
                 <ul class="nav-links">
-                    <li><a href="{{ url_for('home') }}" class="{% if request.path == url_for('home') %}active{% endif %}">Home</a></li>
-                    <li><a href="{{ url_for('about') }}" class="{% if request.path == url_for('about') %}active{% endif %}">About</a></li>
-                    <li><a href="{{ url_for('projects') }}" class="{% if request.path == url_for('projects') %}active{% endif %}">Projects</a></li>
-                                        <li><a href="{{ url_for('guestbook') }}" class="{% if request.path == url_for('guestbook') %}active{% endif %}">Guestbook</a></li>
-                    <li>
-                        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-                            <i class="fas fa-moon"></i>
-                            <i class="fas fa-sun"></i>
-                        </button>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('projects') }}">Projects</a></li>
+                    <li><a href="{{ url_for('guestbook') }}">Guestbook</a></li>
+                    <li><a href="{{ url_for('home') }}#contact" class="btn btn-small btn-secondary"
+                            style="padding: 0.5rem 1rem; border-color: var(--accent-color); color: var(--accent-color);">Contact</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <main class="container">
+    <main id="content">
         {% block content %}{% endblock %}
     </main>
 
     <footer class="site-footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <span>MW</span>
-                    <span>Michael Williams</span>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-section">
-                        <h4>Navigation</h4>
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h4>Connect</h4>
-                        <div class="social-links">
-                            <a href="https://github.com/mwill20" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/mwillitmission/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="mailto:mwill.itmission@gmail.com" aria-label="Email">
-                                <i class="fas fa-envelope"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <div class="social-links" style="margin-bottom: 20px;">
+                <a href="https://github.com/mwill20" aria-label="GitHub" target="_blank"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/mwillitmission/" aria-label="LinkedIn" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; <span id="current-year">{{ now.year }}</span> Michael Williams. All rights reserved.</p>
-                <a href="#home" class="back-to-top" aria-label="Back to top">
-                    <i class="fas fa-arrow-up"></i>
-                </a>
-            </div>
+            <p>Designed & Built by Michael Williams & Antigravity</p>
         </div>
     </footer>
 
+    {# Optional: Add main.js here #}
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-    </style>
 </body>
+
 </html>
