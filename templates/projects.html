@@ -27,7 +27,7 @@
             <h2 style="margin-bottom: 40px; border-bottom: 2px solid var(--accent-color); padding-bottom: 10px;">
                 Featured: Production-Deployed Systems</h2>
 
-            <!-- PROJECT 1: PURPLELENS -->
+            <!-- PROJECT 1: THREATPRISM -->
             <div class="project-card featured"
                 style="background: var(--bg-secondary); border: 1px solid var(--accent-color); padding: 40px; border-radius: 8px; margin-bottom: 40px; position: relative; overflow: hidden;">
                 <!-- Badge -->
@@ -37,7 +37,7 @@
                 </div>
 
                 <div class="project-header" style="flex-direction: column; align-items: flex-start;">
-                    <h3 style="font-size: 28px; margin-bottom: 10px;">PurpleLens — Guardrail-First Investigation
+                    <h3 style="font-size: 28px; margin-bottom: 10px;">ThreatPrism — Guardrail-First Investigation
                         Pipeline
                     </h3>
                     <p class="project-tagline"
@@ -49,8 +49,8 @@
                     style="display: flex; align-items: center; margin-bottom: 30px; background: rgba(10, 25, 47, 0.5); padding: 20px; border-radius: 8px;">
                     <span class="metric-number"
                         style="font-size: 48px; font-weight: 700; color: var(--accent-color); margin-right: 20px;">48%</span>
-                    <span class="metric-label" style="font-size: 16px; color: var(--text-primary);">reduction in analyst
-                        investigation time</span>
+                    <span class="metric-label" style="font-size: 16px; color: var(--text-primary);">MTTR reduction in
+                        analyst investigation workflows</span>
                 </div>
 
                 <div class="project-details"
@@ -90,11 +90,11 @@
                             <h4 style="color: var(--accent-color); margin-bottom: 15px;">Demonstrated Impact</h4>
                             <ul style="color: var(--text-secondary); list-style: none;">
                                 <li style="margin-bottom: 10px;"><i class="fas fa-check"
-                                        style="color: var(--accent-color); margin-right: 10px;"></i> 48% reduction in
-                                    investigation time (30-45 min → ~6 min per batch)</li>
+                                        style="color: var(--accent-color); margin-right: 10px;"></i> 48% MTTR reduction
+                                    in analyst investigation workflows</li>
                                 <li style="margin-bottom: 10px;"><i class="fas fa-check"
-                                        style="color: var(--accent-color); margin-right: 10px;"></i> Zero hallucinated
-                                    actions through strict guardrail enforcement</li>
+                                        style="color: var(--accent-color); margin-right: 10px;"></i> Evidence-first
+                                    reporting with no autonomous response actions</li>
                                 <li style="margin-bottom: 10px;"><i class="fas fa-check"
                                         style="color: var(--accent-color); margin-right: 10px;"></i> Full auditability
                                     with
@@ -130,7 +130,7 @@
                 </div>
 
                 <div class="project-links">
-                    <a href="https://github.com/mwill20/purplelens-soc" class="btn btn-primary"
+                    <a href="https://github.com/mwill20/threatprism" class="btn btn-primary"
                         style="margin-right: 15px;"><i class="fab fa-github"></i> View POC on GitHub</a>
                 </div>
             </div>
@@ -383,7 +383,7 @@
                 const filter = btn.dataset.filter;
 
                 // Show/Hide Featured Section
-                // If filter is 'all', 'security' (since PurpleLens/DevSecOps are likely security), 
+                // If filter is 'all', 'security' (since ThreatPrism/DevSecOps are likely security),
                 // show featured.
                 if (filter === 'all' || filter === 'security') {
                     if (featuredSection) featuredSection.style.display = 'block';
