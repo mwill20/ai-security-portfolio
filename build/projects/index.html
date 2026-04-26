@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Michael Williams &mdash; Cybersecurity Analyst, Customer Success Engineering, Threat Hunting, Detection Engineering, and AI Security specialist building guardrail-first architectures for production systems.">
     <title>Projects - Michael Williams | AI Security Engineer</title>
     <link rel="stylesheet" href="../static/css/style.css?v=2.1">
     <link
@@ -36,8 +37,7 @@
         <header class="page-header" style="text-align: center; margin-bottom: 50px;">
             <h1 class="big-heading">My Projects</h1>
             <div class="divider"></div>
-            <p class="section-description">A selection of my recent work spanning AI security, machine learning, and
-                cybersecurity.</p>
+            <p class="section-description">Production systems, AI security research, and SOC tooling &mdash; built under real operational constraints.</p>
         </header>
 
         <!-- Project Filters -->
@@ -46,60 +46,64 @@
             <button class="filter-btn" data-filter="mcp">MCP Ecosystem</button>
             <button class="filter-btn" data-filter="security">Security</button>
             <button class="filter-btn" data-filter="agents">AI Agents</button>
-            <button class="filter-btn" data-filter="ml">ML Engineering</button>
             <button class="filter-btn" data-filter="cloud">Cloud</button>
             <button class="filter-btn" data-filter="fun">Just for Fun</button>
         </div>
 
         <section class="featured-projects" id="featured-projects" style="margin-bottom: 80px;">
             <h2 style="margin-bottom: 40px; border-bottom: 2px solid var(--accent-color); padding-bottom: 10px;">
-                Featured: Production-Deployed Systems</h2>
+                Featured: Production Systems &amp; Security Research</h2>
 
             <!-- PROJECT 1: THREATPRISM -->
             <div class="project-card featured"
                 style="background: var(--bg-secondary); border: 1px solid var(--accent-color); padding: 40px; border-radius: 8px; margin-bottom: 40px; position: relative; overflow: hidden;">
+
                 <!-- Badge -->
                 <div
                     style="position: absolute; top: 20px; right: 20px; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 20px; font-family: var(--font-mono); font-size: 12px; border: 1px solid var(--accent-color);">
-                    PUBLIC POC
+                    PRODUCTION DEPLOYED
+                </div>
+
+                <!-- Hero Image -->
+                <div style="margin-bottom: 30px; border-radius: 6px; overflow: hidden;">
+                    <img src="../static/images/ThreatPrism.png"
+                         alt="ThreatPrism - AI-Assisted SOC Analysis with Deterministic Guardrails"
+                         style="width: 100%; height: auto; display: block; border-radius: 6px;" />
                 </div>
 
                 <div class="project-header" style="flex-direction: column; align-items: flex-start;">
-                    <h3 style="font-size: 28px; margin-bottom: 10px;">ThreatPrism — Guardrail-First Investigation
-                        Pipeline
-                    </h3>
+                    <h3 style="font-size: 28px; margin-bottom: 10px;">ThreatPrism &mdash; Guardrail-First SOC Investigation Pipeline</h3>
                     <p class="project-tagline"
                         style="font-size: 18px; color: var(--text-secondary); margin-bottom: 25px;">
-                        Open-source POC demonstrating production-grade guardrail architecture</p>
+                        AI-Assisted SOC Analysis with Deterministic Guardrails</p>
                 </div>
 
                 <div class="project-metric"
                     style="display: flex; align-items: center; margin-bottom: 30px; background: rgba(10, 25, 47, 0.5); padding: 20px; border-radius: 8px;">
                     <span class="metric-number"
                         style="font-size: 48px; font-weight: 700; color: var(--accent-color); margin-right: 20px;">48%</span>
-                    <span class="metric-label" style="font-size: 16px; color: var(--text-primary);">MTTR reduction in
-                        analyst investigation workflows</span>
+                    <span class="metric-label" style="font-size: 16px; color: var(--text-primary);">reduction in analyst
+                        investigation time across 60+ enterprise clients</span>
                 </div>
 
                 <div class="project-details"
                     style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 30px;">
                     <div class="detail-section">
-                        <h4 style="color: var(--accent-color); margin-bottom: 15px;">The Challenge</h4>
+                        <h4 style="color: var(--accent-color); margin-bottom: 15px;">The Chaos</h4>
                         <p style="color: var(--text-secondary);">
-                            Security analysts face repetitive manual event correlation across
-                            fragmented telemetry sources, with investigation workflows averaging
-                            30-45 minutes per alert batch. Traditional automation breaks analyst
-                            trust when tools produce unreliable outputs.
+                            60+ enterprise clients. 3,000+ endpoints across US, APAC, and EU. Thousands of
+                            events weekly. T2 analysts spending 30&ndash;45 minutes per alert batch on work that
+                            was repetitive, manual, and beneath their skill level. Unsustainable at scale.
                         </p>
                     </div>
 
                     <div class="detail-section">
-                        <h4 style="color: var(--accent-color); margin-bottom: 15px;">The Solution</h4>
+                        <h4 style="color: var(--accent-color); margin-bottom: 15px;">What I Built</h4>
                         <p style="color: var(--text-secondary);">
-                            Multi-source telemetry ingestion with normalization, constrained LLM
-                            analysis protected by deterministic, semantic, and policy-based guardrails,
-                            and full provenance tracking. Each guardrail layer can veto outputs
-                            before they reach analysts.
+                            Engineered and deployed within Swimlane SOAR &mdash; an API-driven investigation pipeline
+                            that automatically extracts IOCs, maps TTPs to MITRE ATT&amp;CK, generates severity and
+                            confidence scores, recommends next steps, and delivers structured analyst context
+                            before a human ever touches the alert.
                         </p>
                     </div>
                 </div>
@@ -112,6 +116,7 @@
                                 Three-layer guardrail enforcement: (1) deterministic validation for
                                 known patterns, (2) semantic schema enforcement preventing malformed
                                 outputs, (3) policy-based controls enforcing organizational rules.
+                                Each layer can independently veto outputs before they reach analysts.
                             </p>
                         </div>
                         <div>
@@ -119,17 +124,16 @@
                             <ul style="color: var(--text-secondary); list-style: none;">
                                 <li style="margin-bottom: 10px;"><i class="fas fa-check"
                                         style="color: var(--accent-color); margin-right: 10px;"></i> 48% MTTR reduction
-                                    in analyst investigation workflows</li>
+                                    (30&ndash;45 min &rarr; ~6 min per batch)</li>
                                 <li style="margin-bottom: 10px;"><i class="fas fa-check"
-                                        style="color: var(--accent-color); margin-right: 10px;"></i> Evidence-first
-                                    reporting with no autonomous response actions</li>
+                                        style="color: var(--accent-color); margin-right: 10px;"></i> Zero hallucinated
+                                    actions through strict guardrail enforcement</li>
                                 <li style="margin-bottom: 10px;"><i class="fas fa-check"
                                         style="color: var(--accent-color); margin-right: 10px;"></i> Full auditability
-                                    with
-                                    provenance tracking for compliance</li>
+                                    with provenance tracking for compliance</li>
                                 <li style="margin-bottom: 10px;"><i class="fas fa-check"
-                                        style="color: var(--accent-color); margin-right: 10px;"></i> Designed for
-                                    production SOC environments</li>
+                                        style="color: var(--accent-color); margin-right: 10px;"></i> Production-deployed
+                                    within Swimlane SOAR across MSSP environment</li>
                             </ul>
                         </div>
                     </div>
@@ -137,29 +141,27 @@
 
                 <div class="note-box"
                     style="background: rgba(100, 255, 218, 0.05); padding: 15px; border-left: 3px solid var(--accent-color); border-radius: 4px; margin-bottom: 30px; color: var(--text-secondary);">
-                    <strong style="color: var(--accent-color);">Note:</strong> The GitHub repository contains the
-                    proof-of-concept
-                    demonstrating the guardrail architecture and evaluation methodology.
-                    Operational deployment details remain proprietary.
+                    <strong style="color: var(--accent-color);">Note:</strong> GitHub contains the public POC demonstrating
+                    the full guardrail architecture and evaluation methodology. Operational deployment details
+                    within 11:11 Systems remain proprietary.
                 </div>
 
                 <div class="tech-stack" style="margin-bottom: 30px;">
                     <span class="tech-tag"
                         style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">Python</span>
                     <span class="tech-tag"
-                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">LLM
-                        Guardrails</span>
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">LLM Guardrails</span>
                     <span class="tech-tag"
-                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">Multi-Cloud
-                        Telemetry</span>
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">Swimlane SOAR</span>
                     <span class="tech-tag"
-                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">Provenance
-                        Tracking</span>
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">MITRE ATT&amp;CK</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">Provenance Tracking</span>
                 </div>
 
                 <div class="project-links">
                     <a href="https://github.com/mwill20/threatprism" class="btn btn-primary"
-                        style="margin-right: 15px;"><i class="fab fa-github"></i> View POC on GitHub</a>
+                        style="margin-right: 15px;" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
                 </div>
             </div>
 
@@ -256,6 +258,95 @@
                 <div class="project-links">
                     <a href="https://github.com/mwill20/AI-Operation-Center" class="btn btn-primary"
                         style="margin-right: 15px;"><i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+            </div>
+
+            <!-- PROJECT 3: SECURECLI-TUNER -->
+            <div class="project-card featured"
+                style="background: var(--bg-secondary); border: 1px solid var(--accent-color); padding: 40px; border-radius: 8px; margin-top: 40px; position: relative; overflow: hidden;">
+
+                <!-- Badge -->
+                <div
+                    style="position: absolute; top: 20px; right: 20px; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 20px; font-family: var(--font-mono); font-size: 12px; border: 1px solid var(--accent-color);">
+                    SECURITY RESEARCH
+                </div>
+
+                <div class="project-header" style="flex-direction: column; align-items: flex-start;">
+                    <h3 style="font-size: 28px; margin-bottom: 10px;">SecureCLI-Tuner &mdash; Security-First LLM for Agentic DevOps</h3>
+                    <p class="project-tagline"
+                        style="font-size: 18px; color: var(--text-secondary); margin-bottom: 25px;">
+                        Translating natural language into safe, auditable Bash commands</p>
+                </div>
+
+                <div class="project-metric"
+                    style="display: flex; align-items: center; margin-bottom: 30px; background: rgba(10, 25, 47, 0.5); padding: 20px; border-radius: 8px;">
+                    <span class="metric-number"
+                        style="font-size: 48px; font-weight: 700; color: var(--accent-color); margin-right: 20px;">100%</span>
+                    <span class="metric-label" style="font-size: 16px; color: var(--text-primary);">adversarial attack
+                        blocking rate</span>
+                </div>
+
+                <div class="project-details"
+                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 30px;">
+                    <div class="detail-section">
+                        <h4 style="color: var(--accent-color); margin-bottom: 15px;">The Problem</h4>
+                        <p style="color: var(--text-secondary);">
+                            AI-generated shell commands create a dangerous attack surface in agentic DevOps
+                            pipelines. Traditional tools cannot distinguish between legitimate automation and
+                            prompt injection attempts. A single malformed command executed in production can
+                            cascade into a full breach.
+                        </p>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4 style="color: var(--accent-color); margin-bottom: 15px;">The Solution</h4>
+                        <p style="color: var(--text-secondary);">
+                            Fine-tuned an LLM using sanitized QLoRA training data, then wrapped it in a
+                            three-layer runtime guardrail: (1) deterministic command validation, (2) semantic
+                            intent analysis, (3) policy enforcement blocking dangerous operations before
+                            execution. The model translates natural language to Bash while the guardrail
+                            stack intercepts any attempt to break out of safe behavior.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="detail-section" style="margin-bottom: 30px;">
+                    <div style="background: rgba(10, 25, 47, 0.3); padding: 20px; border-radius: 6px;">
+                        <h5 style="color: var(--text-primary); margin-bottom: 10px;">Validation Results:</h5>
+                        <ul
+                            style="color: var(--text-secondary); list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            <li><i class="fas fa-check-circle"
+                                    style="color: var(--accent-color); margin-right: 8px;"></i> 100% adversarial attack
+                                blocking rate</li>
+                            <li><i class="fas fa-check-circle"
+                                    style="color: var(--accent-color); margin-right: 8px;"></i> 99.4% format compliance
+                                on valid commands</li>
+                            <li><i class="fas fa-check-circle"
+                                    style="color: var(--accent-color); margin-right: 8px;"></i> Three independent
+                                guardrail layers (Defense-in-Depth)</li>
+                            <li><i class="fas fa-check-circle"
+                                    style="color: var(--accent-color); margin-right: 8px;"></i> Built for production
+                                CI/CD pipeline integration</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tech-stack" style="margin-bottom: 30px;">
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">Python</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">QLoRA Fine-Tuning</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">LLM Guardrails</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">Bash Safety</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">Pydantic</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/mwill20/SecureCLI-Tuner" class="btn btn-primary"
+                        style="margin-right: 15px;" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
                 </div>
             </div>
         </section>
@@ -1280,8 +1371,8 @@
                 const filter = btn.dataset.filter;
 
                 // Show/Hide Featured Section
-                // If filter is 'all', 'security' (since ThreatPrism/DevSecOps are likely security),
-                // show featured.
+                // Featured section contains ThreatPrism, AI DevSecOps, and SecureCLI-Tuner - all security.
+                // Show featured on 'all' or 'security' filter.
                 if (filter === 'all' || filter === 'security') {
                     if (featuredSection) featuredSection.style.display = 'block';
                 } else {
