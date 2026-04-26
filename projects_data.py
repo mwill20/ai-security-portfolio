@@ -14,14 +14,6 @@ projects = {
                 ]
             },
             {
-                "title": "Unified Demo Interface",
-                "description": "Access all tools through a single interface.",
-                "icon": "fas fa-desktop",
-                "links": [
-                    {"label": "Try Live Demo", "url": "#", "class": "btn-primary"}
-                ]
-            },
-            {
                 "title": "Calculator Tool",
                 "description": "Advanced calculator tool with support for complex mathematical operations and unit conversions.",
                 "icon": "fas fa-calculator",
@@ -69,7 +61,7 @@ projects = {
         "projects": [
             {
                 "title": "SecureCLI-Tuner",
-                "description": "Security-first LLM fine-tuned for Agentic DevOps that translates natural language into safe, valid Bash commands while achieving a 100% adversarial attack blocking rate. Implements a \"Defense in Depth\" architecture with sanitized QLoRA fine-tuning and three-layer runtime guardrail system.",
+                "description": "Security-first LLM fine-tuned for Agentic DevOps that translates natural language into safe, valid Bash commands while achieving a 100% adversarial attack blocking rate. Implements a Defense-in-Depth architecture with sanitized QLoRA fine-tuning and three-layer runtime guardrail system.",
                 "icon": "fas fa-terminal",
                 "links": [{"label": "View on GitHub", "url": "https://github.com/mwill20/SecureCLI-Tuner", "class": "btn-primary"}]
             },
@@ -100,18 +92,12 @@ projects = {
                 ]
             },
             {
-                "title": "Smart Security Camera",
-                "description": "An intelligent security system with face detection and motion tracking, built with Python and OpenCV.",
-                "icon": "fas fa-server",
-                "links": [{"label": "View on GitHub", "url": "https://github.com/mwill20/smart-security-camera", "class": "btn-primary"}]
-            },
-            {
                 "title": "Malware Analysis LightGBM",
                 "description": "AI-powered malware detection using LightGBM and static PE file analysis for enterprise endpoint security. Achieves 98%+ F1-score with millisecond prediction times.",
                 "icon": "fas fa-bug",
                 "links": [{"label": "View on GitHub", "url": "https://github.com/mwill20/Malware_analysis_LightGBM", "class": "btn-primary"}]
             },
-             {
+            {
                 "title": "PE File Metadata Analysis",
                 "description": "Comprehensive malware detection using PE file metadata with advanced feature engineering, visualization, and model validation. Multi-method feature selection with PCA, t-SNE, and ensemble methods.",
                 "icon": "fas fa-file-code",
@@ -140,6 +126,12 @@ projects = {
                 "links": [
                     {"label": "View on GitHub", "url": "https://github.com/mwill20/Unsupervised_Structural_Anomaly_Detection_PE_Files_Malware_Triage", "class": "btn-primary"}
                 ]
+            },
+            {
+                "title": "Smart Security Camera",
+                "description": "An intelligent security system with face detection and motion tracking, built with Python and OpenCV.",
+                "icon": "fas fa-video",
+                "links": [{"label": "View on GitHub", "url": "https://github.com/mwill20/smart-security-camera", "class": "btn-primary"}]
             }
         ]
     },
@@ -197,63 +189,6 @@ projects = {
             }
         ]
     },
-    "ml": {
-        "title": "ML Engineering",
-        "icon": "fas fa-cogs",
-        "projects": [
-            {
-                "title": "HuggingFace Sentiment Analysis",
-                "description": "A Neural Network for emotion detection in text using PyTorch and the HuggingFace Transformers library.",
-                "icon": "fas fa-tools",
-                "links": [{"label": "View on GitHub", "url": "https://github.com/mwill20/HuggingFace-Sentiment-Analysis", "class": "btn-primary"}]
-            },
-            {
-                "title": "XGBoost Regressor",
-                "description": "Advanced regression analysis using the XGBoost algorithm, including feature importance and model evaluation.",
-                "icon": "fas fa-chart-candlestick",
-                "links": [{"label": "View on GitHub", "url": "https://github.com/mwill20/XGBoost-Regressor", "class": "btn-primary"}]
-            },
-            {
-                "title": "Bank Churn Neural Network",
-                "description": "Predicting customer churn using a neural network model built with TensorFlow/Keras, helping banks identify at-risk customers.",
-                "icon": "fas fa-network-wired",
-                "links": [{"label": "View on GitHub", "url": "https://github.com/mwill20/Bank_Churn_NN", "class": "btn-primary"}]
-            },
-            {
-                "title": "Visa Approval Prediction",
-                "description": "Machine learning model using XGBoost to predict visa approval outcomes based on applicant data and historical patterns.",
-                "icon": "fas fa-passport",
-                "links": [{"label": "View on GitHub", "url": "https://github.com/mwill20/XGBoost_Visa_Approval_Prediction", "class": "btn-primary"}]
-            },
-            {
-                "title": "Loan Acceptance Predictor",
-                "description": "Decision tree model for predicting loan approval decisions, including feature importance analysis and model interpretation.",
-                "icon": "fas fa-hand-holding-usd",
-                "links": [{"label": "View on GitHub", "url": "https://github.com/mwill20/Loan_Acceptance_DecisionTree", "class": "btn-primary"}]
-            },
-            {
-                "title": "FoodHub Data Analysis",
-                "description": "Comprehensive analysis of FoodHub's food delivery data, including customer behavior, order patterns, and restaurant performance metrics.",
-                "icon": "fas fa-utensils",
-                "links": [{"label": "View on GitHub", "url": "https://github.com/mwill20/FoodHub-Data-Analysis", "class": "btn-primary"}]
-            },
-             {
-                "title": "NLP RAG Medical Assistant",
-                "description": "Retrieval-Augmented Generation (RAG) system for medical information retrieval and question answering using NLP and vector databases.",
-                "icon": "fas fa-user-md",
-                "links": [{"label": "View on GitHub", "url": "https://github.com/mwill20/NLP_RAG_Medical_Assistant", "class": "btn-primary"}]
-            },
-            {
-                "title": "SuperKart Sales Forecasting",
-                "description": "End-to-end machine learning solution for retail sales prediction. Features include data preprocessing, feature engineering, and model deployment with FastAPI.",
-                "icon": "fas fa-chart-line",
-                "links": [
-                    {"label": "View on GitHub", "url": "https://github.com/mwill20/Model-Deployment", "class": "btn-primary"},
-                    {"label": "Live Demo", "url": "https://huggingface.co/spaces/mwill-AImission/superkart-sales-forecast-frontend", "class": "btn-secondary"}
-                ]
-            }
-        ]
-    },
     "cloud": {
         "title": "Cloud",
         "icon": "fas fa-cloud",
@@ -268,31 +203,28 @@ projects = {
                 ]
             }
         ]
-
     },
-    "fun": {
-        "title": "Just for Fun",
-        "icon": "fas fa-gamepad",
+    "tools": {
+        "title": "Tools",
+        "icon": "fas fa-tools",
         "projects": [
             {
-                 "title": "Python-Dojo – Security Reps Playground v1",
-                 "description": "A playful security \"gym\" for AI engineers to build muscle memory around sanitization, API management, and guardrail patterns using a Mastery Loop training engine.",
+                "title": "KQL Sentinel Learning Lab",
+                "description": "Interactive self-paced Microsoft Sentinel and KQL training tool with 11 micro-levels covering real SOC detection scenarios. Built to bridge FortiSIEM/FortiEDR experience to the Microsoft security stack — practical hunt queries, detection logic, and incident investigation exercises.",
+                "tech": ["KQL", "Microsoft Sentinel", "Detection Engineering", "HTML"],
+                "icon": "fas fa-search",
+                "links": [
+                    {"label": "Try Demo", "url": "#", "class": "btn-primary"}
+                ]
+            },
+            {
+                 "title": "Python-Dojo — Security Reps Playground",
+                 "description": "A security gym for AI engineers to build muscle memory around sanitization, API management, and guardrail patterns using a Mastery Loop training engine.",
                  "tech": ["React", "Security", "AI Training"],
                  "icon": "fas fa-dumbbell",
                  "links": [
-                     {"label": "Live Demo", "url": "#", "class": "btn-primary"},
-                     {"label": "View on GitHub", "url": "#", "class": "btn-secondary"}
+                     {"label": "View on GitHub", "url": "#", "class": "btn-primary"}
                  ]
-            },
-            {
-                "title": "SqueezeRadarAI 🚀",
-                "description": "A simple yet powerful tool for identifying potential short squeeze opportunities in the stock market.",
-                "tech": ["Python", "Gradio", "yfinance", "Stock Analysis"],
-                "icon": "fas fa-chart-line",
-                "links": [
-                    {"label": "View on GitHub", "url": "https://github.com/mwill20/Easy_Squeeze_AI", "class": "btn-primary"},
-                    {"label": "Try Live Demo", "url": "https://huggingface.co/spaces/mwill-AImission/squeeze-radar-ai", "class": "btn-secondary"}
-                ]
             }
         ]
     }

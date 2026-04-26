@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Michael Williams - AI Security Engineer{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=2.1">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500;600&display=swap"
-        rel="stylesheet">
+    <title>{% block title %}Michael Williams | AI Security Engineer{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}Michael Williams — AI Security Engineer and SOC Practitioner building guardrail-first architectures for production AI systems.{% endblock %}">
+    <meta property="og:title" content="{% block og_title %}Michael Williams | AI Security Engineer{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Building guardrail-first architectures for production AI systems. 60+ enterprise clients, 48% MTTR reduction.{% endblock %}">
+    <meta property="og:url" content="{% block og_url %}https://mwill20.github.io/ai-security-portfolio/{% endblock %}">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=2.2">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -21,9 +24,8 @@
                     <li><a href="{{ url_for('home') }}">Home</a></li>
                     <li><a href="{{ url_for('about') }}">About</a></li>
                     <li><a href="{{ url_for('projects') }}">Projects</a></li>
-                    <li><a href="{{ url_for('home') }}#contact" class="btn btn-small btn-secondary"
-                            style="padding: 0.5rem 1rem; border-color: var(--accent-color); color: var(--accent-color);">Contact</a>
-                    </li>
+                    <li><a href="{{ url_for('static', filename='resume/M_Will_Resume.pdf') }}" target="_blank" class="btn btn-small btn-secondary" style="padding: 0.5rem 1rem; border-color: var(--accent-color); color: var(--accent-color);">Resume</a></li>
+                    <li><a href="{{ url_for('home') }}#contact" class="btn btn-small btn-secondary" style="padding: 0.5rem 1rem; border-color: var(--accent-color); color: var(--accent-color);">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -36,16 +38,13 @@
     <footer class="site-footer">
         <div class="container">
             <div class="social-links" style="margin-bottom: 20px;">
-                <a href="https://github.com/mwill20" aria-label="GitHub" target="_blank"><i
-                        class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/mwillitmission/" aria-label="LinkedIn" target="_blank"><i
-                        class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/mwill20" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/mwillitmission/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
             </div>
-            <p>Designed & Built by Michael Williams & Antigravity</p>
+            <p>Designed &amp; Built by Michael Williams</p>
         </div>
     </footer>
 
-    {# Optional: Add main.js here #}
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 

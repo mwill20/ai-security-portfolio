@@ -1,178 +1,195 @@
 {% extends 'base.html' %}
 
 {% block title %}About - Michael Williams | AI Security Engineer{% endblock %}
+{% block og_title %}About — Michael Williams | AI Security Engineer{% endblock %}
+{% block og_description %}Builder who walks into ambiguity and ships production-grade security tools. 4+ years defending enterprise environments. Open to new opportunities.{% endblock %}
 
 {% block content %}
+<style>
+    .timeline { position: relative; padding-left: 30px; }
+    .timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--card-border); }
+    .timeline-item { position: relative; margin-bottom: 50px; }
+    .timeline-dot { position: absolute; left: -38px; top: 4px; width: 16px; height: 16px; background: var(--accent-color); border-radius: 50%; border: 2px solid var(--bg-primary); }
+    .timeline-chaos { font-family: var(--font-mono); font-size: 12px; color: var(--accent-color); margin-bottom: 6px; letter-spacing: 0.05em; }
+    .timeline-role { font-size: 20px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
+    .timeline-meta { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
+    .timeline-content p { color: var(--text-secondary); font-size: 16px; line-height: 1.8; margin-bottom: 12px; }
+    .tech-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; }
+    .tech-tag { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 4px; padding: 8px 12px; font-size: 13px; font-family: var(--font-mono); color: var(--text-secondary); text-align: center; }
+    .edu-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 6px; padding: 20px; }
+    .edu-card-title { font-size: 16px; font-weight: 600; color: var(--text-primary); }
+    .edu-card-meta { color: var(--accent-color); font-family: var(--font-mono); font-size: 13px; margin-top: 4px; }
+</style>
+
 <section id="about" class="about-section">
     <div class="container">
-        <header class="page-header" style="text-align: center; margin-bottom: 50px;">
+        <header class="page-header" style="text-align: center; margin-bottom: 60px;">
             <h1 class="big-heading">About Me</h1>
-            <h2 style="font-size: 24px; color: var(--text-primary); margin-top: 10px;">Cybersecurity Analyst II | AI
-                Security Engineer</h2>
-            <p class="subtitle" style="color: var(--accent-color); font-family: var(--font-mono); margin-top: 10px;">
-                Building guardrail-first architectures for production AI systems</p>
+            <h2 style="font-size: 22px; color: var(--text-primary); margin-top: 10px;">AI Security Engineer&nbsp;&middot;&nbsp;SOC Practitioner&nbsp;&middot;&nbsp;Builder</h2>
+            <p class="subtitle" style="color: var(--accent-color); font-family: var(--font-mono); margin-top: 10px;">Open to new opportunities</p>
         </header>
 
         <div class="about-grid" style="display: grid; grid-template-columns: 2fr 1fr; gap: 50px;">
             <div class="about-content">
 
-                <!-- About Intro -->
-                <section class="about-intro"
-                    style="font-size: 18px; color: var(--text-secondary); margin-bottom: 40px;">
+                <section class="about-intro" style="font-size: 18px; color: var(--text-secondary); margin-bottom: 50px;">
                     <p style="margin-bottom: 20px;">
-                        I'm a Cybersecurity Analyst II at 11:11 Systems, where I handle security
-                        operations for 50+ enterprise clients while engineering AI security solutions
-                        that improve how our team investigates threats.
+                        <strong style="color: var(--accent-color);">I don't just study AI security — I build systems that run in production.</strong>
+                        My approach is shaped by hands-on SOC operations: I've seen what breaks, what analysts trust, and what actually works under operational constraints. That operator's perspective informs every guardrail architecture I design.
                     </p>
-
-                    <p>
-                        <strong style="color: var(--accent-color);">I don't just study AI security—I build systems that
-                            run in production.</strong> My
-                        approach is shaped by hands-on SOC operations: I've seen what breaks, what
-                        analysts trust, and what actually works under operational constraints. This
-                        operator's perspective informs every guardrail architecture I design.
-                    </p>
+                    <p>In every role I've taken, I walked into ambiguity and built something. The pandemic didn't come with a playbook. A nonprofit SOC doesn't come with a budget. A 60-client MSSP doesn't fix its own triage problem on its own. These are the conditions where I do my best work — and where the things I build outlast the chaos that made them necessary.</p>
                 </section>
 
-                <!-- My Approach -->
-                <section class="my-approach" style="margin-bottom: 40px;">
-                    <h3 style="color: var(--accent-color); margin-bottom: 20px;">My Approach</h3>
-
-                    <p style="font-size: 18px; color: var(--text-secondary); margin-bottom: 20px;">
-                        AI security isn't just about preventing hallucinations—it's about Defense-in-Depth,
-                        treating AI as untrusted, and preventing unsafe behaviors. I build multi-layer
-                        guardrail systems that combine deterministic validation, semantic analysis, and
-                        policy enforcement to ensure AI-augmented tools and agentic systems fail safely
-                        in production environments.
-                    </p>
-
-                    <h4
-                        style="color: var(--accent-color); font-family: var(--font-mono); font-size: 16px; margin-bottom: 15px;">
-                        Key Principles:</h4>
-                    <ul style="list-style: none; padding-left: 0;">
-                        <li
-                            style="margin-bottom: 10px; position: relative; padding-left: 20px; color: var(--text-secondary);">
-                            <span style="position: absolute; left: 0; color: var(--accent-color);">▹</span> Guardrails
-                            must be composable and layered
-                        </li>
-                        <li
-                            style="margin-bottom: 10px; position: relative; padding-left: 20px; color: var(--text-secondary);">
-                            <span style="position: absolute; left: 0; color: var(--accent-color);">▹</span> Auditability
-                            matters more than raw accuracy for security tools
-                        </li>
-                        <li
-                            style="margin-bottom: 10px; position: relative; padding-left: 20px; color: var(--text-secondary);">
-                            <span style="position: absolute; left: 0; color: var(--accent-color);">▹</span> Production
-                            systems need deterministic safety controls
-                        </li>
-                        <li
-                            style="margin-bottom: 10px; position: relative; padding-left: 20px; color: var(--text-secondary);">
-                            <span style="position: absolute; left: 0; color: var(--accent-color);">▹</span> Analyst
-                            trust determines adoption
-                        </li>
-                    </ul>
-                </section>
-
-                <!-- My Journey -->
-                <section class="my-journey" style="margin-bottom: 40px;">
-                    <h3 style="color: var(--accent-color); margin-bottom: 20px;">My Journey</h3>
-
+                <section style="margin-bottom: 60px;">
+                    <h3 style="color: var(--accent-color); margin-bottom: 30px; font-size: 22px;">Experience</h3>
                     <div class="timeline">
-                        <div class="timeline-item dialog-style" style="margin-bottom: 20px;">
-                            <p style="font-size: 16px; color: var(--text-secondary); margin-bottom: 15px;">
-                                I started in SOC operations at 11:11 Systems, conducting incident response,
-                                detection engineering, and threat hunting across multi-cloud environments.
-                                I automated repetitive analyst tasks using deterministic controls—these were
-                                consistent and predictable. But the introduction of non-deterministic systems
-                                like AI introduced new vulnerabilities, broke trust, and teams wouldn't use
-                                tools that made mistakes.
-                            </p>
 
-                            <p style="font-size: 16px; color: var(--text-secondary); margin-bottom: 15px;">
-                                That's when I shifted focus to AI security: building systems that augment
-                                human analysts while maintaining the trust and auditability security
-                                operations require. My work now spans the full AI security lifecycle—
-                                architecting guardrail systems, conducting adversarial testing against
-                                OWASP LLM Top 10, and designing evaluation frameworks with safety controls.
-                            </p>
-
-                            <p style="font-size: 16px; color: var(--text-secondary);">
-                                Before 11:11, I built CDIC's first production SOC from scratch, leading
-                                30+ analysts and learning what security looks like when resources are
-                                constrained but threats are real.
-                            </p>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-chaos">THE CHAOS: T2 analysts buried in T1 triage across 60+ enterprise clients</div>
+                            <div class="timeline-role">Cybersecurity Analyst II</div>
+                            <div class="timeline-meta">11:11 Systems&nbsp;&middot;&nbsp;Feb 2024 – Apr 2026</div>
+                            <div class="timeline-content">
+                                <p>60+ enterprise clients. 3,000+ endpoints across US, APAC, and EU. Thousands of events weekly. T2 analysts spending 30–45 minutes per alert batch on work that was repetitive, manual, and beneath their skill level. Unsustainable at scale.</p>
+                                <p>Engineered and deployed <strong style="color: var(--accent-color);">ThreatPrism</strong> within Swimlane SOAR — an API-driven investigation pipeline that automatically extracts IOCs, maps TTPs to MITRE ATT&amp;CK, generates severity and confidence scores, recommends next steps, and delivers structured analyst context before a human ever touches the alert. Result: 48% reduction in MTTR across the client base.</p>
+                                <p>Day-to-day scope included Tier 2/3 triage, event investigation, incident response, proactive threat hunting, customer success engineering, and email security operations across a large multi-tenant MSSP environment.</p>
+                            </div>
                         </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-chaos">THE CHAOS: Build a production SOC with no enterprise budget and no existing infrastructure</div>
+                            <div class="timeline-role">Director of Cybersecurity</div>
+                            <div class="timeline-meta">Cyber Defense &amp; Intelligence Center (CDIC)&nbsp;&middot;&nbsp;Aug 2023 – Sep 2024</div>
+                            <div class="timeline-content">
+                                <p>A mandate to build a production SOC from scratch — open-source and nonprofit licensing or nothing. The constraint wasn't an obstacle; it became the design requirement.</p>
+                                <p>Architected and deployed a full production SOC integrating BitDefender EDR, Wazuh for EDR/SIEM, Splunk SIEM, TheHive SOAR, Action1 RMM, and a Software Defined Perimeter. Led the organization's migration from Google Workspace to Microsoft 365. Developed threat hunting playbooks, detection runbooks, IR procedures, and security policy from scratch.</p>
+                                <p>Led a 30+ person team spanning SOC analysts, detection engineers, insider threat operations, incident response, GRC, and project management — working cross-functionally with other divisions to align security operations with organizational goals.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-chaos">THE CHAOS: A pandemic. No playbook, no time, distributed teams handling HIPAA/PII from home</div>
+                            <div class="timeline-role">First Responder — Technology Operations | Co-Lead</div>
+                            <div class="timeline-meta">COVID-19 Response Pilot Program&nbsp;&middot;&nbsp;Feb 2020 – Feb 2021</div>
+                            <div class="timeline-content">
+                                <p>Stood up the foundational IT infrastructure for a pandemic response pilot program from scratch — authentication controls, account provisioning and management, AIM systems, phishing investigation and mitigation workflows, security training, and IT documentation that became the operational standard others followed. Built under emergency conditions, with the expectation that it would hold.</p>
+                            </div>
+                        </div>
+
                     </div>
                 </section>
 
-                <!-- My Mission -->
-                <div class="highlight-box"
-                    style="background: var(--bg-secondary); padding: 25px; border-radius: 6px; border-left: 3px solid var(--accent-color); margin: 30px 0;">
+                <section class="my-approach" style="margin-bottom: 50px;">
+                    <h3 style="color: var(--accent-color); margin-bottom: 20px;">My Approach</h3>
+                    <p style="font-size: 18px; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.8;">
+                        AI security isn't just about preventing hallucinations — it's about Defense-in-Depth, treating AI as untrusted, and preventing unsafe behaviors. I build multi-layer guardrail systems that combine deterministic validation, semantic analysis, and policy enforcement to ensure AI-augmented tools and agentic systems fail safely in production environments.
+                    </p>
+                    <h4 style="color: var(--accent-color); font-family: var(--font-mono); font-size: 16px; margin-bottom: 15px;">Key Principles:</h4>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="margin-bottom: 10px; position: relative; padding-left: 20px; color: var(--text-secondary);"><span style="position: absolute; left: 0; color: var(--accent-color);">&#9657;</span> Guardrails must be composable and layered</li>
+                        <li style="margin-bottom: 10px; position: relative; padding-left: 20px; color: var(--text-secondary);"><span style="position: absolute; left: 0; color: var(--accent-color);">&#9657;</span> Auditability matters more than raw accuracy for security tools</li>
+                        <li style="margin-bottom: 10px; position: relative; padding-left: 20px; color: var(--text-secondary);"><span style="position: absolute; left: 0; color: var(--accent-color);">&#9657;</span> Production systems need deterministic safety controls</li>
+                        <li style="margin-bottom: 10px; position: relative; padding-left: 20px; color: var(--text-secondary);"><span style="position: absolute; left: 0; color: var(--accent-color);">&#9657;</span> Analyst trust determines adoption</li>
+                    </ul>
+                </section>
+
+                <div class="highlight-box" style="background: var(--bg-secondary); padding: 25px; border-radius: 6px; border-left: 3px solid var(--accent-color); margin: 30px 0 50px;">
                     <div style="display: flex; gap: 15px; align-items: flex-start;">
-                        <i class="fas fa-bullseye"
-                            style="color: var(--accent-color); font-size: 24px; margin-top: 5px;"></i>
+                        <i class="fas fa-bullseye" style="color: var(--accent-color); font-size: 24px; margin-top: 5px;"></i>
                         <div>
                             <h3 style="margin-bottom: 10px; color: var(--text-primary);">My Mission</h3>
-                            <p style="margin-bottom: 0px; color: var(--text-secondary);">
-                                Build AI security systems that enable innovation without compromising safety.
-                                Security shouldn't block progress—it should make the safe path the easy path.
-                                I architect guardrail systems that let teams deploy AI confidently, knowing
-                                their systems will fail safely when the unexpected happens.
-                            </p>
+                            <p style="margin-bottom: 0; color: var(--text-secondary);">Build AI security systems that enable innovation without compromising safety. Security shouldn't block progress — it should make the safe path the easy path. I architect guardrail systems that let teams deploy AI confidently, knowing their systems will fail safely when the unexpected happens.</p>
                         </div>
                     </div>
                 </div>
 
+                <section style="margin-bottom: 50px;">
+                    <h3 style="color: var(--accent-color); margin-bottom: 25px; font-size: 22px;">Education</h3>
+                    <div style="display: flex; flex-direction: column; gap: 14px;">
+                        <div class="edu-card"><div class="edu-card-title">Postgraduate &mdash; AI &amp; ML Engineering</div><div class="edu-card-meta">University of Texas at Austin (McCombs)&nbsp;&middot;&nbsp;2025</div></div>
+                        <div class="edu-card"><div class="edu-card-title">Applied Cybersecurity</div><div class="edu-card-meta">SANS Technology Institute&nbsp;&middot;&nbsp;2024</div></div>
+                        <div class="edu-card"><div class="edu-card-title">B.S. &mdash; Cybersecurity &amp; Information Assurance</div><div class="edu-card-meta">Western Governors University&nbsp;&middot;&nbsp;2023</div></div>
+                    </div>
+                </section>
+
+                <section style="margin-bottom: 50px;">
+                    <h3 style="color: var(--accent-color); margin-bottom: 25px; font-size: 22px;">Tech Stack</h3>
+                    <div style="margin-bottom: 20px;">
+                        <h4 style="font-size: 13px; color: var(--text-primary); margin-bottom: 12px; font-family: var(--font-mono);">SIEM / EDR / SOAR</h4>
+                        <div class="tech-grid">
+                            <div class="tech-tag">Sentinel</div><div class="tech-tag">Defender XDR</div><div class="tech-tag">FortiEDR</div><div class="tech-tag">FortiSIEM</div><div class="tech-tag">Wazuh</div><div class="tech-tag">Splunk</div><div class="tech-tag">Swimlane</div><div class="tech-tag">TheHive</div>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <h4 style="font-size: 13px; color: var(--text-primary); margin-bottom: 12px; font-family: var(--font-mono);">LANGUAGES / TOOLS</h4>
+                        <div class="tech-grid">
+                            <div class="tech-tag">Python</div><div class="tech-tag">KQL</div><div class="tech-tag">REST APIs</div><div class="tech-tag">Postman</div><div class="tech-tag">Docker</div><div class="tech-tag">Git</div><div class="tech-tag">LangGraph</div><div class="tech-tag">FastAPI</div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 13px; color: var(--text-primary); margin-bottom: 12px; font-family: var(--font-mono);">CLOUD / AI / ML</h4>
+                        <div class="tech-grid">
+                            <div class="tech-tag">AWS</div><div class="tech-tag">Azure</div><div class="tech-tag">GCP</div><div class="tech-tag">Hugging Face</div><div class="tech-tag">PyTorch</div><div class="tech-tag">scikit-learn</div><div class="tech-tag">Pydantic</div><div class="tech-tag">SQLite</div>
+                        </div>
+                    </div>
+                </section>
+
             </div>
 
-            <!-- Skills Column (Kept from previous version, as it complements the new copy) -->
             <div class="skills-column">
-                <div class="skills-card"
-                    style="background: var(--card-bg); padding: 30px; border-radius: 6px; border: 1px solid var(--card-border);">
-                    <h3 style="margin-bottom: 25px;"><i class="fas fa-shield-alt"
-                            style="margin-right: 10px; color: var(--accent-color);"></i> Core Expertise</h3>
+                <div class="skills-card" style="background: var(--card-bg); padding: 30px; border-radius: 6px; border: 1px solid var(--card-border); position: sticky; top: 100px;">
+                    <h3 style="margin-bottom: 25px;"><i class="fas fa-shield-alt" style="margin-right: 10px; color: var(--accent-color);"></i> Core Expertise</h3>
 
                     <div class="skill-category" style="margin-bottom: 25px;">
                         <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--text-primary);">AI Security</h4>
-                        <ul class="skill-tags" style="list-style: none; padding: 0;">
-                            <li style="color: var(--text-secondary); font-size: 14px; margin-bottom: 5px;">▹ Adversarial
-                                ML</li>
-                            <li style="color: var(--text-secondary); font-size: 14px; margin-bottom: 5px;">▹ Model
-                                Security & Hardening</li>
-                            <li style="color: var(--text-secondary); font-size: 14px; margin-bottom: 5px;">▹ Threat
-                                Modeling & AI Red Teaming</li>
-                            <li style="color: var(--text-secondary); font-size: 14px; margin-bottom: 5px;">▹ AI Agents &
-                                MCP Orchestration</li>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="color: var(--text-secondary); font-size: 14px; margin-bottom: 5px;">&#9657; LLM Guardrail Architecture</li>
+                            <li style="color: var(--text-secondary); font-size: 14px; margin-bottom: 5px;">&#9657; Adversarial ML &amp; Red Teaming</li>
+                            <li style="color: var(--text-secondary); font-size: 14px; margin-bottom: 5px;">&#9657; OWASP LLM Top 10</li>
+                            <li style="color: var(--text-secondary); font-size: 14px; margin-bottom: 5px;">&#9657; AI Agent &amp; MCP Security</li>
+                            <li style="color: var(--text-secondary); font-size: 14px; margin-bottom: 5px;">&#9657; Model Security &amp; Hardening</li>
                         </ul>
                     </div>
 
                     <div class="skill-category" style="margin-bottom: 25px;">
-                        <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--text-primary);">Cybersecurity</h4>
-                        <ul class="skill-tags" style="list-style: none; padding: 0;">
-                            <li style="color: var(--text-secondary); font-size: 14px; margin-bottom: 5px;">▹ SIEM, SOAR,
-                                EDR, XDR, CRS</li>
-                            <li style="color: var(--text-secondary); font-size: 14px; margin-bottom: 5px;">▹ Incident
-                                Response</li>
-                            <li style="color: var(--text-secondary); font-size: 14px; margin-bottom: 5px;">▹ Threat
-                                Intelligence</li>
-                            <li style="color: var(--text-secondary); font-size: 14px; margin-bottom: 5px;">▹ Cloud &
-                                Endpoint Security</li>
+                        <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--text-primary);">Security Operations</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="color: var(--text-secondary); font-size: 14px; margin-bottom: 5px;">&#9657; Detection Engineering</li>
+                            <li style="color: var(--text-secondary); font-size: 14px; margin-bottom: 5px;">&#9657; Threat Hunting</li>
+                            <li style="color: var(--text-secondary); font-size: 14px; margin-bottom: 5px;">&#9657; Incident Response</li>
+                            <li style="color: var(--text-secondary); font-size: 14px; margin-bottom: 5px;">&#9657; SIEM / SOAR / EDR / XDR</li>
+                            <li style="color: var(--text-secondary); font-size: 14px; margin-bottom: 5px;">&#9657; MITRE ATT&amp;CK</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category" style="margin-bottom: 25px;">
+                        <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--text-primary);">Builder</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="color: var(--text-secondary); font-size: 14px; margin-bottom: 5px;">&#9657; Python / REST APIs</li>
+                            <li style="color: var(--text-secondary); font-size: 14px; margin-bottom: 5px;">&#9657; LLM Integration</li>
+                            <li style="color: var(--text-secondary); font-size: 14px; margin-bottom: 5px;">&#9657; SOC Automation</li>
+                            <li style="color: var(--text-secondary); font-size: 14px; margin-bottom: 5px;">&#9657; Docker / Git / CI-CD</li>
                         </ul>
                     </div>
 
                     <div class="certifications">
-                        <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--text-primary);"><i
-                                class="fas fa-certificate" style="margin-right: 5px; color: var(--accent-color);"></i>
-                            Certifications</h4>
-                        <p style="font-size: 14px; margin-bottom: 10px; color: var(--text-secondary);">17+
-                            certifications including:</p>
-                        <ul class="cert-list" style="list-style: none; padding: 0;">
-                            <li style="color: var(--text-secondary); font-size: 14px; margin-bottom: 5px;">▹ GIAC:
-                                GFACT, GSEC, GCIH, GCIA</li>
-                            <li style="color: var(--text-secondary); font-size: 14px; margin-bottom: 5px;">▹ CompTIA:
-                                Security+, CASP+, Pentest+</li>
-                            <li style="color: var(--text-secondary); font-size: 14px; margin-bottom: 5px;">▹ CCNA, SSCP,
-                                ITIL</li>
+                        <h4 style="font-size: 16px; margin-bottom: 12px; color: var(--text-primary);"><i class="fas fa-certificate" style="margin-right: 5px; color: var(--accent-color);"></i> Certifications</h4>
+                        <p style="font-size: 12px; margin-bottom: 8px; color: var(--accent-color); font-family: var(--font-mono);">CYBERSECURITY</p>
+                        <ul style="list-style: none; padding: 0; margin-bottom: 16px;">
+                            <li style="color: var(--text-secondary); font-size: 13px; margin-bottom: 4px;">&#9657; GSEC &middot; GCIH &middot; GCIA</li>
+                            <li style="color: var(--text-secondary); font-size: 13px; margin-bottom: 4px;">&#9657; SecurityX &middot; CySA+ &middot; PenTest+</li>
+                            <li style="color: var(--text-secondary); font-size: 13px; margin-bottom: 4px;">&#9657; Security+ &middot; SSCP &middot; CCNA &middot; ITIL</li>
+                            <li style="color: var(--text-secondary); font-size: 13px; margin-bottom: 4px;">&#9657; SC-200 &amp; SC-300 (In Progress)</li>
+                        </ul>
+                        <p style="font-size: 12px; margin-bottom: 8px; color: var(--accent-color); font-family: var(--font-mono);">AI / ML ENGINEERING</p>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="color: var(--text-secondary); font-size: 13px; margin-bottom: 4px;">&#9657; CAISS</li>
+                            <li style="color: var(--text-secondary); font-size: 13px; margin-bottom: 4px;">&#9657; Ready Tensor: Agentic AI &amp; LLM</li>
+                            <li style="color: var(--text-secondary); font-size: 13px; margin-bottom: 4px;">&#9657; ProtectAI: MLSecOps</li>
+                            <li style="color: var(--text-secondary); font-size: 13px; margin-bottom: 4px;">&#9657; Hugging Face: Agents, MCP</li>
+                            <li style="color: var(--text-secondary); font-size: 13px; margin-bottom: 4px;">&#9657; CAIS &middot; CAISP (In Progress)</li>
                         </ul>
                     </div>
                 </div>
