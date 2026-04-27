@@ -8,51 +8,50 @@
 <style>
     .timeline { position: relative; padding-left: 30px; }
     .timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--card-border); }
-    .timeline-item { position: relative; margin-bottom: 50px; }
+    .timeline-item { position: relative; margin-bottom: 34px; }
     .timeline-dot { position: absolute; left: -38px; top: 4px; width: 16px; height: 16px; background: var(--accent-color); border-radius: 50%; border: 2px solid var(--bg-primary); }
     .timeline-chaos { font-family: var(--font-mono); font-size: 12px; color: var(--accent-color); margin-bottom: 6px; letter-spacing: 0.05em; }
     .timeline-role { font-size: 20px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
     .timeline-meta { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
-    .timeline-content p { color: var(--text-secondary); font-size: 16px; line-height: 1.8; margin-bottom: 12px; }
+    .timeline-content p { color: var(--text-secondary); font-size: 15px; line-height: 1.68; margin-bottom: 10px; }
     .tech-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; }
     .tech-tag { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 4px; padding: 8px 12px; font-size: 13px; font-family: var(--font-mono); color: var(--text-secondary); text-align: center; }
-    .edu-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 6px; padding: 20px; }
+    .edu-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 6px; padding: 16px; }
     .edu-card-title { font-size: 16px; font-weight: 600; color: var(--text-primary); }
     .edu-card-meta { color: var(--accent-color); font-family: var(--font-mono); font-size: 13px; margin-top: 4px; }
 </style>
 
 <section id="about" class="about-section">
     <div class="container">
-        <header class="page-header" style="text-align: center; margin-bottom: 60px;">
+        <header class="page-header" style="text-align: center; margin-bottom: 40px;">
             <h1 class="big-heading">About Me</h1>
-            <h2 style="font-size: 22px; color: var(--text-primary); margin-top: 10px;">AI Security Engineer&nbsp;&middot;&nbsp;SOC Practitioner&nbsp;&middot;&nbsp;Builder</h2>
+            <h2 style="font-size: 22px; color: var(--text-primary); margin-top: 10px;">Security operations specialist and builder</h2>
             <p class="subtitle" style="color: var(--accent-color); font-family: var(--font-mono); margin-top: 10px;">Open to new opportunities</p>
         </header>
 
         <div class="about-grid" style="display: grid; grid-template-columns: 2fr 1fr; gap: 50px;">
             <div class="about-content">
 
-                <section class="about-intro" style="font-size: 18px; color: var(--text-secondary); margin-bottom: 50px;">
+                <section class="about-intro" style="font-size: 17px; color: var(--text-secondary); margin-bottom: 34px;">
                     <p style="margin-bottom: 20px;">
-                        <strong style="color: var(--accent-color);">I don't just study AI security — I build systems that run in production.</strong>
-                        My approach is shaped by hands-on SOC operations: I've seen what breaks, what analysts trust, and what actually works under operational constraints. That operator's perspective informs every guardrail architecture I design.
+                        I am a security operations specialist and builder with experience across SOC operations, incident response, threat hunting, detection engineering, and customer-facing security partnerships. My work centers on turning messy telemetry, ambiguous investigations, and operational pain points into clear detections, repeatable processes, and safer systems.
                     </p>
-                    <p>In every role I've taken, I walked into ambiguity and built something. The pandemic didn't come with a playbook. A nonprofit SOC doesn't come with a budget. A 60-client MSSP doesn't fix its own triage problem on its own. These are the conditions where I do my best work — and where the things I build outlast the chaos that made them necessary.</p>
+                    <p>My approach is shaped by hands-on SOC operations: I have seen what breaks, what analysts, customers, and engineering teams trust, and what actually works under operational constraints. That operator's perspective informs every guardrail architecture I design.</p>
                 </section>
 
-                <section style="margin-bottom: 60px;">
-                    <h3 style="color: var(--accent-color); margin-bottom: 30px; font-size: 22px;">Experience</h3>
+                <section style="margin-bottom: 42px;">
+                    <h3 style="color: var(--accent-color); margin-bottom: 18px; font-size: 22px;">Experience</h3>
+                    <p style="font-size: 16px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 28px;">The throughline in my career is simple: I walk into ambiguity, find the operational pain point, and build something that makes the environment more secure, repeatable, or easier to run. A pandemic response program needed secure technology operations from zero. A nonprofit cyber program needed a production SOC without enterprise licensing. A 60-client MSSP needed faster triage without sacrificing evidence or trust.</p>
                     <div class="timeline">
 
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
-                            <div class="timeline-chaos">THE CHAOS: T2 analysts buried in T1 triage across 60+ enterprise clients</div>
+                            <div class="timeline-chaos">THE CHAOS: T2 analysts buried in high-volume triage across 60+ enterprise clients</div>
                             <div class="timeline-role">Cybersecurity Analyst II</div>
                             <div class="timeline-meta">11:11 Systems&nbsp;&middot;&nbsp;Feb 2024 – Apr 2026</div>
                             <div class="timeline-content">
-                                <p>60+ enterprise clients. 3,000+ endpoints across US, APAC, and EU. Thousands of events weekly. T2 analysts spending 30–45 minutes per alert batch on work that was repetitive, manual, and beneath their skill level. Unsustainable at scale.</p>
-                                <p>Engineered and deployed <strong style="color: var(--accent-color);">ThreatPrism</strong> within Swimlane SOAR — an API-driven investigation pipeline that automatically extracts IOCs, maps TTPs to MITRE ATT&amp;CK, generates severity and confidence scores, recommends next steps, and delivers structured analyst context before a human ever touches the alert. Result: 48% reduction in MTTR across the client base.</p>
-                                <p>Day-to-day scope included Tier 2/3 triage, event investigation, incident response, proactive threat hunting, customer success engineering, and email security operations across a large multi-tenant MSSP environment.</p>
+                                <p>Supported security operations across 60+ enterprise MSSP clients and 3,000+ endpoints spanning US, APAC, and EU environments. Work included Tier 2/3 triage, incident response, threat hunting, email security, detection tuning, and customer-facing remediation support.</p>
+                                <p>The pain point was scale: repetitive T1 investigation work consumed time that should have gone toward deeper analysis, customer guidance, and response quality. I engineered and operationalized <strong style="color: var(--accent-color);">ThreatPrism</strong> within Swimlane SOAR to automate IOC extraction, MITRE ATT&amp;CK mapping, severity and confidence scoring, next-step generation, and structured analyst context. ThreatPrism contributed to a 48% MTTR reduction while keeping production details proprietary.</p>
                             </div>
                         </div>
 
@@ -62,28 +61,28 @@
                             <div class="timeline-role">Director of Cybersecurity</div>
                             <div class="timeline-meta">Cyber Defense &amp; Intelligence Center (CDIC)&nbsp;&middot;&nbsp;Aug 2023 – Sep 2024</div>
                             <div class="timeline-content">
-                                <p>A mandate to build a production SOC from scratch — open-source and nonprofit licensing or nothing. The constraint wasn't an obstacle; it became the design requirement.</p>
-                                <p>Architected and deployed a full production SOC integrating BitDefender EDR, Wazuh for EDR/SIEM, Splunk SIEM, TheHive SOAR, Action1 RMM, and a Software Defined Perimeter. Led the organization's migration from Google Workspace to Microsoft 365. Developed threat hunting playbooks, detection runbooks, IR procedures, and security policy from scratch.</p>
-                                <p>Led a 30+ person team spanning SOC analysts, detection engineers, insider threat operations, incident response, GRC, and project management — working cross-functionally with other divisions to align security operations with organizational goals.</p>
+                                <p>Built a production SOC from the ground up under nonprofit constraints where open-source and nonprofit licensing were the design requirements. Integrated BitDefender EDR, Wazuh EDR/SIEM, Splunk SIEM, TheHive SOAR, Action1 RMM, and a Software Defined Perimeter to support detection, monitoring, response, and operational repeatability.</p>
+                                <p>Led a 30+ member team spanning SOC operations, detection engineering, incident response, insider threat, GRC, and project management. Developed threat hunting playbooks, detection runbooks, IR procedures, and security policy to make operations repeatable across a growing team. Worked cross-functionally with other divisions to align security capabilities with organizational goals.</p>
                             </div>
                         </div>
 
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
-                            <div class="timeline-chaos">THE CHAOS: A pandemic. No playbook, no time, distributed teams handling HIPAA/PII from home</div>
+                            <div class="timeline-chaos">THE CHAOS: A pandemic response environment with no playbook, no baseline, and distributed teams handling HIPAA/PII data</div>
                             <div class="timeline-role">First Responder — Technology Operations | Co-Lead</div>
-                            <div class="timeline-meta">COVID-19 Response Pilot Program&nbsp;&middot;&nbsp;Feb 2020 – Feb 2021</div>
+                            <div class="timeline-meta">Co-Lead PDA&nbsp;&middot;&nbsp;Feb 2020 – Feb 2021</div>
                             <div class="timeline-content">
-                                <p>Stood up the foundational IT infrastructure for a pandemic response pilot program from scratch — authentication controls, account provisioning and management, AIM systems, phishing investigation and mitigation workflows, security training, and IT documentation that became the operational standard others followed. Built under emergency conditions, with the expectation that it would hold.</p>
+                                <p>Helped stand up secure technology operations for a COVID-19 rapid-response environment where distributed teams needed reliable systems, secure access, and clear procedures immediately. Supported endpoint provisioning, authentication controls, account management, collaboration tooling, and secure connectivity for teams handling sensitive HIPAA/PII data.</p>
+                                <p>Built foundational operating processes for technology use, data handling, security practices, and staff support. Implemented baseline cybersecurity controls such as endpoint protection, patching, secure configuration, and monitoring. Supported phishing investigation and mitigation, escalated suspicious activity, and coordinated with leadership and external partners to align technical capabilities with operational needs.</p>
                             </div>
                         </div>
 
                     </div>
                 </section>
 
-                <section class="my-approach" style="margin-bottom: 50px;">
+                <section class="my-approach" style="margin-bottom: 38px;">
                     <h3 style="color: var(--accent-color); margin-bottom: 20px;">My Approach</h3>
-                    <p style="font-size: 18px; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.8;">
+                    <p style="font-size: 17px; color: var(--text-secondary); margin-bottom: 18px; line-height: 1.7;">
                         AI security isn't just about preventing hallucinations — it's about Defense-in-Depth, treating AI as untrusted, and preventing unsafe behaviors. I build multi-layer guardrail systems that combine deterministic validation, semantic analysis, and policy enforcement to ensure AI-augmented tools and agentic systems fail safely in production environments.
                     </p>
                     <h4 style="color: var(--accent-color); font-family: var(--font-mono); font-size: 16px; margin-bottom: 15px;">Key Principles:</h4>
@@ -91,22 +90,22 @@
                         <li style="margin-bottom: 10px; position: relative; padding-left: 20px; color: var(--text-secondary);"><span style="position: absolute; left: 0; color: var(--accent-color);">&#9657;</span> Guardrails must be composable and layered</li>
                         <li style="margin-bottom: 10px; position: relative; padding-left: 20px; color: var(--text-secondary);"><span style="position: absolute; left: 0; color: var(--accent-color);">&#9657;</span> Auditability matters more than raw accuracy for security tools</li>
                         <li style="margin-bottom: 10px; position: relative; padding-left: 20px; color: var(--text-secondary);"><span style="position: absolute; left: 0; color: var(--accent-color);">&#9657;</span> Production systems need deterministic safety controls</li>
-                        <li style="margin-bottom: 10px; position: relative; padding-left: 20px; color: var(--text-secondary);"><span style="position: absolute; left: 0; color: var(--accent-color);">&#9657;</span> Analyst trust determines adoption</li>
+                        <li style="margin-bottom: 10px; position: relative; padding-left: 20px; color: var(--text-secondary);"><span style="position: absolute; left: 0; color: var(--accent-color);">&#9657;</span> Operational trust determines adoption — analysts, customers, and engineering teams need systems that are explainable, auditable, and safe under pressure</li>
                     </ul>
                 </section>
 
-                <div class="highlight-box" style="background: var(--bg-secondary); padding: 25px; border-radius: 6px; border-left: 3px solid var(--accent-color); margin: 30px 0 50px;">
+                <div class="highlight-box" style="background: var(--bg-secondary); padding: 22px; border-radius: 6px; border-left: 3px solid var(--accent-color); margin: 24px 0 38px;">
                     <div style="display: flex; gap: 15px; align-items: flex-start;">
                         <i class="fas fa-bullseye" style="color: var(--accent-color); font-size: 24px; margin-top: 5px;"></i>
                         <div>
                             <h3 style="margin-bottom: 10px; color: var(--text-primary);">My Mission</h3>
-                            <p style="margin-bottom: 0; color: var(--text-secondary);">Build AI security systems that enable innovation without compromising safety. Security shouldn't block progress — it should make the safe path the easy path. I architect guardrail systems that let teams deploy AI confidently, knowing their systems will fail safely when the unexpected happens.</p>
+                            <p style="margin-bottom: 0; color: var(--text-secondary);">Build AI security systems that enable innovation without compromising safety. Security should not block progress; it should reinforce systems so they can stay in production. I architect guardrail systems that help teams deploy AI confidently, knowing their systems are designed to fail safely when the unexpected happens.</p>
                         </div>
                     </div>
                 </div>
 
-                <section style="margin-bottom: 50px;">
-                    <h3 style="color: var(--accent-color); margin-bottom: 25px; font-size: 22px;">Education</h3>
+                <section style="margin-bottom: 38px;">
+                    <h3 style="color: var(--accent-color); margin-bottom: 18px; font-size: 22px;">Education</h3>
                     <div style="display: flex; flex-direction: column; gap: 14px;">
                         <div class="edu-card"><div class="edu-card-title">Postgraduate &mdash; AI &amp; ML Engineering</div><div class="edu-card-meta">University of Texas at Austin (McCombs)&nbsp;&middot;&nbsp;2025</div></div>
                         <div class="edu-card"><div class="edu-card-title">Applied Cybersecurity</div><div class="edu-card-meta">SANS Technology Institute&nbsp;&middot;&nbsp;2024</div></div>
@@ -114,8 +113,8 @@
                     </div>
                 </section>
 
-                <section style="margin-bottom: 50px;">
-                    <h3 style="color: var(--accent-color); margin-bottom: 25px; font-size: 22px;">Tech Stack</h3>
+                <section style="margin-bottom: 38px;">
+                    <h3 style="color: var(--accent-color); margin-bottom: 18px; font-size: 22px;">Tech Stack</h3>
                     <div style="margin-bottom: 20px;">
                         <h4 style="font-size: 13px; color: var(--text-primary); margin-bottom: 12px; font-family: var(--font-mono);">SIEM / EDR / SOAR</h4>
                         <div class="tech-grid">

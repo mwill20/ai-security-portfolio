@@ -204,19 +204,10 @@ projects = {
             }
         ]
     },
-    "tools": {
-        "title": "Tools",
-        "icon": "fas fa-tools",
+    "fun": {
+        "title": "Just for Fun",
+        "icon": "fas fa-gamepad",
         "projects": [
-            {
-                "title": "KQL Sentinel Learning Lab",
-                "description": "Interactive self-paced Microsoft Sentinel and KQL training tool with 11 micro-levels covering real SOC detection scenarios. Built to bridge FortiSIEM/FortiEDR experience to the Microsoft security stack — practical hunt queries, detection logic, and incident investigation exercises.",
-                "tech": ["KQL", "Microsoft Sentinel", "Detection Engineering", "HTML"],
-                "icon": "fas fa-search",
-                "links": [
-                    {"label": "Try Demo", "url": "#", "class": "btn-primary"}
-                ]
-            },
             {
                  "title": "Python-Dojo — Security Reps Playground",
                  "description": "A security gym for AI engineers to build muscle memory around sanitization, API management, and guardrail patterns using a Mastery Loop training engine.",
