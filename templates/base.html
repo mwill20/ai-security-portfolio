@@ -24,7 +24,7 @@
                     <li><a href="{{ url_for('home') }}">Home</a></li>
                     <li><a href="{{ url_for('about') }}">About</a></li>
                     <li><a href="{{ url_for('projects') }}">Projects</a></li>
-                    <li><a href="mailto:mwil.ITmission@gmail.com?subject=Resume%20Request" class="btn btn-small btn-secondary" style="padding: 0.5rem 1rem; border-color: var(--accent-color); color: var(--accent-color);">Resume</a></li>
+                    <li><a href="{{ url_for('static', filename='resume/M_Will_Resume.docx') }}" target="_blank" class="btn btn-small btn-secondary" style="padding: 0.5rem 1rem; border-color: var(--accent-color); color: var(--accent-color);">Resume</a></li>
                     <li><a href="{{ url_for('home') }}#contact" class="btn btn-small btn-secondary" style="padding: 0.5rem 1rem; border-color: var(--accent-color); color: var(--accent-color);">Contact</a></li>
                 </ul>
             </div>
