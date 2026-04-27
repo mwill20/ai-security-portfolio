@@ -64,11 +64,11 @@ h6 {
 }
 
 h1 {
-    font-size: clamp(40px, 8vw, 80px);
+    font-size: clamp(36px, 6.8vw, 66px);
 }
 
 h2 {
-    font-size: clamp(26px, 5vw, 32px);
+    font-size: clamp(24px, 4.2vw, 30px);
 }
 
 h3 {
@@ -100,7 +100,7 @@ a:hover {
 }
 
 section {
-    padding: 100px 0;
+    padding: 76px 0;
 }
 
 /* Navigation - Floating Glass Navbar */
@@ -112,7 +112,7 @@ section {
     background: rgba(10, 25, 47, 0.85);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--card-border);
-    padding: 1rem 0;
+    padding: 0.75rem 0;
     transition: var(--transition-medium);
 }
 
@@ -162,10 +162,10 @@ section {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    min-height: 92vh;
     display: flex;
     align-items: center;
-    padding-top: 120px;
+    padding-top: 100px;
 }
 
 .hero-subtitle {
@@ -182,7 +182,7 @@ section {
 
 .hero h2 {
     color: var(--text-secondary);
-    margin-bottom: 30px;
+    margin-bottom: 24px;
 }
 
 .hero p {
@@ -200,7 +200,7 @@ section {
 .btn {
     display: inline-flex;
     align-items: center;
-    padding: 1.25rem 1.75rem;
+    padding: 1rem 1.45rem;
     border-radius: 4px;
     font-family: var(--font-mono);
     font-size: 14px;
@@ -265,11 +265,11 @@ section {
 
 /* Project Group Headers */
 .project-group {
-    margin-bottom: 60px;
+    margin-bottom: 44px;
 }
 
 .project-group-header {
-    margin-bottom: 30px;
+    margin-bottom: 22px;
     border-bottom: 1px solid #233554;
     padding-bottom: 10px;
 }
@@ -291,14 +291,14 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 25px;
-    margin-top: 50px;
+    margin-top: 34px;
 }
 
 .project-card {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
     border-radius: 6px;
-    padding: 2rem 1.75rem;
+    padding: 1.55rem 1.4rem;
     transition: var(--transition-medium);
     height: 100%;
     display: flex;
@@ -372,8 +372,8 @@ section {
 .mcp-ecosystem-section {
     background: #112240;
     border-radius: 10px;
-    padding: 40px;
-    margin-bottom: 60px;
+    padding: 30px;
+    margin-bottom: 44px;
     border: 1px solid var(--accent-color);
     position: relative;
     overflow: hidden;
@@ -393,12 +393,12 @@ section {
 .ecosystem-diagram-container {
     display: flex;
     justify-content: center;
-    padding: 40px 0;
+    padding: 30px 0;
 }
 
 /* Footer */
 footer {
-    padding: 20px 0;
+    padding: 16px 0;
     text-align: center;
     font-family: var(--font-mono);
     font-size: 12px;
@@ -538,7 +538,7 @@ footer {
     gap: 30px;
     align-items: center;
     justify-content: center;
-    margin: 60px 0;
+    margin: 42px 0;
     position: relative;
     max-width: 1100px;
     margin-left: auto;
@@ -584,7 +584,7 @@ footer {
 .mcp-card {
     background: rgba(17, 34, 64, 0.9);
     border: 1px solid var(--accent-color);
-    padding: 20px;
+    padding: 16px;
     border-radius: 8px;
     text-align: center;
     transition: all 0.3s ease;
