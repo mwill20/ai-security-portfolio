@@ -706,3 +706,15 @@ footer {
         align-items: center;
     }
 }
+
+
+/* Descriptions vary from ~100 to ~460 characters, which left cards in a row
+   ragged and the page ~1176px longer. Clamp to three lines so the grid aligns;
+   the full text lives in each project's README. */
+.project-card .project-description p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

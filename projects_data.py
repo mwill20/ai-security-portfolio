@@ -195,7 +195,6 @@ projects = {
              {
                 "title": "TrustBench SecureEval Ops v3.0 Production",
                 "description": "Production-Grade Multi-Agent Security Evaluation Framework: Advanced evolution of Trust Bench featuring SecureEval guardrails, intelligent agent routing, consensus building, and operational excellence. Features specialized security, quality, and documentation agents with cross-agent collaboration, weighted scoring, confidence metrics, and comprehensive export capabilities. Includes structured logging, health probes, CI/CD pipeline, and 79% test coverage.",
-                "badge": "Publication",
                 "tech": ["Python", "LangGraph", "Multi-Agent Systems", "FastAPI", "Security Analysis", "CI/CD"],
                 "icon": "fas fa-shield-alt",
                 "links": [
@@ -214,7 +213,6 @@ projects = {
             {
                 "title": "Trust Bench Demo",
                 "description": "A LangGraph-based multi-agent workflow that inspects software repositories for security leaks, code quality gaps, and documentation health. Features a collaborative system of specialized agents working together to provide comprehensive repository analysis.",
-                "badge": "Demo",
                 "tech": ["Python", "LangGraph", "Multi-Agent Systems", "Security Analysis"],
                 "icon": "fas fa-laptop-code",
                 "links": [
@@ -265,6 +263,15 @@ projects = {
                 "icon": "fas fa-file-contract",
                 "links": [
                     {"label": "View on GitHub", "url": "https://github.com/mwill20/Spec-Driven_Feature_Factory", "class": "btn-primary"}
+                ]
+            },
+            {
+                "title": "ADK Expense Approval Agent",
+                "description": "Expense-approval workflow on Google's Agent Development Kit where the routing gate is deterministic, not a model decision. A plain threshold comparison auto-approves small expenses and suspends larger ones on a RequestInput interrupt until a human approves or rejects, so the LLM never gates the money decision.",
+                "tech": ["Python", "Google ADK", "Human-in-the-Loop", "Terraform"],
+                "icon": "fas fa-user-check",
+                "links": [
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/adk-expense-approval-agent", "class": "btn-primary"}
                 ]
             }
         ]
@@ -430,6 +437,15 @@ projects = {
                 "links": [
                     {"label": "View on GitHub", "url": "https://github.com/mwill20/Easy_Squeeze_AI", "class": "btn-primary"},
                     {"label": "Live Demo", "url": "https://huggingface.co/spaces/mwill-AImission/squeeze-radar-ai", "class": "btn-success"}
+                ]
+            },
+            {
+                "title": "Google News CLI",
+                "description": "Interactive terminal client for Google News: fetch headlines, search queries, filter by topic, and open articles in the browser with arrow-key selection. Reads the public RSS feeds, so it needs no API key.",
+                "tech": ["Node.js", "CLI", "RSS"],
+                "icon": "fas fa-newspaper",
+                "links": [
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/google-news-cli", "class": "btn-primary"}
                 ]
             }
         ]
