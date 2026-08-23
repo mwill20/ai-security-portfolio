@@ -1,0 +1,63 @@
+name: Build and deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Least privilege: the workflow gets nothing by default; the one job that
+# needs to write gh-pages asks for contents:write explicitly.
+permissions: {}
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install pinned dependencies
+        run: pip install -r requirements.txt
+
+      - name: Freeze Flask app to static HTML
+        run: python freeze.py
+
+      - name: Fail the build if freeze produced nothing
+        run: |
+          test -f build/index.html
+          test -f build/projects/index.html
+          test -f build/about/index.html
+
+      # Published with plain git rather than a third-party action: this repo is a
+      # security portfolio, and a marketplace action would add an unaudited
+      # dependency with write access to the deploy branch for no real benefit.
+      - name: Publish build/ to gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git config --global user.name  "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Orphan branch each time, so files deleted from source (e.g. a removed
+          # route) do not linger on the published site.
+          cd build
+          git init -q
+          git checkout -q --orphan gh-pages
+          git add -A
+          git commit -q -m "Deploy ${GITHUB_SHA::7}"
+          git push -q --force \
+            "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" \
+            gh-pages

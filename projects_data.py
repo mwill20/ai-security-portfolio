@@ -18,7 +18,7 @@ projects = {
                 "description": "Advanced calculator tool with support for complex mathematical operations and unit conversions.",
                 "icon": "fas fa-calculator",
                 "links": [
-                    {"label": "Try Demo", "url": "#", "class": "btn-primary"}
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/mcp-tools", "class": "btn-primary"}
                 ]
             },
             {
@@ -26,7 +26,7 @@ projects = {
                 "description": "Analyze the sentiment of text using advanced NLP models. Supports multiple languages and provides confidence scores.",
                 "icon": "fas fa-smile",
                 "links": [
-                    {"label": "Try Demo", "url": "#", "class": "btn-primary"}
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/Sentiment-Analysis", "class": "btn-primary"}
                 ]
             },
             {
@@ -34,7 +34,7 @@ projects = {
                 "description": "Get current weather conditions and forecasts for any location worldwide. Includes detailed metrics and weather alerts.",
                 "icon": "fas fa-cloud-sun",
                 "links": [
-                    {"label": "Try Demo", "url": "#", "class": "btn-primary"}
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/mcp-tools", "class": "btn-primary"}
                 ]
             },
             {
@@ -76,8 +76,7 @@ projects = {
                 "description": "Security-focused RAG application with built-in guardrails for safe document and codebase analysis with AI.",
                 "icon": "fas fa-lock",
                 "links": [
-                    {"label": "View Project", "url": "/sagevault", "class": "btn-primary"},
-                    {"label": "View on GitHub", "url": "https://github.com/mwill20/SageVault", "class": "btn-secondary"}
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/SageVault", "class": "btn-primary"}
                 ]
             },
             {
@@ -155,7 +154,7 @@ projects = {
                 "tech": ["Python 3.13", "Google ADK", "a2a-sdk", "Gemini 2.5 Flash-Lite", "Uvicorn", "Pytest"],
                 "icon": "fas fa-trophy",
                 "links": [
-                    {"label": "View on GitHub", "url": "https://github.com/mwill20/Trust-Bench-SecureEval-Ops", "class": "btn-primary"}
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/MultiAgent_SOC", "class": "btn-primary"}
                 ]
             },
             {
@@ -214,7 +213,7 @@ projects = {
                  "tech": ["React", "Security", "AI Training"],
                  "icon": "fas fa-dumbbell",
                  "links": [
-                     {"label": "View on GitHub", "url": "#", "class": "btn-primary"}
+                     {"label": "View on GitHub", "url": "https://github.com/mwill20/Python-Dojo", "class": "btn-primary"}
                  ]
             }
         ]

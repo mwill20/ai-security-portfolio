@@ -1,8 +1,14 @@
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
 .venv/
 .env
-.DS_Store
 instance/
-portfolio.db
+
+# Generated static site — built by CI from source, never committed.
+build/
+
+# OS
+.DS_Store
+Thumbs.db

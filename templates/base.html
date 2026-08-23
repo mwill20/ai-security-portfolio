@@ -12,7 +12,9 @@
     <meta property="og:type" content="website">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=2.2">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body>
@@ -24,7 +26,7 @@
                     <li><a href="{{ url_for('home') }}">Home</a></li>
                     <li><a href="{{ url_for('about') }}">About</a></li>
                     <li><a href="{{ url_for('projects') }}">Projects</a></li>
-                    <li><a href="{{ url_for('static', filename='resume/M_Will_Resume.docx') }}" target="_blank" class="btn btn-small btn-secondary" style="padding: 0.5rem 1rem; border-color: var(--accent-color); color: var(--accent-color);">Resume</a></li>
+                    <li><a href="{{ url_for('static', filename='resume/M_Will_Resume.docx') }}" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-secondary" style="padding: 0.5rem 1rem; border-color: var(--accent-color); color: var(--accent-color);">Resume</a></li>
                     <li><a href="{{ url_for('home') }}#contact" class="btn btn-small btn-secondary" style="padding: 0.5rem 1rem; border-color: var(--accent-color); color: var(--accent-color);">Contact</a></li>
                 </ul>
             </div>
@@ -38,8 +40,8 @@
     <footer class="site-footer">
         <div class="container">
             <div class="social-links" style="margin-bottom: 20px;">
-                <a href="https://github.com/mwill20" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/mwillitmission/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/mwill20" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/mwillitmission/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
             </div>
             <p>Designed &amp; Built by Michael Williams</p>
         </div>
