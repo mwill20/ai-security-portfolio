@@ -360,6 +360,15 @@ projects = {
                 "links": [
                     {"label": "View on GitHub", "url": "https://github.com/mwill20/event-talks-app", "class": "btn-primary"}
                 ]
+            },
+            {
+                "title": "GCP Document Pipeline",
+                "description": "Event-driven document ingestion on Google Cloud, provisioned end to end with Terraform. A GCS upload fires a storage notification onto Pub/Sub, an OIDC-authenticated push subscription invokes a Cloud Run service, Gemini extracts and classifies the document via Vertex AI, and the metadata lands in BigQuery behind a Streamlit dashboard.",
+                "tech": ["Terraform", "Cloud Run", "Pub/Sub", "BigQuery", "Vertex AI"],
+                "icon": "fas fa-diagram-project",
+                "links": [
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/gcp-document-pipeline", "class": "btn-primary"}
+                ]
             }
         ]
     },
