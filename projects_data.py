@@ -69,7 +69,8 @@ projects = {
                 "tech": ["Python", "MCP"],
                 "icon": "fas fa-network-wired",
                 "links": [
-                    {"label": "View on GitHub", "url": "https://github.com/mwill20/MCP_Project", "class": "btn-primary"}
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/MCP_Project", "class": "btn-primary"},
+                    {"label": "Live Demo", "url": "https://huggingface.co/spaces/mwill-AImission/MCP_Project", "class": "btn-success"}
                 ]
             },
             {
@@ -78,7 +79,8 @@ projects = {
                 "tech": ["Gradio", "MCP"],
                 "icon": "fas fa-toolbox",
                 "links": [
-                    {"label": "View on GitHub", "url": "https://github.com/mwill20/mcp-tools-demo", "class": "btn-primary"}
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/mcp-tools-demo", "class": "btn-primary"},
+                    {"label": "Live Demo", "url": "https://huggingface.co/spaces/mwill-AImission/mcp-tools-demo", "class": "btn-success"}
                 ]
             }
         ]
@@ -466,7 +468,8 @@ projects = {
                 "tech": ["Python", "Market Data", "Analysis"],
                 "icon": "fas fa-magnifying-glass-chart",
                 "links": [
-                    {"label": "View on GitHub", "url": "https://github.com/mwill20/Easy_Squeeze_AI", "class": "btn-primary"}
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/Easy_Squeeze_AI", "class": "btn-primary"},
+                    {"label": "Live Demo", "url": "https://huggingface.co/spaces/mwill-AImission/squeeze-radar-ai", "class": "btn-success"}
                 ]
             }
         ]
