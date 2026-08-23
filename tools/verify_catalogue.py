@@ -204,11 +204,36 @@ def check_placeholders(rep, projects):
     return ok
 
 
+def check_local_assets(rep, projects):
+    """Site-relative links must point at a file that actually exists in static/.
+
+    Cards render at /projects/, so "../static/x" means "<repo>/static/x".
+    """
+    ok = True
+    for label, link_label, url in iter_urls(projects):
+        if not url or url.startswith("http") or url.strip() == "#":
+            continue
+        rel = url.split("?", 1)[0].lstrip("/")
+        if rel.startswith("../"):
+            rel = rel[3:]
+        target = ROOT / rel
+        if not target.is_file():
+            ok = False
+            rep.fail("%s: '%s' points at %s, which does not exist"
+                     % (label, link_label, url))
+        else:
+            rep.note("local asset ok: %s (%.1f MB)"
+                     % (url, target.stat().st_size / 1048576))
+    return ok
+
+
 def check_liveness(rep, projects):
     ok = True
     seen = {}
     for label, link_label, url in iter_urls(projects):
-        if not url or url.startswith("/") or url.strip() == "#":
+        # Only external URLs are fetchable here; site-relative links (../static/...)
+        # are validated by freeze.py producing the file.
+        if not url or not url.startswith("http"):
             continue
         if url not in seen:
             req = urllib.request.Request(
@@ -243,6 +268,7 @@ def main():
     results = [
         ("schema", check_schema(rep, projects)),
         ("no placeholder links", check_placeholders(rep, projects)),
+        ("local assets exist", check_local_assets(rep, projects)),
     ]
     if not args.no_network:
         results.append(("coverage of public repos", check_coverage(rep, projects)))

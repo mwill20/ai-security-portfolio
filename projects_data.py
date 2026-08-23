@@ -106,7 +106,8 @@ projects = {
                 "description": "Security-focused RAG application with built-in guardrails for safe document and codebase analysis with AI.",
                 "icon": "fas fa-lock",
                 "links": [
-                    {"label": "View on GitHub", "url": "https://github.com/mwill20/SageVault", "class": "btn-primary"}
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/SageVault", "class": "btn-primary"},
+                    {"label": "Watch Demo", "url": "../static/videos/sagevault-demo.mp4", "class": "btn-secondary"}
                 ]
             },
             {

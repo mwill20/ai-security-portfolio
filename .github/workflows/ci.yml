@@ -1,0 +1,51 @@
+name: Validate build
+
+# Runs on every branch and pull request. This is what proves the pipeline works
+# without publishing anything - deploy.yml only ever fires on main.
+on:
+  push:
+    branches-ignore: [gh-pages]
+  pull_request:
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install pinned dependencies
+        run: pip install -r requirements.txt
+
+      - name: Catalogue checks
+        # Offline checks only: schema, placeholder links, and local asset
+        # existence. Coverage and external link liveness need network and the gh
+        # CLI, and 50+ outbound requests per push would be slow and rate-limit
+        # prone - run `python tools/verify_catalogue.py` locally for those.
+        run: python tools/verify_catalogue.py --no-network
+
+      - name: Build the static site
+        run: python freeze.py
+
+      - name: Assert expected pages exist
+        run: |
+          test -f build/index.html
+          test -f build/projects/index.html
+          test -f build/about/index.html
+
+      - name: Assert no placeholder or dead-end links survived the build
+        run: |
+          ! grep -q 'href="#"' build/projects/index.html
+
+      - name: Upload built site for inspection
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-${{ github.sha }}
+          path: build/
+          retention-days: 7

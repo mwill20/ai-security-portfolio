@@ -27,14 +27,17 @@ What this project does not do, and when not to use it as a reference.
 - **The Featured block is not data-driven.** Three projects live as hand-written HTML with
   inline styles in `templates/projects.html`. They cannot be reordered, filtered, or
   validated by the catalogue checks the way `projects_data.py` entries can.
-- **`static/videos/sagevault-demo.mp4` (4.6 MB) is unreferenced.** No template links it.
-  It is copied into every build and published to `gh-pages` regardless. Either surface it
-  on a real SageVault page or remove it.
+- **The site ships a 4.4 MB video.** `static/videos/sagevault-demo.mp4` is now linked
+  from the SageVault card, but it is served as a direct file rather than an embedded,
+  poster-framed player, so a visitor who clicks it downloads or opens it raw.
 - **No automated accessibility or visual-regression testing.** Contrast, focus order, and
   screen-reader behavior have not been formally audited.
-- **No link checking of external destinations at build time.**
-  `tools/verify_catalogue.py` verifies links when run, but CI does not currently fail on a
-  third-party URL that rots after publication.
+- **CI does not check external links.** `.github/workflows/ci.yml` runs
+  `verify_catalogue.py --no-network`: schema, placeholder, and local-asset checks only.
+  Repo coverage and external link liveness need the `gh` CLI and 50+ outbound requests,
+  which would be slow and rate-limit prone on every push, so they remain a local step
+  (`python tools/verify_catalogue.py`). A third-party URL that rots after publication will
+  not fail a build until someone runs that locally.
 
 ## Accuracy boundary
 
