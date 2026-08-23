@@ -297,6 +297,10 @@
             <h3><i class="{{ category.icon }} project-icon"></i> {{ category.title }}</h3>
         </div>
 
+        {# The MCP category leads with its network diagram; its cards still come
+           from projects_data.py and render underneath, like every other category. #}
+        {% if key == 'mcp' %}{% include '_mcp_ecosystem.html' %}{% endif %}
+
         <div class="projects-grid">
             {% for project in category.projects %}
             <div class="project-card">

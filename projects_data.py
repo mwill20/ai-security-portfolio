@@ -1,59 +1,9 @@
-
 projects = {
     "mcp": {
         "title": "MCP Ecosystem",
         "icon": "fas fa-cogs",
         "description": "The Model Context Protocol (MCP) is a scalable framework designed to enable modular AI Agents and tools to communicate and collaborate seamlessly. My ecosystem includes core servers and diverse agents.",
         "projects": [
-             {
-                "title": "MCP Core Server",
-                "description": "Central Python server hosting AI models and exposing them via MCP. Provides a unified interface for AI services and manages communication between different components in the ecosystem.",
-                "icon": "fas fa-server",
-                "links": [
-                    {"label": "View on GitHub", "url": "https://github.com/mwill20/mcp-tools", "class": "btn-primary"}
-                ]
-            },
-            {
-                "title": "Calculator Tool",
-                "description": "Advanced calculator tool with support for complex mathematical operations and unit conversions.",
-                "icon": "fas fa-calculator",
-                "links": [
-                    {"label": "View on GitHub", "url": "https://github.com/mwill20/mcp-tools", "class": "btn-primary"}
-                ]
-            },
-            {
-                "title": "Sentiment Analysis Tool",
-                "description": "Analyze the sentiment of text using advanced NLP models. Supports multiple languages and provides confidence scores.",
-                "icon": "fas fa-smile",
-                "links": [
-                    {"label": "View on GitHub", "url": "https://github.com/mwill20/Sentiment-Analysis", "class": "btn-primary"}
-                ]
-            },
-            {
-                "title": "Weather Tool",
-                "description": "Get current weather conditions and forecasts for any location worldwide. Includes detailed metrics and weather alerts.",
-                "icon": "fas fa-cloud-sun",
-                "links": [
-                    {"label": "View on GitHub", "url": "https://github.com/mwill20/mcp-tools", "class": "btn-primary"}
-                ]
-            },
-            {
-                "title": "TypeScript MCP Agent",
-                "description": "Lightweight TypeScript agent with web automation capabilities. Connects to the MCP Core Server to perform tasks and process information.",
-                "icon": "fab fa-js",
-                "links": [
-                    {"label": "View on GitHub", "url": "https://github.com/mwill20/mcp-tiny-agent", "class": "btn-primary"}
-                ]
-            },
-             {
-                "title": "Productivity Agent",
-                "description": "Automates Windows tasks, analyzes system logs using AI, and helps manage your digital workspace efficiently.",
-                "icon": "fas fa-robot",
-                "links": [
-                    {"label": "View on GitHub", "url": "https://github.com/mwill20/PersonalProductivityAgent", "class": "btn-primary"}
-                ]
-            }
-,
             {
                 "title": "MCP Intelligence System",
                 "description": "Claude-powered operational intelligence platform that connects to live engineering data over MCP and answers engineering-operations questions in natural language, producing a daily morning brief and live incident views.",

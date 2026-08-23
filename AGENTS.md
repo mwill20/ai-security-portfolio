@@ -16,10 +16,13 @@ The file is **half hand-written HTML, half data-driven**:
 - The **Featured** block at the top is hand-authored and not generated from
   `projects_data.py`.
 - Everything below is a `{% for key, category in projects.items() %}` loop.
+- The **MCP** category also renders `templates/_mcp_ecosystem.html`, a network diagram,
+  above its card grid.
 
 A previous `{% if key != 'mcp' %}` guard made the `mcp` section of `projects_data.py` dead
-data — edits to it silently changed nothing on the live site. That guard is gone. Do not
-add a hand-written category block; it recreates the trap.
+data — edits to it silently changed nothing on the live site. That guard is gone, and the
+diagram is now decoration *above* the MCP cards rather than a replacement for them. Do not
+add hand-written markup that replaces a category's cards; that recreates the trap.
 
 ## Hard rules
 

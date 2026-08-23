@@ -43,14 +43,23 @@ before editing it.
 - Everything below it is a `{% for key, category in projects.items() %}` loop over
   `projects_data.py`.
 
-Historically the MCP Ecosystem section was *also* hand-written, and the loop carried an
-`{% if key != 'mcp' %}` guard to avoid rendering it twice. The effect was that the `mcp`
-section in `projects_data.py` was dead data — edits to it changed nothing on the published
-site, silently. That guard has been removed and the MCP section is now data-driven like
-every other category.
+- The **MCP Ecosystem** category additionally renders a hand-written network diagram,
+  `templates/_mcp_ecosystem.html`, included above its card grid.
 
-**If you re-introduce a hand-written category block, you re-introduce that trap.** Prefer
-adding to `projects_data.py`.
+The MCP diagram is worth understanding, because an earlier version of it caused a real
+bug. It used to be a full hand-written *replacement* for the MCP category, and the loop
+carried an `{% if key != 'mcp' %}` guard so it would not render twice. The effect was that
+the `mcp` section of `projects_data.py` was dead data - edits to it silently changed
+nothing on the published site.
+
+It is now a **decoration, not a replacement**: the guard is gone, the diagram is included
+*in addition to* the category's normal card grid, and MCP cards come from
+`projects_data.py` like every other category. The projects the diagram depicts each link
+their own repository from within the diagram, and `tools/verify_catalogue.py` scans every
+template, so those repos still count as covered.
+
+**Do not turn a category back into hand-written markup that replaces its cards** - that is
+what created the dead-data trap. Adding decoration above the grid is fine.
 
 ## Category ordering contract
 

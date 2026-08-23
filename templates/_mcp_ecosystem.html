@@ -1,0 +1,82 @@
+{# MCP Ecosystem network diagram.
+
+   This is a decorative overview of the MCP tools and agents, included by
+   templates/projects.html only for the 'mcp' category. It sits ABOVE that
+   section's normal card grid - it does not replace it. The cards still come
+   from projects_data.py like every other category, so nothing here makes
+   that data unrendered. See docs/ARCHITECTURE.md. #}
+            <div class="mcp-ecosystem-section"
+                style="max-width: 1200px; margin: 20px auto; color: #e0e6f0; line-height: 1.6; border: none; background: transparent;">
+                <h3 style="text-align: center; margin-bottom: 20px;">The Model Context Protocol (MCP) Ecosystem</h3>
+                <p
+                    style="text-align: center; max-width: 800px; margin: 0 auto 40px auto; color: var(--text-secondary);">
+                    A unified framework connecting specialized AI Agents and Tools through a central Core Server,
+                    enabling
+                    seamless interoperability and secure orchestration.
+                </p>
+
+                <!-- MCP Network Visualization -->
+                <div class="mcp-network-container">
+
+                    <!-- Left Column: Tools -->
+                    <div class="mcp-column left-tools">
+                        <div class="mcp-card tool">
+                            <i class="fas fa-calculator icon"></i>
+                            <h4>Calculator Tool</h4>
+                            <p>Complex math & unit conversions</p>
+                        </div>
+                        <div class="mcp-card tool">
+                            <i class="fas fa-smile icon"></i>
+                            <h4>Sentiment Analysis</h4>
+                            <p>NLP-powered emotion detection</p>
+                            <a href="https://github.com/mwill20/Sentiment-Analysis" target="_blank"
+                                rel="noopener noreferrer" class="btn-mini">View Code</a>
+                        </div>
+                        <div class="mcp-card tool">
+                            <i class="fas fa-cloud-sun icon"></i>
+                            <h4>Weather Tool</h4>
+                            <p>Global forecasts & alerts</p>
+                        </div>
+                    </div>
+
+                    <!-- Center Column: Core Server -->
+                    <div class="mcp-column center-hub">
+                        <div class="mcp-card core-server">
+                            <i class="fas fa-server icon" style="font-size: 3rem; margin-bottom: 20px;"></i>
+                            <h4 style="font-size: 1.5rem;">MCP Core Server</h4>
+                            <p style="font-size: 1rem;">The central nervous system orchestrating all tool executions and
+                                agent communications.</p>
+                            <div style="margin-top: 20px;">
+                                <a href="https://github.com/mwill20/mcp-tools" target="_blank"
+                                    class="btn btn-primary">View
+                                    Core on GitHub</a>
+                            </div>
+                        </div>
+                        <div class="arrow-down"
+                            style="height: 40px; width: 2px; background: var(--accent-color); margin: 0 auto; opacity: 0.5;">
+                        </div>
+                        <div class="mcp-card tool" style="width: auto; padding: 15px 30px;">
+                            <i class="fas fa-desktop icon"></i>
+                            <h4 style="margin: 0;">Unified Demo Interface</h4>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Agents -->
+                    <div class="mcp-column right-agents">
+                        <div class="mcp-card agent">
+                            <i class="fab fa-js icon"></i>
+                            <h4>TypeScript Agent</h4>
+                            <p>Lightweight web automation agent</p>
+                            <a href="https://github.com/mwill20/mcp-tiny-agent" target="_blank" rel="noopener noreferrer" class="btn-mini">View
+                                Code</a>
+                        </div>
+                        <div class="mcp-card agent">
+                            <i class="fas fa-robot icon"></i>
+                            <h4>Productivity Agent</h4>
+                            <p>Windows automation & log analysis</p>
+                            <a href="https://github.com/mwill20/PersonalProductivityAgent" target="_blank"
+                                class="btn-mini">View Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>

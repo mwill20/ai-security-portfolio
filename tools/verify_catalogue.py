@@ -83,15 +83,17 @@ def cards_per_repo(projects):
 
 
 def template_repos():
-    """Repos referenced from the hand-written blocks in templates/projects.html.
+    """Repos referenced from hand-written markup in any template.
 
-    A repo appearing both here and in projects_data.py is not a duplicate - the
-    Featured block deliberately re-surfaces projects that also sit in a category.
+    Covers the Featured block in projects.html and the MCP network diagram in
+    _mcp_ecosystem.html. A repo appearing both here and in projects_data.py is
+    not a duplicate - the Featured block deliberately re-surfaces projects that
+    also sit in a category.
     """
-    tpl = ROOT / "templates" / "projects.html"
-    if not tpl.exists():
-        return set()
-    return set(m.lower() for m in REPO_RE.findall(tpl.read_text(encoding="utf-8")))
+    found = set()
+    for tpl in sorted((ROOT / "templates").glob("*.html")):
+        found.update(m.lower() for m in REPO_RE.findall(tpl.read_text(encoding="utf-8")))
+    return found
 
 
 def public_repos():
