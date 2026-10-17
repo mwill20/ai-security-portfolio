@@ -273,6 +273,105 @@ projects = {
                 "links": [
                     {"label": "View on GitHub", "url": "https://github.com/mwill20/adk-expense-approval-agent", "class": "btn-primary"}
                 ]
+            },
+            {
+                "title": "Yahoo Finance API",
+                "description": "Four FastAPI endpoints over Yahoo Finance data (company profile, market snapshot, historical prices, and deterministic analytics) that validate input before every upstream call and return clear 400/404/422 errors. Coursework demo exercised in-process with TestClient; no LLM involved.",
+                "tech": ["Python", "FastAPI", "Pydantic", "yfinance"],
+                "icon": "fas fa-chart-line",
+                "links": [
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/04-yahoo-finance-api", "class": "btn-primary"}
+                ]
+            },
+            {
+                "title": "Study Assistant Quiz Generator",
+                "description": "LangChain prompt chain that summarizes a PDF or pasted study material into key points, then writes multiple-choice questions as a Pydantic schema so malformed questions are dropped before anything is shown. Coursework project on prompt engineering and structured output.",
+                "tech": ["Python", "LangChain", "OpenAI", "Pydantic"],
+                "icon": "fas fa-graduation-cap",
+                "links": [
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/05-study-assistant-quiz-generator", "class": "btn-primary"}
+                ]
+            },
+            {
+                "title": "Financial Image Scans",
+                "description": "Multimodal LangChain notebook that reads scanned financial-report pages into a typed list of figures, then writes summaries for an investor, analyst or auditor. Reading and writing are separate calls, so a misread figure stays visible instead of being buried in prose.",
+                "tech": ["Python", "LangChain", "Vision Models", "Pydantic"],
+                "icon": "fas fa-file-invoice-dollar",
+                "links": [
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/06-financial-image-scans", "class": "btn-primary"}
+                ]
+            },
+            {
+                "title": "Web Research ReAct Agent",
+                "description": "ReAct loop built from scratch with no agent framework: plans research questions, answers each with a Tavily web-search tool, and compiles a sourced Markdown report. Tool calls are validated before they run, and search results are treated as untrusted input.",
+                "tech": ["Python", "ReAct", "Planning Pattern", "Tavily"],
+                "icon": "fas fa-magnifying-glass",
+                "links": [
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/07-web-research-react-agent", "class": "btn-primary"}
+                ]
+            },
+            {
+                "title": "Travel Assistant Agent",
+                "description": "LangChain tool-calling agent that returns current weather and top attractions for a destination. A deterministic input validator runs before the model, shaped by should-fail tests that caught prompt-injection and newline-smuggling inputs. Both tools are read-only.",
+                "tech": ["Python", "LangChain", "Tavily", "Input Validation"],
+                "icon": "fas fa-plane-departure",
+                "links": [
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/08-travel-assistant-agent", "class": "btn-primary"}
+                ]
+            },
+            {
+                "title": "Competitor Intelligence Agent",
+                "description": "Conversational LangChain agent with per-session SQLite memory that researches nearby retail competitors. Input gates run ahead of the model, an output check flags any cited URL a tool did not return, and footfall figures are labelled as estimates rather than measurements.",
+                "tech": ["Python", "LangChain", "Tavily", "SQLite", "Guardrails"],
+                "icon": "fas fa-store",
+                "links": [
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/09-competitor-intel-agent", "class": "btn-primary"}
+                ]
+            },
+            {
+                "title": "Logistics Optimization Crew",
+                "description": "Two-agent CrewAI system for inventory turnover at a distributor. Metrics are computed in plain Python, an input gate resolves product names against a catalog so caller text never reaches the prompt, and an output gate checks the strategy only names requested SKUs.",
+                "tech": ["Python", "CrewAI", "Guardrails"],
+                "icon": "fas fa-truck",
+                "links": [
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/10-logistics-optimization-crew", "class": "btn-primary"}
+                ]
+            },
+            {
+                "title": "Multi-Agent EDA with AutoGen",
+                "description": "Six AutoGen agents take a synthetic, deliberately dirty dataset from raw CSV to a critic-reviewed EDA report. Turn order is a plain-Python state machine, and every code block the agents write must pass a static AST gate before it is executed.",
+                "tech": ["Python", "AutoGen (AG2)", "Multi-Agent Systems", "Code Gating"],
+                "icon": "fas fa-chart-pie",
+                "links": [
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/11-eda-multiagent-autogen", "class": "btn-primary"}
+                ]
+            },
+            {
+                "title": "LangGraph Math Agent",
+                "description": "LangGraph agent where the LLM decides and Python computes: four arithmetic tools with two-layer validation (including nan and inf, which Pydantic accepts), error strings instead of raised exceptions, and an audit record for every tool call.",
+                "tech": ["Python", "LangGraph", "Pydantic", "Audit Logging"],
+                "icon": "fas fa-calculator",
+                "links": [
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/12-langgraph-math-agent", "class": "btn-primary"}
+                ]
+            },
+            {
+                "title": "LangGraph Multi-Agent Research",
+                "description": "Router agent sends each query to an LLM answerer, a Tavily web-search agent, or a RAG agent over a small knowledge base, and a summarizer produces the structured answer. Routing uses typed structured output so the graph only receives a valid route.",
+                "tech": ["Python", "LangGraph", "RAG", "Tavily"],
+                "icon": "fas fa-diagram-project",
+                "links": [
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/13-langgraph-multiagent-research", "class": "btn-primary"}
+                ]
+            },
+            {
+                "title": "Reflection Agents with AutoGen",
+                "description": "Two-agent reflection loop: a Content Creator drafts, a Content Critic reviews for language clarity and technical accuracy, the Creator revises, and an LLM summarizes the exchange. Neither agent has tools, and the turn count is capped at 3 or 5.",
+                "tech": ["Python", "AutoGen", "Reflection Pattern"],
+                "icon": "fas fa-comments",
+                "links": [
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/14-reflection-agents-autogen", "class": "btn-primary"}
+                ]
             }
         ]
     },
