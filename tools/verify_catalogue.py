@@ -38,6 +38,7 @@ EXCLUDED = {
     "docs": "shared docs scratch repo, not a project",
     "SecureCLI-Tuner-deploy": "deploy variant of SecureCLI-Tuner, already carded",
     "Trust_Bench_UI": "front-end for Trust_Bench, already carded",
+    "KC7-SecOps": "earlier edition of the YARA-L Search trainer; the Claude Edition (KC7SecOpsClaude) is carded",
 }
 
 REQUIRED_PROJECT_KEYS = ("title", "description", "icon", "links")

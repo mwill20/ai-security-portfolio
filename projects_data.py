@@ -483,6 +483,16 @@ projects = {
         "icon": "fas fa-gamepad",
         "projects": [
             {
+                "title": "Static on Pier Nine — YARA-L 2.0 Search Trainer",
+                "description": "Browser-only course that teaches Google SecOps Search queries in YARA-L 2.0 the way KC7 teaches KQL, then the step from search to detection: three original investigations, a query desk that returns rows (and detections in Rule mode) against fictional datasets, and a Casebook that teaches analyst note-keeping through to remediation and handoff.",
+                "tech": ["YARA-L 2.0", "Google SecOps", "JavaScript", "Detection Engineering"],
+                "icon": "fas fa-broadcast-tower",
+                "links": [
+                    {"label": "Play the Course", "url": "https://mwill20.github.io/KC7SecOpsClaude/", "class": "btn-success"},
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/KC7SecOpsClaude", "class": "btn-primary"}
+                ]
+            },
+            {
                  "title": "Python-Dojo — Security Reps Playground",
                  "description": "A security gym for AI engineers to build muscle memory around sanitization, API management, and guardrail patterns using a Mastery Loop training engine.",
                  "tech": ["React", "Security", "AI Training"],
