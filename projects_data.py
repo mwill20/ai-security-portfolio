@@ -41,7 +41,7 @@ projects = {
         "projects": [
             {
                 "title": "SecureCLI-Tuner",
-                "description": "Security-first LLM fine-tuned for Agentic DevOps that translates natural language into safe, valid Bash commands while achieving a 100% adversarial attack blocking rate. Implements a Defense-in-Depth architecture with sanitized QLoRA fine-tuning and three-layer runtime guardrail system.",
+                "description": "Security-first LLM fine-tuned for Agentic DevOps that translates natural language into safe, valid Bash commands. Implements a Defense-in-Depth architecture with sanitized QLoRA fine-tuning and three-layer runtime guardrail system.",
                 "icon": "fas fa-terminal",
                 "links": [{"label": "View on GitHub", "url": "https://github.com/mwill20/SecureCLI-Tuner", "class": "btn-primary"}]
             },

@@ -1,42 +1,48 @@
 {% extends 'base.html' %}
 
-{% block title %}Michael Williams | AI Security Engineer{% endblock %}
+{% block title %}Michael Williams | Cybersecurity Engineer, AI Security{% endblock %}
 {% block og_url %}https://mwill20.github.io/ai-security-portfolio/{% endblock %}
-{% block og_description %}Cybersecurity operations foundation with AI security, guardrail engineering, and evidence-first SOC automation. 60+ enterprise clients, 48% MTTR reduction, zero false negatives across 57 adversarial test cases.{% endblock %}
+{% block og_description %}Cybersecurity operations foundation with AI security, guardrail engineering, and evidence-first SOC automation. 60+ enterprise clients, 48% MTTR reduction, 57 adversarial and logic-bomb tests.{% endblock %}
 
 {% block content %}
 
 <section class="hero">
     <div class="container hero-wrapper" style="display: flex; align-items: center; justify-content: space-between; gap: 60px; flex-wrap: wrap-reverse;">
 
-        <div class="hero-text" style="flex: 1 1 500px;">
-            <h1 style="font-size: clamp(52px, 7.5vw, 84px); margin-bottom: 10px; line-height: 1.1; color: var(--text-primary);">Michael Williams</h1>
+        <div class="hero-text" style="flex: 1 1 500px; min-width: 0;">
+            <h1 style="font-size: clamp(38px, 7.5vw, 84px); margin-bottom: 10px; line-height: 1.1; color: var(--text-primary);">Michael Williams</h1>
             <h2 style="font-size: clamp(18px, 2.5vw, 29px); margin-bottom: 24px; font-weight: normal; color: var(--text-secondary);">
-                <span style="color: var(--accent-color);">Cybersecurity:</span> Analyst <span style="color: var(--accent-color);">&middot;</span> Incident Response <span style="color: var(--accent-color);">&middot;</span> Threat Hunting <span style="color: var(--accent-color);">&middot;</span> Detection Engineering <span style="color: var(--accent-color);">&middot;</span> Customer Success Engineering <span style="color: var(--accent-color);">&middot;</span> <span style="white-space: nowrap;">AI Security</span>
+                <span style="color: var(--accent-color);">Security Operations:</span> Engineering <span style="color: var(--accent-color);">&middot;</span> Detection <span style="color: var(--accent-color);">&middot;</span> Threat Hunting <span style="color: var(--accent-color);">&middot;</span> Investigation &amp; Incident Response <span style="color: var(--accent-color);">&middot;</span> Vulnerability Management <span style="color: var(--accent-color);">&middot;</span> AI Risk &amp; Security
             </h2>
 
             <p class="hero-intro" style="font-size: 1.08rem; color: var(--text-secondary); line-height: 1.7; margin-top: 24px;">
-                My foundation is cybersecurity operations: incident response, threat hunting, detection engineering,
-                and customer-facing security work across multi-tenant environments. I build from that foundation into
-                AI security systems that preserve what security teams need most: evidence, guardrails, auditability,
-                and safe failure.
+                Security operations is the constant. Five years of it: investigations and incident response, threat
+                hunting, detection engineering, and customer-facing security work across multi-tenant environments.
+                Today I engineer security for a healthcare environment, where the work spans vulnerability management,
+                identity and access, escalated investigations, and AI and software risk assessment. Most of it runs
+                across team lines, so driving remediation with infrastructure, application, and clinical system owners
+                is as much the job as the engineering is.
             </p>
 
             <p class="hero-highlight" style="font-size: 1.08rem; color: var(--text-secondary); line-height: 1.7; margin-top: 18px;">
-                Across my roles, I have walked into ambiguity, found operational pain points, and built systems to solve them.
+                At every stop I have walked into ambiguity, found the operational pain point, and built something to fix it.
+                That instinct is what moved me from security operations into AI security: same discipline, new attack surface.
                 <strong style="color: var(--accent-color);">ThreatPrism</strong> is one example: a guardrail-first SOC
                 investigation pipeline that contributed to a <span style="color: var(--accent-color); font-weight: bold;">48% MTTR reduction</span>
                 across 60+ enterprise clients while keeping production implementation details proprietary.
+                To see how the route runs from first responder to AI security, follow
+                <a href="https://mwill20.github.io/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-color); font-weight: bold;">My Path</a>.
             </p>
 
             <div class="cta-buttons" style="margin-top: 30px;">
                 <a href="{{ url_for('projects') }}" class="btn slide-hover">View Projects</a>
                 <a href="https://github.com/mwill20" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fab fa-github"></i> GitHub</a>
                 <a href="{{ url_for('static', filename='resume/M_Will_Resume.docx') }}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fas fa-file-alt"></i> Resume</a>
+                <a href="https://mwill20.github.io/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fas fa-route"></i> My Path</a>
             </div>
         </div>
 
-        <div class="hero-image" style="flex: 0 0 400px; position: relative; max-width: 100%;">
+        <div class="hero-image" style="flex: 0 1 400px; min-width: 0; position: relative; max-width: 100%;">
             <div class="image-wrapper" style="position: relative; border-radius: 4px; box-shadow: 20px 20px 0 var(--accent-color);">
                 <img src="{{ url_for('static', filename='images/MichaelWilliams-16.jpg') }}" alt="Michael Williams"
                     style="display: block; width: 100%; height: auto; border-radius: 4px; filter: contrast(1.0); transition: all 0.3s ease;">
@@ -52,11 +58,11 @@
 
 <section style="padding: 30px 0; border-top: 1px solid var(--card-border); border-bottom: 1px solid var(--card-border); margin: 30px 0;">
     <div class="container">
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; text-align: center;">
             <div><div style="font-size: 2.1rem; font-weight: 700; color: var(--accent-color);">60+</div><div style="font-size: 0.86rem; color: var(--text-secondary); font-family: var(--font-mono);">Enterprise Clients</div></div>
             <div><div style="font-size: 2.1rem; font-weight: 700; color: var(--accent-color);">3,000+</div><div style="font-size: 0.86rem; color: var(--text-secondary); font-family: var(--font-mono);">Endpoints Managed</div></div>
             <div><div style="font-size: 2.1rem; font-weight: 700; color: var(--accent-color);">48%</div><div style="font-size: 0.86rem; color: var(--text-secondary); font-family: var(--font-mono);">MTTR Reduction</div></div>
-            <div><div style="font-size: 2.1rem; font-weight: 700; color: var(--accent-color);">0</div><div style="font-size: 0.86rem; color: var(--text-secondary); font-family: var(--font-mono);">False Negatives / 57 Adversarial Cases</div></div>
+            <div><div style="font-size: 2.1rem; font-weight: 700; color: var(--accent-color);">57</div><div style="font-size: 0.86rem; color: var(--text-secondary); font-family: var(--font-mono);">Adversarial &amp; Logic-Bomb Tests</div></div>
         </div>
     </div>
 </section>
@@ -78,9 +84,9 @@
             </div>
 
             <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 6px; padding: 24px; border-top: 3px solid var(--accent-color);">
-                <div style="font-family: var(--font-mono); font-size: 12px; color: var(--accent-color); margin-bottom: 8px;">VALIDATED SECURITY RESEARCH</div>
+                <div style="font-family: var(--font-mono); font-size: 12px; color: var(--accent-color); margin-bottom: 8px;">SECURITY RESEARCH</div>
                 <h3 style="font-size: 20px; margin-bottom: 12px;">AI DevSecOps Platform</h3>
-                <p style="color: var(--text-secondary); font-size: 15px; line-height: 1.65; margin-bottom: 18px;">Validated AI security engineering project for detecting unsafe patterns in AI-generated code. Combines deterministic controls, semantic taint tracking, ShellGuard, LLM reasoning with Pydantic constraints, and provenance concepts. Validated across 57 adversarial test cases with zero false negatives.</p>
+                <p style="color: var(--text-secondary); font-size: 15px; line-height: 1.65; margin-bottom: 18px;">AI security engineering project for detecting unsafe patterns in AI-generated code. Combines deterministic controls, semantic taint tracking, ShellGuard, LLM reasoning with Pydantic constraints, and provenance concepts. Tested with 41 adversarial and 16 logic-bomb cases.</p>
                 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
                     <a href="https://github.com/mwill20/AI-DevSecOps" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-secondary" style="font-size: 13px;"><i class="fab fa-github"></i> GitHub</a>
                 </div>
@@ -89,7 +95,7 @@
             <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 6px; padding: 24px; border-top: 3px solid var(--accent-color);">
                 <div style="font-family: var(--font-mono); font-size: 12px; color: var(--accent-color); margin-bottom: 8px;">SECURITY RESEARCH</div>
                 <h3 style="font-size: 20px; margin-bottom: 12px;">SecureCLI-Tuner</h3>
-                <p style="color: var(--text-secondary); font-size: 15px; line-height: 1.65; margin-bottom: 18px;">Security-first LLM fine-tuned for agentic DevOps. Translates natural language into safe Bash commands with 100% adversarial attack blocking rate. QLoRA fine-tuning plus three-layer runtime guardrail architecture.</p>
+                <p style="color: var(--text-secondary); font-size: 15px; line-height: 1.65; margin-bottom: 18px;">Security-first LLM fine-tuned for agentic DevOps. Translates natural language into safe Bash commands. QLoRA fine-tuning plus a three-layer runtime guardrail architecture.</p>
                 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
                     <a href="https://github.com/mwill20/SecureCLI-Tuner" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-secondary" style="font-size: 13px;"><i class="fab fa-github"></i> GitHub</a>
                 </div>
@@ -112,7 +118,7 @@
             my inbox is always open.
         </p>
         <div style="margin-top: 32px; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="mailto:mwil.ITmission@gmail.com" class="btn">Say Hello</a>
+            <a href="mailto:mwill.itmission@gmail.com" class="btn">Say Hello</a>
             <a href="https://www.linkedin.com/in/mwillitmission/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
             <a href="https://github.com/mwill20" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fab fa-github"></i> GitHub</a>
         </div>

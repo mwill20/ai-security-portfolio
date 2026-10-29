@@ -23,7 +23,7 @@ This portfolio presents cybersecurity as Michael Williams' professional foundati
 
 ## AI DevSecOps Accuracy
 
-AI DevSecOps Platform was validated as AI security engineering research across 57 adversarial test cases with zero false negatives. It should not be described as deployed or release-ready.
+AI DevSecOps Platform is AI security engineering research, tested with 41 adversarial and 16 logic-bomb cases (per its README). Do not claim zero false negatives or any detection rate the README does not state. It should not be described as deployed or release-ready.
 
 ## Build
 
