@@ -131,7 +131,111 @@
                 </div>
             </div>
 
-            <!-- PROJECT 2: AI DEVSECOPS PLATFORM -->
+            <!-- PROJECT 2: RAPID EXPOSURE RESPONSE KIT -->
+            <div class="project-card featured"
+                style="background: var(--bg-secondary); border: 1px solid var(--accent-color); padding: 30px; border-radius: 8px; margin-bottom: 32px; position: relative; overflow: hidden;">
+                <div
+                    style="position: absolute; top: 20px; right: 20px; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 20px; font-family: var(--font-mono); font-size: 12px; border: 1px solid var(--accent-color);">
+                    PLAYBOOK KIT
+                </div>
+
+                <div class="project-header" style="flex-direction: column; align-items: flex-start;">
+                    <h3 style="font-size: 26px; margin-bottom: 10px;">Rapid Exposure Response (RER) Kit</h3>
+                    <p class="project-tagline"
+                        style="font-size: 17px; color: var(--text-secondary); margin-bottom: 22px;">
+                        Emerging-vulnerability playbook: contain fast with compensating controls, remediate, verify, and hunt. Run with Microsoft 365 Copilot.</p>
+                </div>
+
+                <div class="project-metric"
+                    style="display: flex; align-items: center; margin-bottom: 24px; background: rgba(10, 25, 47, 0.5); padding: 18px; border-radius: 8px;">
+                    <span class="metric-number"
+                        style="font-size: 42px; font-weight: 700; color: var(--accent-color); margin-right: 18px;">S0–S7</span>
+                    <span class="metric-label" style="font-size: 16px; color: var(--text-primary);">eight-stage standing protocol, each stage with an entry and exit gate</span>
+                </div>
+
+                <div class="project-details"
+                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 24px;">
+                    <div class="detail-section">
+                        <h4 style="color: var(--accent-color); margin-bottom: 15px;">The Challenge</h4>
+                        <p style="color: var(--text-secondary);">
+                            A critical vulnerability drops and the response has to start before a patch
+                            exists: who owns each exposed asset, which compensating control buys time,
+                            what evidence proves a fix, and whether anything was already exploited.
+                            Most of that work crosses teams that do not report to security.
+                        </p>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4 style="color: var(--accent-color); margin-bottom: 15px;">The Solution</h4>
+                        <p style="color: var(--text-secondary);">
+                            A generic, reusable playbook kit: a standing protocol from intake to close,
+                            one Event Pack per vulnerability that maps the advisory onto the playbook,
+                            and libraries of compensating controls, verification recipes, and
+                            SIEM-agnostic retro-hunt hypotheses with decision tables for exposure
+                            grading, control selection, and evidence standards.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="detail-section" style="margin-bottom: 24px;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
+                        <div>
+                            <h4 style="color: var(--accent-color); margin-bottom: 15px;">Architecture Approach</h4>
+                            <p style="color: var(--text-secondary);">
+                                One-way flow: GitHub to work, never back. Tagged releases ship a zip with
+                                SHA256 checksums and GitHub build attestations, extracted into a
+                                restricted SharePoint site as a read-only upstream copy beside the
+                                organization's filled edition. An M365 Copilot agent grounds on both and
+                                must cite a table row for every grade, control, and hunt; a pasted
+                                advisory is treated as data, never as instructions.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--accent-color); margin-bottom: 15px;">What Ships</h4>
+                            <ul style="color: var(--text-secondary); list-style: none;">
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check"
+                                        style="color: var(--accent-color); margin-right: 10px;"></i> Eight-stage playbook, Event Pack template, and after-action report template</li>
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check"
+                                        style="color: var(--accent-color); margin-right: 10px;"></i> Control, verification, and hunt libraries (H1–H7) with four decision tables</li>
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check"
+                                        style="color: var(--accent-color); margin-right: 10px;"></i> Copilot agent instructions, prompt pack, and Power Automate flow specs</li>
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check"
+                                        style="color: var(--accent-color); margin-right: 10px;"></i> Three synthetic drills with answer keys and a scoring sheet</li>
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check"
+                                        style="color: var(--accent-color); margin-right: 10px;"></i> Pre-commit leak guard and a cross-reference checker run in CI</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="note-box"
+                    style="background: rgba(100, 255, 218, 0.05); padding: 15px; border-left: 3px solid var(--accent-color); border-radius: 4px; margin-bottom: 24px; color: var(--text-secondary);">
+                    <strong style="color: var(--accent-color);">Note:</strong> The repository holds templates only.
+                    No organization data is ever committed; every filled copy lives in the organization's own tenant.
+                </div>
+
+                <div class="tech-stack" style="margin-bottom: 24px;">
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">Python</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">PowerShell</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">M365 Copilot</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">SharePoint Lists</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">Power Automate</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">Vulnerability Management</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/mwill20/rapid-exposure-response" class="btn btn-primary"
+                        style="margin-right: 15px;"><i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+            </div>
+
+            <!-- PROJECT 3: AI DEVSECOPS PLATFORM -->
             <div class="project-card featured"
                 style="background: var(--bg-secondary); border: 1px solid var(--accent-color); padding: 30px; border-radius: 8px; margin-bottom: 32px; position: relative; overflow: hidden;">
                 <!-- Badge -->
@@ -226,7 +330,7 @@
                 </div>
             </div>
 
-            <!-- PROJECT 3: SECURECLI-TUNER -->
+            <!-- PROJECT 4: SECURECLI-TUNER -->
             <div class="project-card featured"
                 style="background: var(--bg-secondary); border: 1px solid var(--accent-color); padding: 30px; border-radius: 8px; position: relative; overflow: hidden;">
                 <div
@@ -352,7 +456,7 @@
                 const filter = btn.dataset.filter;
 
                 // Show/Hide Featured Section
-                // Featured section contains ThreatPrism, AI DevSecOps, and SecureCLI-Tuner.
+                // Featured section contains ThreatPrism, RER Kit, AI DevSecOps, and SecureCLI-Tuner.
                 // Show featured on 'all' or 'security' filter.
                 if (filter === 'all' || filter === 'security') {
                     if (featuredSection) featuredSection.style.display = 'block';

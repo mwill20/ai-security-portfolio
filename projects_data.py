@@ -40,13 +40,6 @@ projects = {
         "icon": "fas fa-shield-alt",
         "projects": [
             {
-                "title": "Rapid Exposure Response (RER) Kit",
-                "description": "Generic, reusable playbook kit for reacting to emerging critical vulnerabilities: contain fast with compensating controls, remediate, verify, and hunt. An eight-stage playbook with entry and exit gates, compensating-control and verification libraries, SIEM-agnostic retro-hunt hypotheses, Copilot agent instructions and prompt packs, and drills with answer keys. Built to be pulled one way into a work environment and run with Microsoft 365 Copilot.",
-                "tech": ["Python", "PowerShell", "M365 Copilot", "Vulnerability Management"],
-                "icon": "fas fa-bolt",
-                "links": [{"label": "View on GitHub", "url": "https://github.com/mwill20/rapid-exposure-response", "class": "btn-primary"}]
-            },
-            {
                 "title": "SecureCLI-Tuner",
                 "description": "Security-first LLM fine-tuned for Agentic DevOps that translates natural language into safe, valid Bash commands. Implements a Defense-in-Depth architecture with sanitized QLoRA fine-tuning and three-layer runtime guardrail system.",
                 "icon": "fas fa-terminal",
