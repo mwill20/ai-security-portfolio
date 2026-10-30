@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 
-{% block title %}About - Michael Williams | AI Security Engineer{% endblock %}
-{% block og_title %}About — Michael Williams | AI Security Engineer{% endblock %}
-{% block og_description %}Builder who walks into ambiguity and ships production-grade security tools. 4+ years defending enterprise environments. Open to new opportunities.{% endblock %}
+{% block title %}About - Michael Williams | Cybersecurity Engineer, AI Security{% endblock %}
+{% block og_title %}About — Michael Williams | Cybersecurity Engineer, AI Security{% endblock %}
+{% block og_description %}Cybersecurity engineer and builder. Five years in security operations, now covering vulnerability management, investigations, and AI risk in healthcare.{% endblock %}
 
 {% block content %}
 <style>
@@ -25,7 +25,7 @@
     <div class="container">
         <header class="page-header" style="text-align: center; margin-bottom: 40px;">
             <h1 class="big-heading">About Me</h1>
-            <h2 style="font-size: 22px; color: var(--text-primary); margin-top: 10px;">Security operations specialist and builder</h2>
+            <h2 style="font-size: 22px; color: var(--text-primary); margin-top: 10px;">Cybersecurity engineer and builder</h2>
             <p class="subtitle" style="color: var(--accent-color); font-family: var(--font-mono); margin-top: 10px;">Open to new opportunities</p>
         </header>
 
@@ -34,15 +34,26 @@
 
                 <section class="about-intro" style="font-size: 17px; color: var(--text-secondary); margin-bottom: 34px;">
                     <p style="margin-bottom: 20px;">
-                        I am a security operations specialist and builder with experience across SOC operations, incident response, threat hunting, detection engineering, and customer-facing security partnerships. My work centers on turning messy telemetry, ambiguous investigations, and operational pain points into clear detections, repeatable processes, and safer systems.
+                        I am a cybersecurity engineer and builder with five years across SOC operations, incident response, threat hunting, detection engineering, and customer-facing security partnerships. Today that work runs in a healthcare environment: vulnerability management, escalated investigations, identity and access, and AI and software risk assessment, most of it coordinated across infrastructure, application, and clinical system owners rather than inside one team.
                     </p>
-                    <p>My approach is shaped by hands-on SOC operations: I have seen what breaks, what analysts, customers, and engineering teams trust, and what actually works under operational constraints. That operator's perspective informs every guardrail architecture I design.</p>
+                    <p>My approach is shaped by hands-on SOC operations: I have seen what breaks, what analysts, customers, and engineering teams trust, and what actually works under operational constraints. That operator's perspective informs every guardrail architecture I design, and it is the throughline from security operations into AI security.</p>
                 </section>
 
                 <section style="margin-bottom: 42px;">
                     <h3 style="color: var(--accent-color); margin-bottom: 18px; font-size: 22px;">Experience</h3>
-                    <p style="font-size: 16px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 28px;">The throughline in my career is simple: I walk into ambiguity, find the operational pain point, and build something that makes the environment more secure, repeatable, or easier to run. A pandemic response program needed secure technology operations from zero. A nonprofit cyber program needed a production SOC without enterprise licensing. A 60-client MSSP needed faster triage without sacrificing evidence or trust.</p>
+                    <p style="font-size: 16px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 28px;">The throughline in my career is simple: I walk into ambiguity, find the operational pain point, and build something that makes the environment more secure, repeatable, or easier to run. A pandemic response program needed secure technology operations from zero. A nonprofit cyber program needed a production SOC without enterprise licensing. A 60-client MSSP needed faster triage without sacrificing evidence or trust. A healthcare environment needed vulnerability management, access governance, and a way to assess AI before it is adopted.</p>
                     <div class="timeline">
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-chaos">THE CHAOS: A healthcare environment where risk is spread across clinical, infrastructure, and application teams</div>
+                            <div class="timeline-role">Cybersecurity Engineer II</div>
+                            <div class="timeline-meta">SEARHC&nbsp;&middot;&nbsp;Jun 2026 – Present</div>
+                            <div class="timeline-content">
+                                <p>Security engineering for a healthcare organization governed by HIPAA, SOC 2, NIST, and ISO 27001. I built out a vulnerability management program for testing and remediation, and I drive the fixes across network, infrastructure, application, and clinical systems teams. I also lead the identity and access program, maturing access and privilege management across the environment.</p>
+                                <p>On the response side, I investigate and lead containment for threats escalated from an outsourced SOC, working across SOAR, SIEM, EDR, email security, and identity platforms with OSINT enrichment. I run software risk assessments on vendors, and I lead AI risk assessment and adoption for the organization. The coordination is the job as much as the engineering: most remediation depends on teams that do not report to security.</p>
+                            </div>
+                        </div>
 
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
@@ -58,7 +69,7 @@
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
                             <div class="timeline-chaos">THE CHAOS: Build a production SOC with no enterprise budget and no existing infrastructure</div>
-                            <div class="timeline-role">Director of Cybersecurity</div>
+                            <div class="timeline-role">Director of Cybersecurity (Non-Profit)</div>
                             <div class="timeline-meta">Cyber Defense &amp; Intelligence Center (CDIC)&nbsp;&middot;&nbsp;Aug 2023 – Sep 2024</div>
                             <div class="timeline-content">
                                 <p>Built a production SOC from the ground up under nonprofit constraints where open-source and nonprofit licensing were the design requirements. Integrated BitDefender EDR, Wazuh EDR/SIEM, Splunk SIEM, TheHive SOAR, Action1 RMM, and a Software Defined Perimeter to support detection, monitoring, response, and operational repeatability.</p>
@@ -70,7 +81,7 @@
                             <div class="timeline-dot"></div>
                             <div class="timeline-chaos">THE CHAOS: A pandemic response environment with no playbook, no baseline, and distributed teams handling HIPAA/PII data</div>
                             <div class="timeline-role">First Responder — Technology Operations | Co-Lead</div>
-                            <div class="timeline-meta">Co-Lead PDA&nbsp;&middot;&nbsp;Feb 2020 – Feb 2021</div>
+                            <div class="timeline-meta">Co-Lead PDA&nbsp;&middot;&nbsp;Apr 2020 – Jan 2021</div>
                             <div class="timeline-content">
                                 <p>Helped stand up secure technology operations for a COVID-19 rapid-response environment where distributed teams needed reliable systems, secure access, and clear procedures immediately. Supported endpoint provisioning, authentication controls, account management, collaboration tooling, and secure connectivity for teams handling sensitive HIPAA/PII data.</p>
                                 <p>Built foundational operating processes for technology use, data handling, security practices, and staff support. Implemented baseline cybersecurity controls such as endpoint protection, patching, secure configuration, and monitoring. Supported phishing investigation and mitigation, escalated suspicious activity, and coordinated with leadership and external partners to align technical capabilities with operational needs.</p>
@@ -109,7 +120,7 @@
                     <div style="display: flex; flex-direction: column; gap: 14px;">
                         <div class="edu-card"><div class="edu-card-title">Postgraduate &mdash; AI &amp; ML Engineering</div><div class="edu-card-meta">University of Texas at Austin (McCombs)&nbsp;&middot;&nbsp;2025</div></div>
                         <div class="edu-card"><div class="edu-card-title">Applied Cybersecurity</div><div class="edu-card-meta">SANS Technology Institute&nbsp;&middot;&nbsp;2024</div></div>
-                        <div class="edu-card"><div class="edu-card-title">B.S. &mdash; Cybersecurity &amp; Information Assurance</div><div class="edu-card-meta">Western Governors University&nbsp;&middot;&nbsp;2023</div></div>
+                        <div class="edu-card"><div class="edu-card-title">B.A.S. &mdash; Cybersecurity &amp; Information Assurance</div><div class="edu-card-meta">Western Governors University&nbsp;&middot;&nbsp;2023</div></div>
                     </div>
                 </section>
 
@@ -178,9 +189,9 @@
                         <p style="font-size: 12px; margin-bottom: 8px; color: var(--accent-color); font-family: var(--font-mono);">CYBERSECURITY</p>
                         <ul style="list-style: none; padding: 0; margin-bottom: 16px;">
                             <li style="color: var(--text-secondary); font-size: 13px; margin-bottom: 4px;">&#9657; GSEC &middot; GCIH &middot; GCIA</li>
-                            <li style="color: var(--text-secondary); font-size: 13px; margin-bottom: 4px;">&#9657; SecurityX &middot; CySA+ &middot; PenTest+</li>
-                            <li style="color: var(--text-secondary); font-size: 13px; margin-bottom: 4px;">&#9657; Security+ &middot; SSCP &middot; CCNA &middot; ITIL</li>
-                            <li style="color: var(--text-secondary); font-size: 13px; margin-bottom: 4px;">&#9657; SC-200 &amp; SC-300 (In Progress)</li>
+                            <li style="color: var(--text-secondary); font-size: 13px; margin-bottom: 4px;">&#9657; SecurityX &middot; CASP+ &middot; CySA+</li>
+                            <li style="color: var(--text-secondary); font-size: 13px; margin-bottom: 4px;">&#9657; PenTest+ &middot; Security+ &middot; Network+</li>
+                            <li style="color: var(--text-secondary); font-size: 13px; margin-bottom: 4px;">&#9657; SSCP</li>
                         </ul>
                         <p style="font-size: 12px; margin-bottom: 8px; color: var(--accent-color); font-family: var(--font-mono);">AI / ML ENGINEERING</p>
                         <ul style="list-style: none; padding: 0;">

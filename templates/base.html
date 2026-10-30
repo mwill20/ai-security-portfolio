@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Michael Williams | AI Security Engineer{% endblock %}</title>
-    <meta name="description" content="{% block meta_description %}Michael Williams — cybersecurity operations specialist and AI security builder focused on guardrail-first systems, evidence-first reporting, and safe failure.{% endblock %}">
-    <meta property="og:title" content="{% block og_title %}Michael Williams | AI Security Engineer{% endblock %}">
+    <title>{% block title %}Michael Williams | Cybersecurity Engineer, AI Security{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}Michael Williams — cybersecurity engineer and AI security builder focused on guardrail-first systems, evidence-first reporting, and safe failure.{% endblock %}">
+    <meta property="og:title" content="{% block og_title %}Michael Williams | Cybersecurity Engineer, AI Security{% endblock %}">
     <meta property="og:description" content="{% block og_description %}Cybersecurity operations foundation with AI security, guardrail engineering, and evidence-first SOC automation. 60+ enterprise clients, 48% MTTR reduction.{% endblock %}">
     <meta property="og:url" content="{% block og_url %}https://mwill20.github.io/ai-security-portfolio/{% endblock %}">
     <meta property="og:type" content="website">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=2.2">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=2.3">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -26,6 +26,7 @@
                     <li><a href="{{ url_for('home') }}">Home</a></li>
                     <li><a href="{{ url_for('about') }}">About</a></li>
                     <li><a href="{{ url_for('projects') }}">Projects</a></li>
+                    <li><a href="https://mwill20.github.io/" target="_blank" rel="noopener noreferrer">My Path</a></li>
                     <li><a href="{{ url_for('static', filename='resume/M_Will_Resume.docx') }}" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-secondary" style="padding: 0.5rem 1rem; border-color: var(--accent-color); color: var(--accent-color);">Resume</a></li>
                     <li><a href="{{ url_for('home') }}#contact" class="btn btn-small btn-secondary" style="padding: 0.5rem 1rem; border-color: var(--accent-color); color: var(--accent-color);">Contact</a></li>
                 </ul>
