@@ -1,0 +1,2766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Michael Williams | AI Security Engineer</title>
+    <meta name="description" content="Michael Williams — cybersecurity engineer and AI security builder focused on guardrail-first systems, evidence-first reporting, and safe failure.">
+    <meta property="og:title" content="Michael Williams | Cybersecurity Engineer, AI Security">
+    <meta property="og:description" content="Cybersecurity operations foundation with AI security, guardrail engineering, and evidence-first SOC automation. 60+ enterprise clients, 48% MTTR reduction.">
+    <meta property="og:url" content="https://mwill20.github.io/ai-security-portfolio/">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="../static/css/style.css?v=2.3">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="../index.html" class="logo">MW</a>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about/index.html">About</a></li>
+                    <li><a href="index.html">Projects</a></li>
+                    <li><a href="https://mwill20.github.io/" target="_blank" rel="noopener noreferrer">My Path</a></li>
+                    <li><a href="../static/resume/M_Will_Resume.docx" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-secondary" style="padding: 0.5rem 1rem; border-color: var(--accent-color); color: var(--accent-color);">Resume</a></li>
+                    <li><a href="../index.html#contact" class="btn btn-small btn-secondary" style="padding: 0.5rem 1rem; border-color: var(--accent-color); color: var(--accent-color);">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="content">
+
+<section class="projects-section" id="projects">
+    <div class="container">
+        <header class="page-header" style="text-align: center; margin-bottom: 40px;">
+            <h1 class="big-heading">My Projects</h1>
+            <div class="divider"></div>
+            <p class="section-description">SOC systems, AI security research, and guardrail-first tooling built from operational constraints.</p>
+        </header>
+
+        <!-- Project Filters -->
+        <div id="all-projects" class="project-filters" style="text-align: center; margin-bottom: 32px;">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="mcp">MCP Ecosystem</button>
+            <button class="filter-btn" data-filter="security">Security</button>
+            <button class="filter-btn" data-filter="agents">AI Agents</button>
+            <button class="filter-btn" data-filter="ml">ML Engineering</button>
+            <button class="filter-btn" data-filter="cloud">Cloud</button>
+            <button class="filter-btn" data-filter="fun">Just for Fun</button>
+        </div>
+
+        <section class="featured-projects" id="featured-projects" style="margin-bottom: 56px;">
+            <h2 style="margin-bottom: 32px; border-bottom: 2px solid var(--accent-color); padding-bottom: 10px;">
+                Featured: SOC Systems, AI Security Research, and Guardrail-First Tooling</h2>
+
+            <!-- PROJECT 1: THREATPRISM -->
+            <div class="project-card featured"
+                style="background: var(--bg-secondary); border: 1px solid var(--accent-color); padding: 30px; border-radius: 8px; margin-bottom: 32px; position: relative; overflow: hidden;">
+                <!-- Badge -->
+                <div
+                    style="position: absolute; top: 20px; right: 20px; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 20px; font-family: var(--font-mono); font-size: 12px; border: 1px solid var(--accent-color);">
+                    PRODUCTION DEPLOYED
+                </div>
+
+                <div class="project-header" style="flex-direction: column; align-items: flex-start;">
+                    <h3 style="font-size: 26px; margin-bottom: 10px;">ThreatPrism — Guardrail-First SOC Investigation Pipeline</h3>
+                    <p class="project-tagline"
+                        style="font-size: 17px; color: var(--text-secondary); margin-bottom: 22px;">
+                        AI-assisted SOC analysis with deterministic guardrails and evidence-first reporting</p>
+                </div>
+
+                <div class="project-metric"
+                    style="display: flex; align-items: center; margin-bottom: 24px; background: rgba(10, 25, 47, 0.5); padding: 18px; border-radius: 8px;">
+                    <span class="metric-number"
+                        style="font-size: 42px; font-weight: 700; color: var(--accent-color); margin-right: 18px;">48%</span>
+                    <span class="metric-label" style="font-size: 16px; color: var(--text-primary);">reduction in analyst
+                        investigation time</span>
+                </div>
+
+                <div class="project-details"
+                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 24px;">
+                    <div class="detail-section">
+                        <h4 style="color: var(--accent-color); margin-bottom: 15px;">The Challenge</h4>
+                        <p style="color: var(--text-secondary);">
+                            Security analysts face repetitive manual event correlation across
+                            fragmented telemetry sources, with investigation workflows averaging
+                            30-45 minutes per alert batch. Traditional automation breaks analyst
+                            trust when tools produce unreliable outputs.
+                        </p>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4 style="color: var(--accent-color); margin-bottom: 15px;">The Solution</h4>
+                        <p style="color: var(--text-secondary);">
+                            ThreatPrism is a guardrail-first SOC investigation pipeline that automates IOC extraction,
+                            MITRE ATT&amp;CK mapping, severity and confidence scoring, next-step generation, and analyst
+                            context delivery while keeping production details proprietary.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="detail-section" style="margin-bottom: 24px;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
+                        <div>
+                            <h4 style="color: var(--accent-color); margin-bottom: 15px;">Architecture Approach</h4>
+                            <p style="color: var(--text-secondary);">
+                                Three-layer guardrail enforcement: (1) deterministic validation for
+                                known patterns, (2) semantic schema enforcement preventing malformed
+                                outputs, (3) policy-based controls enforcing organizational rules.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--accent-color); margin-bottom: 15px;">Demonstrated Impact</h4>
+                            <ul style="color: var(--text-secondary); list-style: none;">
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check"
+                                        style="color: var(--accent-color); margin-right: 10px;"></i> 48% reduction in
+                                    investigation time (30-45 min → ~6 min per batch)</li>
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check"
+                                        style="color: var(--accent-color); margin-right: 10px;"></i> Zero hallucinated
+                                    actions through strict guardrail enforcement</li>
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check"
+                                        style="color: var(--accent-color); margin-right: 10px;"></i> Full auditability
+                                    with
+                                    provenance tracking for compliance</li>
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check"
+                                        style="color: var(--accent-color); margin-right: 10px;"></i> Designed for
+                                    production SOC environments</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="note-box"
+                    style="background: rgba(100, 255, 218, 0.05); padding: 15px; border-left: 3px solid var(--accent-color); border-radius: 4px; margin-bottom: 24px; color: var(--text-secondary);">
+                    <strong style="color: var(--accent-color);">Note:</strong> The GitHub repository contains the
+                    proof-of-concept
+                    demonstrating the guardrail architecture and evaluation methodology.
+                    Operational deployment details remain proprietary.
+                </div>
+
+                <div class="tech-stack" style="margin-bottom: 24px;">
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">Python</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">LLM
+                        Guardrails</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">Multi-Cloud
+                        Telemetry</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">Provenance
+                        Tracking</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/mwill20/threatprism" class="btn btn-primary"
+                        style="margin-right: 15px;"><i class="fab fa-github"></i> View POC on GitHub</a>
+                </div>
+            </div>
+
+            <!-- PROJECT 2: RAPID EXPOSURE RESPONSE KIT -->
+            <div class="project-card featured"
+                style="background: var(--bg-secondary); border: 1px solid var(--accent-color); padding: 30px; border-radius: 8px; margin-bottom: 32px; position: relative; overflow: hidden;">
+                <div
+                    style="position: absolute; top: 20px; right: 20px; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 20px; font-family: var(--font-mono); font-size: 12px; border: 1px solid var(--accent-color);">
+                    PLAYBOOK KIT
+                </div>
+
+                <div class="project-header" style="flex-direction: column; align-items: flex-start;">
+                    <h3 style="font-size: 26px; margin-bottom: 10px;">Rapid Exposure Response (RER) Kit</h3>
+                    <p class="project-tagline"
+                        style="font-size: 17px; color: var(--text-secondary); margin-bottom: 22px;">
+                        Emerging-vulnerability playbook: contain fast with compensating controls, remediate, verify, and hunt. Run with Microsoft 365 Copilot.</p>
+                </div>
+
+                <div class="project-metric"
+                    style="display: flex; align-items: center; margin-bottom: 24px; background: rgba(10, 25, 47, 0.5); padding: 18px; border-radius: 8px;">
+                    <span class="metric-number"
+                        style="font-size: 42px; font-weight: 700; color: var(--accent-color); margin-right: 18px;">S0–S7</span>
+                    <span class="metric-label" style="font-size: 16px; color: var(--text-primary);">eight-stage standing protocol, each stage with an entry and exit gate</span>
+                </div>
+
+                <div class="project-details"
+                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 24px;">
+                    <div class="detail-section">
+                        <h4 style="color: var(--accent-color); margin-bottom: 15px;">The Challenge</h4>
+                        <p style="color: var(--text-secondary);">
+                            A critical vulnerability drops and the response has to start before a patch
+                            exists: who owns each exposed asset, which compensating control buys time,
+                            what evidence proves a fix, and whether anything was already exploited.
+                            Most of that work crosses teams that do not report to security.
+                        </p>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4 style="color: var(--accent-color); margin-bottom: 15px;">The Solution</h4>
+                        <p style="color: var(--text-secondary);">
+                            A generic, reusable playbook kit: a standing protocol from intake to close,
+                            one Event Pack per vulnerability that maps the advisory onto the playbook,
+                            and libraries of compensating controls, verification recipes, and
+                            SIEM-agnostic retro-hunt hypotheses with decision tables for exposure
+                            grading, control selection, and evidence standards.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="detail-section" style="margin-bottom: 24px;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
+                        <div>
+                            <h4 style="color: var(--accent-color); margin-bottom: 15px;">Architecture Approach</h4>
+                            <p style="color: var(--text-secondary);">
+                                One-way flow: GitHub to work, never back. Tagged releases ship a zip with
+                                SHA256 checksums and GitHub build attestations, extracted into a
+                                restricted SharePoint site as a read-only upstream copy beside the
+                                organization's filled edition. An M365 Copilot agent grounds on both and
+                                must cite a table row for every grade, control, and hunt; a pasted
+                                advisory is treated as data, never as instructions.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--accent-color); margin-bottom: 15px;">What Ships</h4>
+                            <ul style="color: var(--text-secondary); list-style: none;">
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check"
+                                        style="color: var(--accent-color); margin-right: 10px;"></i> Eight-stage playbook, Event Pack template, and after-action report template</li>
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check"
+                                        style="color: var(--accent-color); margin-right: 10px;"></i> Control, verification, and hunt libraries (H1–H7) with four decision tables</li>
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check"
+                                        style="color: var(--accent-color); margin-right: 10px;"></i> Copilot agent instructions, prompt pack, and Power Automate flow specs</li>
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check"
+                                        style="color: var(--accent-color); margin-right: 10px;"></i> Three synthetic drills with answer keys and a scoring sheet</li>
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check"
+                                        style="color: var(--accent-color); margin-right: 10px;"></i> Pre-commit leak guard and a cross-reference checker run in CI</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="note-box"
+                    style="background: rgba(100, 255, 218, 0.05); padding: 15px; border-left: 3px solid var(--accent-color); border-radius: 4px; margin-bottom: 24px; color: var(--text-secondary);">
+                    <strong style="color: var(--accent-color);">Note:</strong> The repository holds templates only.
+                    No organization data is ever committed; every filled copy lives in the organization's own tenant.
+                </div>
+
+                <div class="tech-stack" style="margin-bottom: 24px;">
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">Python</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">PowerShell</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">M365 Copilot</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">SharePoint Lists</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">Power Automate</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">Vulnerability Management</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/mwill20/rapid-exposure-response" class="btn btn-primary"
+                        style="margin-right: 15px;"><i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+            </div>
+
+            <!-- PROJECT 3: AI DEVSECOPS PLATFORM -->
+            <div class="project-card featured"
+                style="background: var(--bg-secondary); border: 1px solid var(--accent-color); padding: 30px; border-radius: 8px; margin-bottom: 32px; position: relative; overflow: hidden;">
+                <!-- Badge -->
+                <div
+                    style="position: absolute; top: 20px; right: 20px; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 20px; font-family: var(--font-mono); font-size: 12px; border: 1px solid var(--accent-color);">
+                    VALIDATED SECURITY RESEARCH
+                </div>
+
+                <div class="project-header" style="flex-direction: column; align-items: flex-start;">
+                    <h3 style="font-size: 26px; margin-bottom: 10px;">AI DevSecOps Platform — 5-Layer Security Mesh</h3>
+                    <p class="project-tagline"
+                        style="font-size: 17px; color: var(--text-secondary); margin-bottom: 22px;">
+                        Validated AI security engineering research for detecting unsafe code-generation patterns</p>
+                </div>
+
+                <div class="project-metric"
+                    style="display: flex; align-items: center; margin-bottom: 24px; background: rgba(10, 25, 47, 0.5); padding: 18px; border-radius: 8px;">
+                    <span class="metric-number"
+                        style="font-size: 42px; font-weight: 700; color: var(--accent-color); margin-right: 18px;">57</span>
+                    <span class="metric-label" style="font-size: 16px; color: var(--text-primary);">adversarial test
+                        cases validated</span>
+                </div>
+
+                <div class="project-details"
+                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 24px;">
+                    <div class="detail-section">
+                        <h4 style="color: var(--accent-color); margin-bottom: 15px;">The Problem</h4>
+                        <p style="color: var(--text-secondary);">
+                            Traditional static analysis tools miss AI-specific threats (prompt injection,
+                            model poisoning, shadow code modifications), while pure LLM-based security
+                            tools lack deterministic guarantees and audit trails required for CI/CD workflows.
+                        </p>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4 style="color: var(--accent-color); margin-bottom: 15px;">The Solution</h4>
+                        <p style="color: var(--text-secondary);">
+                            Validated AI security engineering project for detecting unsafe patterns in AI-generated
+                            code. Combines deterministic controls, semantic taint tracking, ShellGuard, LLM reasoning
+                            with Pydantic constraints, and provenance concepts.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="detail-section" style="margin-bottom: 24px;">
+                    <h4 style="color: var(--accent-color); margin-bottom: 15px;">Key Innovation: Taint Handshake
+                        Protocol</h4>
+                    <p style="color: var(--text-secondary); margin-bottom: 18px;">
+                        AST provides factual data flows (deterministic), LLM provides semantic
+                        intent analysis (contextual). Shadow Code detection flags unauthorized
+                        AI modifications through provenance verification. Semantic Drift tracking
+                        monitors AI vs. AST disagreements as red-team radar for model blind spots.
+                    </p>
+                    <div style="background: rgba(10, 25, 47, 0.3); padding: 18px; border-radius: 6px;">
+                        <h5 style="color: var(--text-primary); margin-bottom: 10px;">Validation Results:</h5>
+                        <ul
+                            style="color: var(--text-secondary); list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            <li><i class="fas fa-check-circle"
+                                    style="color: var(--accent-color); margin-right: 8px;"></i> Tested across 57
+                                adversarial scenarios</li>
+                            <li><i class="fas fa-check-circle"
+                                    style="color: var(--accent-color); margin-right: 8px;"></i> Detection patterns mapped to
+                                OWASP LLM Top 10</li>
+                            <li><i class="fas fa-check-circle"
+                                    style="color: var(--accent-color); margin-right: 8px;"></i> Detects washed secrets &
+                                logic bombs</li>
+                            <li><i class="fas fa-check-circle"
+                                    style="color: var(--accent-color); margin-right: 8px;"></i> CI/CD-ready with
+                                sys.exit(1) on CRITICAL</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tech-stack" style="margin-bottom: 24px;">
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">Python
+                        3.12+</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">DeepSeek-R1
+                        (Ollama)</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">SQLite</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">AST</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">Pydantic</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/mwill20/AI-DevSecOps" class="btn btn-primary"
+                        style="margin-right: 15px;"><i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+            </div>
+
+            <!-- PROJECT 4: SECURECLI-TUNER -->
+            <div class="project-card featured"
+                style="background: var(--bg-secondary); border: 1px solid var(--accent-color); padding: 30px; border-radius: 8px; position: relative; overflow: hidden;">
+                <div
+                    style="position: absolute; top: 20px; right: 20px; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 20px; font-family: var(--font-mono); font-size: 12px; border: 1px solid var(--accent-color);">
+                    SECURITY RESEARCH
+                </div>
+
+                <div class="project-header" style="flex-direction: column; align-items: flex-start;">
+                    <h3 style="font-size: 26px; margin-bottom: 10px;">SecureCLI-Tuner — Security-First LLM for Agentic DevOps</h3>
+                    <p class="project-tagline"
+                        style="font-size: 17px; color: var(--text-secondary); margin-bottom: 22px;">
+                        Translating natural language into safe, auditable Bash commands</p>
+                </div>
+
+                <div class="project-details"
+                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 24px;">
+                    <div class="detail-section">
+                        <h4 style="color: var(--accent-color); margin-bottom: 15px;">The Problem</h4>
+                        <p style="color: var(--text-secondary);">
+                            AI-generated shell commands create a dangerous attack surface in agentic DevOps workflows.
+                            The system needs to distinguish legitimate automation from prompt injection and unsafe operations.
+                        </p>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4 style="color: var(--accent-color); margin-bottom: 15px;">The Solution</h4>
+                        <p style="color: var(--text-secondary);">
+                            Fine-tuned an LLM using sanitized QLoRA training data, then wrapped it in deterministic
+                            command validation, semantic intent analysis, and policy enforcement that blocks dangerous
+                            behavior before execution.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="tech-stack" style="margin-bottom: 24px;">
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">Python</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">QLoRA Fine-Tuning</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">LLM Guardrails</span>
+                    <span class="tech-tag"
+                        style="display: inline-block; background: rgba(100, 255, 218, 0.1); color: var(--accent-color); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--accent-color); margin-right: 10px; margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px;">Bash Safety</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/mwill20/SecureCLI-Tuner" class="btn btn-primary"
+                        style="margin-right: 15px;"><i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+            </div>
+        </section>
+
+
+    
+    
+    <div class="project-group" data-category="mcp" id="mcp">
+        <div class="project-group-header">
+            <h3><i class="fas fa-cogs project-icon"></i> MCP Ecosystem</h3>
+        </div>
+
+        
+        
+            <div class="mcp-ecosystem-section"
+                style="max-width: 1200px; margin: 20px auto; color: #e0e6f0; line-height: 1.6; border: none; background: transparent;">
+                <h3 style="text-align: center; margin-bottom: 20px;">The Model Context Protocol (MCP) Ecosystem</h3>
+                <p
+                    style="text-align: center; max-width: 800px; margin: 0 auto 40px auto; color: var(--text-secondary);">
+                    A unified framework connecting specialized AI Agents and Tools through a central Core Server,
+                    enabling
+                    seamless interoperability and secure orchestration.
+                </p>
+
+                <!-- MCP Network Visualization -->
+                <div class="mcp-network-container">
+
+                    <!-- Left Column: Tools -->
+                    <div class="mcp-column left-tools">
+                        <div class="mcp-card tool">
+                            <i class="fas fa-calculator icon"></i>
+                            <h4>Calculator Tool</h4>
+                            <p>Complex math & unit conversions</p>
+                        </div>
+                        <div class="mcp-card tool">
+                            <i class="fas fa-smile icon"></i>
+                            <h4>Sentiment Analysis</h4>
+                            <p>NLP-powered emotion detection</p>
+                            <a href="https://github.com/mwill20/Sentiment-Analysis" target="_blank"
+                                rel="noopener noreferrer" class="btn-mini">View Code</a>
+                        </div>
+                        <div class="mcp-card tool">
+                            <i class="fas fa-cloud-sun icon"></i>
+                            <h4>Weather Tool</h4>
+                            <p>Global forecasts & alerts</p>
+                        </div>
+                    </div>
+
+                    <!-- Center Column: Core Server -->
+                    <div class="mcp-column center-hub">
+                        <div class="mcp-card core-server">
+                            <i class="fas fa-server icon" style="font-size: 3rem; margin-bottom: 20px;"></i>
+                            <h4 style="font-size: 1.5rem;">MCP Core Server</h4>
+                            <p style="font-size: 1rem;">The central nervous system orchestrating all tool executions and
+                                agent communications.</p>
+                            <div style="margin-top: 20px;">
+                                <a href="https://github.com/mwill20/mcp-tools" target="_blank"
+                                    class="btn btn-primary">View
+                                    Core on GitHub</a>
+                            </div>
+                        </div>
+                        <div class="arrow-down"
+                            style="height: 40px; width: 2px; background: var(--accent-color); margin: 0 auto; opacity: 0.5;">
+                        </div>
+                        <div class="mcp-card tool" style="width: auto; padding: 15px 30px;">
+                            <i class="fas fa-desktop icon"></i>
+                            <h4 style="margin: 0;">Unified Demo Interface</h4>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Agents -->
+                    <div class="mcp-column right-agents">
+                        <div class="mcp-card agent">
+                            <i class="fab fa-js icon"></i>
+                            <h4>TypeScript Agent</h4>
+                            <p>Lightweight web automation agent</p>
+                            <a href="https://github.com/mwill20/mcp-tiny-agent" target="_blank" rel="noopener noreferrer" class="btn-mini">View
+                                Code</a>
+                        </div>
+                        <div class="mcp-card agent">
+                            <i class="fas fa-robot icon"></i>
+                            <h4>Productivity Agent</h4>
+                            <p>Windows automation & log analysis</p>
+                            <a href="https://github.com/mwill20/PersonalProductivityAgent" target="_blank"
+                                class="btn-mini">View Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/AV_MCP_Intel_System" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/AV_MCP_Intel_System" target="_blank">MCP Intelligence System</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Claude-powered operational intelligence platform that connects to live engineering data over MCP and answers engineering-operations questions in natural language, producing a daily morning brief and live incident views.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Python</li>
+                        
+                        <li>MCP</li>
+                        
+                        <li>Claude</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/MCP_Project" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                            <a href="https://huggingface.co/spaces/mwill-AImission/MCP_Project" aria-label="Live Demo" target="_blank">
+                                <i
+                                    class="fas fa-external-link-alt"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/MCP_Project" target="_blank">MCP Model Server</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Python backend server implementing the Model Context Protocol to host AI models and expose them to MCP-compliant agents and applications through a standardized interface.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Python</li>
+                        
+                        <li>MCP</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-toolbox"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/mcp-tools-demo" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                            <a href="https://huggingface.co/spaces/mwill-AImission/mcp-tools-demo" aria-label="Live Demo" target="_blank">
+                                <i
+                                    class="fas fa-external-link-alt"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/mcp-tools-demo" target="_blank">MCP Tools Demo</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Multi-tool Gradio application with MCP integration, bundling several tools behind a single interactive front end.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Gradio</li>
+                        
+                        <li>MCP</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="project-group" data-category="security" id="security">
+        <div class="project-group-header">
+            <h3><i class="fas fa-shield-alt project-icon"></i> Security</h3>
+        </div>
+
+        
+        
+
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/AI-Guardrails" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/AI-Guardrails" target="_blank">AI Guardrails</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Layered security framework for LLMs and agents that combines deterministic rules, semantic classifiers, and policy enforcement to detect prompt injection, malicious intent, and unsafe reasoning before outputs reach users or systems.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/SageVault" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                            <a href="../static/videos/sagevault-demo.mp4" aria-label="Watch Demo" target="_blank">
+                                <i
+                                    class="fas fa-external-link-alt"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/SageVault" target="_blank">SageVault - Secure RAG</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Security-focused RAG application with built-in guardrails for safe document and codebase analysis with AI.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-shield-virus"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/ml-malware-detection-system" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                            <a href="https://ml-malware-detection-system-jokkbsjues7uiddb7sduh4.streamlit.app/" aria-label="Live Demo" target="_blank">
+                                <i
+                                    class="fas fa-external-link-alt"></i>
+                            </a>
+                            
+                            <a href="https://github.com/mwill20/ml-malware-detection-system/blob/main/README.md" aria-label="Technical Overview" target="_blank">
+                                <i
+                                    class="fas fa-external-link-alt"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/ml-malware-detection-system" target="_blank">ML Malware Detection System</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Enterprise-Grade Security: Advanced ensemble ML system with 9 trained models, grey-zone decision gating, and SHAP explainability. Features Streamlit web interface, CLI tools, and production-ready deployment achieving 95%+ recall for SOC environments.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Ensemble Learning</li>
+                        
+                        <li>SHAP</li>
+                        
+                        <li>Streamlit</li>
+                        
+                        <li>CI/CD</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/Malware_analysis_LightGBM" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/Malware_analysis_LightGBM" target="_blank">Malware Analysis LightGBM</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>AI-powered malware detection using LightGBM and static PE file analysis for enterprise endpoint security. Achieves 98%+ F1-score with millisecond prediction times.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-file-code"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/Malware_Detection_using_PE_File_Metadata" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/Malware_Detection_using_PE_File_Metadata" target="_blank">PE File Metadata Analysis</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Comprehensive malware detection using PE file metadata with advanced feature engineering, visualization, and model validation. Multi-method feature selection with PCA, t-SNE, and ensemble methods.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-crosshairs"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/High-Recall_Malware_Detector_Supervised_Unsupervised" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/High-Recall_Malware_Detector_Supervised_Unsupervised" target="_blank">High-Recall Malware Detector</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Integration Capstone: Combines supervised and unsupervised ML approaches with recall-first optimization for SOC environments. Synthesizes insights from LightGBM and PE metadata projects into a unified detection framework achieving 99.95% recall.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/Unsupervised_Anomaly_Detection_Proactive_Malware_Defense" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/Unsupervised_Anomaly_Detection_Proactive_Malware_Defense" target="_blank">Unsupervised Anomaly Detection</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Proactive Malware Defense: Signature-free malware detection using unsupervised learning for Aegis AI Security&#39;s Sentinel Endpoint Agent. Achieves 93% AUC with Isolation Forest for real-time pre-execution threat analysis.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/Unsupervised_Structural_Anomaly_Detection_PE_Files_Malware_Triage" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/Unsupervised_Structural_Anomaly_Detection_PE_Files_Malware_Triage" target="_blank">Structural Anomaly Detection</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Malware Triage: Advanced ensemble-based PE file analysis combining Isolation Forest, K-Means, and One-Class SVM. Features interpretable anomaly scoring and confidence-based triage for SOC environments with rich visualization suite.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/smart-security-camera" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/smart-security-camera" target="_blank">Smart Security Camera</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>An intelligent security system with face detection and motion tracking, built with Python and OpenCV.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/ClawGuard" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/ClawGuard" target="_blank">ClawGuard</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Guardrail-first agent security monitoring framework built around OpenClaw job-search telemetry, detecting unsafe agent behavior and preserving evidence for investigation.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Python</li>
+                        
+                        <li>Agent Security</li>
+                        
+                        <li>Telemetry</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-fingerprint"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/MalVec" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/MalVec" target="_blank">MalVec</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Explainable malware classification using structural similarity. Classifies PE files as malware or benign by comparing them against known samples, surfacing the reasoning rather than returning an opaque risk score.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Python</li>
+                        
+                        <li>PE Analysis</li>
+                        
+                        <li>Explainability</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-user-secret"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/LLM-Red-Teaming-Audit-Demo" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/LLM-Red-Teaming-Audit-Demo" target="_blank">LLM Red Teaming Audit</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Security assessment of a financial-services chatbot and an e-commerce agent. Manual probing, automated scanning with Giskard, and adversarial simulation identified 16 distinct vulnerabilities across the OWASP Top 10 for LLMs.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>LLM Red Teaming</li>
+                        
+                        <li>Giskard</li>
+                        
+                        <li>OWASP LLM Top 10</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/ThreatPrism_V2" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/ThreatPrism_V2" target="_blank">ThreatPrism V2</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Demo-safe SOC migration accelerator for organizations moving from outsourced SOC operations toward an internal model. A case-centric backend ingests SOAR-style payloads, normalizes evidence, applies deterministic guardrails, and produces structured triage and GRC output behind role-safe API views.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Python</li>
+                        
+                        <li>SOC</li>
+                        
+                        <li>Guardrails</li>
+                        
+                        <li>GRC</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/CLI-Tuner" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/CLI-Tuner" target="_blank">CLI-Tuner</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Data and training pipeline behind SecureCLI-Tuner: a security-aware ML workflow for translating natural language into Bash, built on Qwen2.5-Coder-7B-Instruct with zero-tolerance validation.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Python</li>
+                        
+                        <li>Qwen2.5-Coder</li>
+                        
+                        <li>Dataset Engineering</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/Governed_AI_Pipeline" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/Governed_AI_Pipeline" target="_blank">Governed AI Pipeline</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Portable governance pipeline for Claude Code - custom slash commands, validation hooks, and audit logging - built to demonstrate that an AI-augmented development workflow can be rolled out safely across a small team.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Claude Code</li>
+                        
+                        <li>Governance</li>
+                        
+                        <li>Audit Logging</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/AI-SEC-practice-ground" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/AI-SEC-practice-ground" target="_blank">AI Sec Practice Ground</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Offline-first rehearsal range for AI security workflows. Provides deterministic simulators and synthetic fixtures so a full loop - read the challenge, run the workflow, capture evidence, write the report - can be practiced without standing up lab infrastructure.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>PowerShell</li>
+                        
+                        <li>Simulation</li>
+                        
+                        <li>Blue Team</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-vials"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/GAN-Security-Learning" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/GAN-Security-Learning" target="_blank">GAN Security Learning</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Step-by-step learning project on Generative Adversarial Networks and AI security - building image-generating models, then attacking and defending them to observe the failure modes directly.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Python</li>
+                        
+                        <li>GANs</li>
+                        
+                        <li>Adversarial ML</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="project-group" data-category="agents" id="agents">
+        <div class="project-group-header">
+            <h3><i class="fas fa-robot project-icon"></i> AI Agents</h3>
+        </div>
+
+        
+        
+
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/Trust-Bench-SecureEval-Ops" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/Trust-Bench-SecureEval-Ops" target="_blank">TrustBench SecureEval Ops v3.0 Production</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Production-Grade Multi-Agent Security Evaluation Framework: Advanced evolution of Trust Bench featuring SecureEval guardrails, intelligent agent routing, consensus building, and operational excellence. Features specialized security, quality, and documentation agents with cross-agent collaboration, weighted scoring, confidence metrics, and comprehensive export capabilities. Includes structured logging, health probes, CI/CD pipeline, and 79% test coverage.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Python</li>
+                        
+                        <li>LangGraph</li>
+                        
+                        <li>Multi-Agent Systems</li>
+                        
+                        <li>FastAPI</li>
+                        
+                        <li>Security Analysis</li>
+                        
+                        <li>CI/CD</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/MultiAgent_SOC" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/MultiAgent_SOC" target="_blank">Aegis MultiAgent SOC Competition Finalist (v1)</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Secure multi-agent SOC triage with A2A guardrails and structured observability, designed as a v1 competition finalist with v2 upgrades planned for expanded SOC automation.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Python 3.13</li>
+                        
+                        <li>Google ADK</li>
+                        
+                        <li>a2a-sdk</li>
+                        
+                        <li>Gemini 2.5 Flash-Lite</li>
+                        
+                        <li>Uvicorn</li>
+                        
+                        <li>Pytest</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/Trust_Bench" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                            <a href="https://1drv.ms/v/c/2c8c41c39e8a63cb/EQil7I1iewdEuzPdQGBqVOYBHaRg9tBcyogZvmKUXKFLyw?e=8Dl8P5" aria-label="Watch Demo" target="_blank">
+                                <i
+                                    class="fas fa-external-link-alt"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/Trust_Bench" target="_blank">Trust Bench Demo</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>A LangGraph-based multi-agent workflow that inspects software repositories for security leaks, code quality gaps, and documentation health. Features a collaborative system of specialized agents working together to provide comprehensive repository analysis.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Python</li>
+                        
+                        <li>LangGraph</li>
+                        
+                        <li>Multi-Agent Systems</li>
+                        
+                        <li>Security Analysis</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/AgentLedger" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/AgentLedger" target="_blank">AgentLedger</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Proof-of-concept six-layer trust infrastructure for agent-native services, covering discovery, identity, trust signals, context disclosure, workflow validation, and liability evidence. Registers and verifies services rather than executing workflows itself.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Python</li>
+                        
+                        <li>Agent Identity</li>
+                        
+                        <li>Trust Infrastructure</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/ai-factory" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/ai-factory" target="_blank">AI Factory</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Portable nine-agent software factory with security engineering built into the pipeline at both design time and implementation time. Tool-agnostic - installs into any project and produces auditable, security-reviewed code.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Multi-Agent Systems</li>
+                        
+                        <li>Secure SDLC</li>
+                        
+                        <li>Shell</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/Quorum_AV" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/Quorum_AV" target="_blank">Quorum</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Multi-agent code-review pipeline with a deterministic merge gate, packaged as a versioned, parameterized, tested skill library. Built as a Claude Code Mastery course mini-project.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Python</li>
+                        
+                        <li>Multi-Agent Review</li>
+                        
+                        <li>CI Gate</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-arrows-rotate"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/agent-config-sync-public" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/agent-config-sync-public" target="_blank">Agent Config Sync</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Sanitized public mirror of a private deployment, published for the Kaggle AI Agents Intensive capstone. Generates an AI assistant&#39;s global instructions and skill library for multiple runtimes from a single source of truth.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Python</li>
+                        
+                        <li>Agent Configuration</li>
+                        
+                        <li>Kaggle Capstone</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/Spec-Driven_Feature_Factory" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/Spec-Driven_Feature_Factory" target="_blank">Spec-Driven Feature Factory</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>URL shortening service built spec-first, where every line of code answers to a documented requirement. Demonstrates spec-driven development and YAML prompt engineering; built as a Claude Code course assignment.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Python</li>
+                        
+                        <li>Spec-Driven Development</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/adk-expense-approval-agent" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/adk-expense-approval-agent" target="_blank">ADK Expense Approval Agent</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Expense-approval workflow on Google&#39;s Agent Development Kit where the routing gate is deterministic, not a model decision. A plain threshold comparison auto-approves small expenses and suspends larger ones on a RequestInput interrupt until a human approves or rejects, so the LLM never gates the money decision.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Python</li>
+                        
+                        <li>Google ADK</li>
+                        
+                        <li>Human-in-the-Loop</li>
+                        
+                        <li>Terraform</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/AGENTs/tree/main/04-yahoo-finance-api" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/AGENTs/tree/main/04-yahoo-finance-api" target="_blank">Yahoo Finance API</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Four FastAPI endpoints over Yahoo Finance data (company profile, market snapshot, historical prices, and deterministic analytics) that validate input before every upstream call and return clear 400/404/422 errors. Coursework demo exercised in-process with TestClient; no LLM involved.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Python</li>
+                        
+                        <li>FastAPI</li>
+                        
+                        <li>Pydantic</li>
+                        
+                        <li>yfinance</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/AGENTs/tree/main/05-study-assistant-quiz-generator" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/AGENTs/tree/main/05-study-assistant-quiz-generator" target="_blank">Study Assistant Quiz Generator</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>LangChain prompt chain that summarizes a PDF or pasted study material into key points, then writes multiple-choice questions as a Pydantic schema so malformed questions are dropped before anything is shown. Coursework project on prompt engineering and structured output.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Python</li>
+                        
+                        <li>LangChain</li>
+                        
+                        <li>OpenAI</li>
+                        
+                        <li>Pydantic</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/AGENTs/tree/main/06-financial-image-scans" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/AGENTs/tree/main/06-financial-image-scans" target="_blank">Financial Image Scans</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Multimodal LangChain notebook that reads scanned financial-report pages into a typed list of figures, then writes summaries for an investor, analyst or auditor. Reading and writing are separate calls, so a misread figure stays visible instead of being buried in prose.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Python</li>
+                        
+                        <li>LangChain</li>
+                        
+                        <li>Vision Models</li>
+                        
+                        <li>Pydantic</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-magnifying-glass"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/AGENTs/tree/main/07-web-research-react-agent" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/AGENTs/tree/main/07-web-research-react-agent" target="_blank">Web Research ReAct Agent</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>ReAct loop built from scratch with no agent framework: plans research questions, answers each with a Tavily web-search tool, and compiles a sourced Markdown report. Tool calls are validated before they run, and search results are treated as untrusted input.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Python</li>
+                        
+                        <li>ReAct</li>
+                        
+                        <li>Planning Pattern</li>
+                        
+                        <li>Tavily</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-plane-departure"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/AGENTs/tree/main/08-travel-assistant-agent" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/AGENTs/tree/main/08-travel-assistant-agent" target="_blank">Travel Assistant Agent</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>LangChain tool-calling agent that returns current weather and top attractions for a destination. A deterministic input validator runs before the model, shaped by should-fail tests that caught prompt-injection and newline-smuggling inputs. Both tools are read-only.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Python</li>
+                        
+                        <li>LangChain</li>
+                        
+                        <li>Tavily</li>
+                        
+                        <li>Input Validation</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/AGENTs/tree/main/09-competitor-intel-agent" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/AGENTs/tree/main/09-competitor-intel-agent" target="_blank">Competitor Intelligence Agent</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Conversational LangChain agent with per-session SQLite memory that researches nearby retail competitors. Input gates run ahead of the model, an output check flags any cited URL a tool did not return, and footfall figures are labelled as estimates rather than measurements.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Python</li>
+                        
+                        <li>LangChain</li>
+                        
+                        <li>Tavily</li>
+                        
+                        <li>SQLite</li>
+                        
+                        <li>Guardrails</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/AGENTs/tree/main/10-logistics-optimization-crew" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/AGENTs/tree/main/10-logistics-optimization-crew" target="_blank">Logistics Optimization Crew</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Two-agent CrewAI system for inventory turnover at a distributor. Metrics are computed in plain Python, an input gate resolves product names against a catalog so caller text never reaches the prompt, and an output gate checks the strategy only names requested SKUs.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Python</li>
+                        
+                        <li>CrewAI</li>
+                        
+                        <li>Guardrails</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/AGENTs/tree/main/11-eda-multiagent-autogen" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/AGENTs/tree/main/11-eda-multiagent-autogen" target="_blank">Multi-Agent EDA with AutoGen</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Six AutoGen agents take a synthetic, deliberately dirty dataset from raw CSV to a critic-reviewed EDA report. Turn order is a plain-Python state machine, and every code block the agents write must pass a static AST gate before it is executed.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Python</li>
+                        
+                        <li>AutoGen (AG2)</li>
+                        
+                        <li>Multi-Agent Systems</li>
+                        
+                        <li>Code Gating</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/AGENTs/tree/main/12-langgraph-math-agent" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/AGENTs/tree/main/12-langgraph-math-agent" target="_blank">LangGraph Math Agent</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>LangGraph agent where the LLM decides and Python computes: four arithmetic tools with two-layer validation (including nan and inf, which Pydantic accepts), error strings instead of raised exceptions, and an audit record for every tool call.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Python</li>
+                        
+                        <li>LangGraph</li>
+                        
+                        <li>Pydantic</li>
+                        
+                        <li>Audit Logging</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-diagram-project"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/AGENTs/tree/main/13-langgraph-multiagent-research" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/AGENTs/tree/main/13-langgraph-multiagent-research" target="_blank">LangGraph Multi-Agent Research</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Router agent sends each query to an LLM answerer, a Tavily web-search agent, or a RAG agent over a small knowledge base, and a summarizer produces the structured answer. Routing uses typed structured output so the graph only receives a valid route.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Python</li>
+                        
+                        <li>LangGraph</li>
+                        
+                        <li>RAG</li>
+                        
+                        <li>Tavily</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/AGENTs/tree/main/14-reflection-agents-autogen" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/AGENTs/tree/main/14-reflection-agents-autogen" target="_blank">Reflection Agents with AutoGen</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Two-agent reflection loop: a Content Creator drafts, a Content Critic reviews for language clarity and technical accuracy, the Creator revises, and an LLM summarizes the exchange. Neither agent has tools, and the turn count is capped at 3 or 5.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Python</li>
+                        
+                        <li>AutoGen</li>
+                        
+                        <li>Reflection Pattern</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="project-group" data-category="ml" id="ml">
+        <div class="project-group-header">
+            <h3><i class="fas fa-brain project-icon"></i> ML Engineering</h3>
+        </div>
+
+        
+        
+
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-notes-medical"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/NLP_RAG_Medical_Assistant" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/NLP_RAG_Medical_Assistant" target="_blank">NLP RAG Medical Assistant</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Retrieval-Augmented Generation system built to help healthcare professionals find medical information from trusted sources, using the Merck Manual as its primary knowledge base.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>RAG</li>
+                        
+                        <li>NLP</li>
+                        
+                        <li>Healthcare</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-face-smile"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/HuggingFace-Sentiment-Analysis" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/HuggingFace-Sentiment-Analysis" target="_blank">HuggingFace Sentiment Analysis</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Sentiment analysis built on Hugging Face Transformers and PyTorch, demonstrating how to fine-tune a pre-trained transformer for a downstream classification task.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>PyTorch</li>
+                        
+                        <li>Transformers</li>
+                        
+                        <li>Fine-Tuning</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-building-columns"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/Bank_Churn_NN" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/Bank_Churn_NN" target="_blank">Bank Churn Prediction</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Neural network model for predicting bank customer churn, identifying accounts likely to leave so retention effort can be targeted.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Neural Networks</li>
+                        
+                        <li>Classification</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-passport"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/XGBoost_Visa_Approval_Prediction" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/XGBoost_Visa_Approval_Prediction" target="_blank">Visa Approval Prediction</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>XGBoost classifier predicting US visa application outcomes, used to surface the factors that most influence approval decisions.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>XGBoost</li>
+                        
+                        <li>Classification</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-hand-holding-dollar"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/Loan_Acceptance_DecisionTree" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/Loan_Acceptance_DecisionTree" target="_blank">Loan Acceptance Prediction</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Decision Tree classifier predicting personal loan acceptance, used to identify which existing bank customers are most likely to convert.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Decision Trees</li>
+                        
+                        <li>Classification</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/FoodHub-Data-Analysis" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/FoodHub-Data-Analysis" target="_blank">FoodHub Data Analysis</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Exploratory analysis of food-delivery order data, surfacing customer ordering patterns and restaurant performance for a food aggregator.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Pandas</li>
+                        
+                        <li>EDA</li>
+                        
+                        <li>Visualization</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-chart-simple"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/XGBoost-Regressor" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/XGBoost-Regressor" target="_blank">XGBoost Regressor</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>XGBoost regressor applied to a continuous-target prediction task, covering feature preparation, training, tuning, and evaluation.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>XGBoost</li>
+                        
+                        <li>Regression</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="project-group" data-category="cloud" id="cloud">
+        <div class="project-group-header">
+            <h3><i class="fas fa-cloud project-icon"></i> Cloud</h3>
+        </div>
+
+        
+        
+
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/Azure-Resource-Optimization-Lab" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/Azure-Resource-Optimization-Lab" target="_blank">Azure Resource Optimization Lab</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>End-to-end Azure fundamentals — ARM-based VM deployment with tagging, governance policies, and Azure Monitor alerts. Demonstrates cloud architecture, cost optimization, and observability with Infrastructure-as-Code (IaC).</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Azure ARM Templates</li>
+                        
+                        <li>IaC</li>
+                        
+                        <li>Azure Monitor</li>
+                        
+                        <li>Governance</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/event-talks-app" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/event-talks-app" target="_blank">BigQuery Release Pulse</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Dashboard that tracks Google Cloud BigQuery release notes, slicing daily updates into individual release items and filtering them by type. Flask server with a vanilla HTML/JS client.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Flask</li>
+                        
+                        <li>BigQuery</li>
+                        
+                        <li>Google Cloud</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-diagram-project"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/gcp-document-pipeline" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/gcp-document-pipeline" target="_blank">GCP Document Pipeline</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Event-driven document ingestion on Google Cloud, provisioned end to end with Terraform. A GCS upload fires a storage notification onto Pub/Sub, an OIDC-authenticated push subscription invokes a Cloud Run service, Gemini extracts and classifies the document via Vertex AI, and the metadata lands in BigQuery behind a Streamlit dashboard.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Terraform</li>
+                        
+                        <li>Cloud Run</li>
+                        
+                        <li>Pub/Sub</li>
+                        
+                        <li>BigQuery</li>
+                        
+                        <li>Vertex AI</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="project-group" data-category="fun" id="fun">
+        <div class="project-group-header">
+            <h3><i class="fas fa-gamepad project-icon"></i> Just for Fun</h3>
+        </div>
+
+        
+        
+
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-broadcast-tower"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://mwill20.github.io/KC7SecOpsClaude/" aria-label="Play the Course" target="_blank">
+                                <i
+                                    class="fas fa-external-link-alt"></i>
+                            </a>
+                            
+                            <a href="https://github.com/mwill20/KC7SecOpsClaude" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://mwill20.github.io/KC7SecOpsClaude/" target="_blank">Static on Pier Nine — YARA-L 2.0 Search Trainer</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Browser-only course that teaches Google SecOps Search queries in YARA-L 2.0 the way KC7 teaches KQL, then the step from search to detection: three original investigations, a query desk that returns rows (and detections in Rule mode) against fictional datasets, and a Casebook that teaches analyst note-keeping through to remediation and handoff.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>YARA-L 2.0</li>
+                        
+                        <li>Google SecOps</li>
+                        
+                        <li>JavaScript</li>
+                        
+                        <li>Detection Engineering</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/Python-Dojo" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/Python-Dojo" target="_blank">Python-Dojo — Security Reps Playground</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>A security gym for AI engineers to build muscle memory around sanitization, API management, and guardrail patterns using a Mastery Loop training engine.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>React</li>
+                        
+                        <li>Security</li>
+                        
+                        <li>AI Training</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-user-ninja"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/Bushido-Code" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/Bushido-Code" target="_blank">Bushido-Code</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Progressive Python training system organized as nine belts of ten kata each, using disciplined repetition, spaced review, and structured recall.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Python</li>
+                        
+                        <li>Spaced Repetition</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/claude-masterclass-kit" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/claude-masterclass-kit" target="_blank">Claude Masterclass Kit</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Self-updating personal study library for Claude Code that turns course material and product news into short reviewed lessons, kept organized and ready to study.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>PowerShell</li>
+                        
+                        <li>Knowledge Management</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-magnifying-glass"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/CodebaseDetective" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/CodebaseDetective" target="_blank">Codebase Detective</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Timed exercise in systematically exploring, mapping, auditing, and documenting an unfamiliar codebase - the BackdoorBox research library - in under five hours.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Code Audit</li>
+                        
+                        <li>Documentation</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-heart-pulse"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/HealthTrack-_API_AV" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/HealthTrack-_API_AV" target="_blank">HealthTrack API</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Patient vital-signs REST API built as the hands-on teaching project for a Claude Code Mastery course week, used to demonstrate multi-session agent workflows against one codebase.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Python</li>
+                        
+                        <li>REST API</li>
+                        
+                        <li>Teaching Project</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-magnifying-glass-chart"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/Easy_Squeeze_AI" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                            <a href="https://huggingface.co/spaces/mwill-AImission/squeeze-radar-ai" aria-label="Live Demo" target="_blank">
+                                <i
+                                    class="fas fa-external-link-alt"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/Easy_Squeeze_AI" target="_blank">SqueezeRadarAI</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Market-data explorer that pulls price, RSI, short interest, and volume for a given ticker and ranks a watchlist of heavily shorted stocks by a composite score. Built as a data-analysis exercise, not investment advice.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Python</li>
+                        
+                        <li>Market Data</li>
+                        
+                        <li>Analysis</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+            <div class="project-card">
+                <header>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/mwill20/google-news-cli" aria-label="View on GitHub" target="_blank">
+                                <i
+                                    class="fab fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <h3>
+                        <a href="https://github.com/mwill20/google-news-cli" target="_blank">Google News CLI</a>
+                    </h3>
+                    <div class="project-description">
+                        <p>Interactive terminal client for Google News: fetch headlines, search queries, filter by topic, and open articles in the browser with arrow-key selection. Reads the public RSS feeds, so it needs no API key.</p>
+                    </div>
+                </header>
+                <footer>
+                    
+                    <ul class="project-tech-list">
+                        
+                        <li>Node.js</li>
+                        
+                        <li>CLI</li>
+                        
+                        <li>RSS</li>
+                        
+                    </ul>
+                    
+                </footer>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectGroups = document.querySelectorAll('.project-group');
+        const featuredSection = document.getElementById('featured-projects');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+
+                // Show/Hide Featured Section
+                // Featured section contains ThreatPrism, RER Kit, AI DevSecOps, and SecureCLI-Tuner.
+                // Show featured on 'all' or 'security' filter.
+                if (filter === 'all' || filter === 'security') {
+                    if (featuredSection) featuredSection.style.display = 'block';
+                } else {
+                    if (featuredSection) featuredSection.style.display = 'none';
+                }
+
+                // Show/Hide Groups
+                projectGroups.forEach(group => {
+                    const category = group.dataset.category;
+                    if (filter === 'all' || category === filter) {
+                        group.style.display = 'block';
+                    } else {
+                        group.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+</script>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="social-links" style="margin-bottom: 20px;">
+                <a href="https://github.com/mwill20" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/mwillitmission/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p>Designed &amp; Built by Michael Williams</p>
+        </div>
+    </footer>
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>
