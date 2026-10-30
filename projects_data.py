@@ -40,12 +40,6 @@ projects = {
         "icon": "fas fa-shield-alt",
         "projects": [
             {
-                "title": "SecureCLI-Tuner",
-                "description": "Security-first LLM fine-tuned for Agentic DevOps that translates natural language into safe, valid Bash commands. Implements a Defense-in-Depth architecture with sanitized QLoRA fine-tuning and three-layer runtime guardrail system.",
-                "icon": "fas fa-terminal",
-                "links": [{"label": "View on GitHub", "url": "https://github.com/mwill20/SecureCLI-Tuner", "class": "btn-primary"}]
-            },
-            {
                 "title": "AI Guardrails",
                 "description": "Layered security framework for LLMs and agents that combines deterministic rules, semantic classifiers, and policy enforcement to detect prompt injection, malicious intent, and unsafe reasoning before outputs reach users or systems.",
                 "icon": "fas fa-user-shield",
