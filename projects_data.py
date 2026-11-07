@@ -366,6 +366,51 @@ projects = {
                 "links": [
                     {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/reflection-agents-autogen", "class": "btn-primary"}
                 ]
+            },
+            {
+                "title": "Smart Health Assistant (AG2)",
+                "description": "Sequential AG2 1.x conversation: a User Proxy validates five health inputs in plain Python, a BMI Agent must call a registered BMI tool, then Diet Planner and Workout Scheduler agents build on each other's output. A check cell recomputes the BMI independently and fails if the agent skipped the tool.",
+                "tech": ["Python", "AG2 1.x", "Tool Registration", "Input Validation"],
+                "icon": "fas fa-heart-pulse",
+                "links": [
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/smart-health-assistant-ag2", "class": "btn-primary"}
+                ]
+            },
+            {
+                "title": "Financial Portfolio Manager (AG2)",
+                "description": "Group chat on AG2 1.x where StateFlow routing is a unit-tested Python state machine, not a model decision: the analysis agent ends with a CATEGORY line, an exact regex parses it, and only the matching Growth or Value specialist speaks before the advisor compiles a fixed-heading report.",
+                "tech": ["Python", "AG2 1.x", "StateFlow", "Group Chat"],
+                "icon": "fas fa-coins",
+                "links": [
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/financial-portfolio-manager-ag2", "class": "btn-primary"}
+                ]
+            },
+            {
+                "title": "Bill Management Agent (AG2, vision)",
+                "description": "Vision agent reads receipt images into a categorised expense table plus a JSON block; a summarizer reports spending per category. Images are validated before upload, and Python re-sums the items and recomputes the highest category, so the model never has the last word on a total.",
+                "tech": ["Python", "AG2 1.x", "Vision Models", "Output Verification"],
+                "icon": "fas fa-receipt",
+                "links": [
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/bill-management-agent-ag2", "class": "btn-primary"}
+                ]
+            },
+            {
+                "title": "Personalized Education Assistant (CrewAI)",
+                "description": "Three-agent sequential crew that curates learning materials, writes a quiz and proposes projects for a topic list and expertise level. Every task returns a validated Pydantic object, and a deterministic custom tool fixes project scope per level so the model cannot oversize a beginner's project.",
+                "tech": ["Python", "CrewAI", "Pydantic", "Custom Tools"],
+                "icon": "fas fa-chalkboard-user",
+                "links": [
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/personalized-education-crewai", "class": "btn-primary"}
+                ]
+            },
+            {
+                "title": "Code Analysis and Correction Crew (CrewAI)",
+                "description": "A Code Analyzer runs buggy Python through a timeout-bounded, isolated-mode subprocess tool to find real tracebacks, a Code Corrector proposes the fix, and the notebook then executes the fix against fixed expected values. Pass or fail is decided by Python, not by the agents' own claims.",
+                "tech": ["Python", "CrewAI", "Code Execution", "Deterministic Verification"],
+                "icon": "fas fa-bug-slash",
+                "links": [
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/code-analysis-correction-crewai", "class": "btn-primary"}
+                ]
             }
         ]
     },
