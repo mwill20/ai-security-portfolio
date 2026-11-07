@@ -274,7 +274,7 @@ projects = {
                 "tech": ["Python", "FastAPI", "Pydantic", "yfinance"],
                 "icon": "fas fa-chart-line",
                 "links": [
-                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/04-yahoo-finance-api", "class": "btn-primary"}
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/yahoo-finance-api", "class": "btn-primary"}
                 ]
             },
             {
@@ -283,7 +283,7 @@ projects = {
                 "tech": ["Python", "LangChain", "OpenAI", "Pydantic"],
                 "icon": "fas fa-graduation-cap",
                 "links": [
-                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/05-study-assistant-quiz-generator", "class": "btn-primary"}
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/study-assistant-quiz-generator", "class": "btn-primary"}
                 ]
             },
             {
@@ -292,7 +292,7 @@ projects = {
                 "tech": ["Python", "LangChain", "Vision Models", "Pydantic"],
                 "icon": "fas fa-file-invoice-dollar",
                 "links": [
-                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/06-financial-image-scans", "class": "btn-primary"}
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/financial-image-scans", "class": "btn-primary"}
                 ]
             },
             {
@@ -301,7 +301,7 @@ projects = {
                 "tech": ["Python", "ReAct", "Planning Pattern", "Tavily"],
                 "icon": "fas fa-magnifying-glass",
                 "links": [
-                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/07-web-research-react-agent", "class": "btn-primary"}
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/web-research-react-agent", "class": "btn-primary"}
                 ]
             },
             {
@@ -310,7 +310,7 @@ projects = {
                 "tech": ["Python", "LangChain", "Tavily", "Input Validation"],
                 "icon": "fas fa-plane-departure",
                 "links": [
-                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/08-travel-assistant-agent", "class": "btn-primary"}
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/travel-assistant-agent", "class": "btn-primary"}
                 ]
             },
             {
@@ -319,7 +319,7 @@ projects = {
                 "tech": ["Python", "LangChain", "Tavily", "SQLite", "Guardrails"],
                 "icon": "fas fa-store",
                 "links": [
-                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/09-competitor-intel-agent", "class": "btn-primary"}
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/competitor-intel-agent", "class": "btn-primary"}
                 ]
             },
             {
@@ -328,7 +328,7 @@ projects = {
                 "tech": ["Python", "CrewAI", "Guardrails"],
                 "icon": "fas fa-truck",
                 "links": [
-                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/10-logistics-optimization-crew", "class": "btn-primary"}
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/logistics-optimization-crew", "class": "btn-primary"}
                 ]
             },
             {
@@ -337,7 +337,7 @@ projects = {
                 "tech": ["Python", "AutoGen (AG2)", "Multi-Agent Systems", "Code Gating"],
                 "icon": "fas fa-chart-pie",
                 "links": [
-                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/11-eda-multiagent-autogen", "class": "btn-primary"}
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/eda-multiagent-autogen", "class": "btn-primary"}
                 ]
             },
             {
@@ -346,7 +346,7 @@ projects = {
                 "tech": ["Python", "LangGraph", "Pydantic", "Audit Logging"],
                 "icon": "fas fa-calculator",
                 "links": [
-                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/12-langgraph-math-agent", "class": "btn-primary"}
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/langgraph-math-agent", "class": "btn-primary"}
                 ]
             },
             {
@@ -355,7 +355,7 @@ projects = {
                 "tech": ["Python", "LangGraph", "RAG", "Tavily"],
                 "icon": "fas fa-diagram-project",
                 "links": [
-                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/13-langgraph-multiagent-research", "class": "btn-primary"}
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/langgraph-multiagent-research", "class": "btn-primary"}
                 ]
             },
             {
@@ -364,7 +364,7 @@ projects = {
                 "tech": ["Python", "AutoGen", "Reflection Pattern"],
                 "icon": "fas fa-comments",
                 "links": [
-                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/14-reflection-agents-autogen", "class": "btn-primary"}
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/reflection-agents-autogen", "class": "btn-primary"}
                 ]
             }
         ]
