@@ -541,6 +541,16 @@ projects = {
                 ]
             },
             {
+                "title": "KC7 SIEM-Less — Query Language Practice Course",
+                "description": "Browser-only practice course for the SIEM-Less query language, built for analysts moving off Google SecOps. Runs on fictional, synthetic data with no SIEM connection and no AI. Modules 1 and 2 of 8 are published; the rest are in progress.",
+                "tech": ["SIEM-Less", "JavaScript", "Detection Engineering", "Training"],
+                "icon": "fas fa-terminal",
+                "links": [
+                    {"label": "Play the Course", "url": "https://mwill20.github.io/KC7-SIEM-Less/", "class": "btn-success"},
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/KC7-SIEM-Less", "class": "btn-primary"}
+                ]
+            },
+            {
                  "title": "Python-Dojo — Security Reps Playground",
                  "description": "A security gym for AI engineers to build muscle memory around sanitization, API management, and guardrail patterns using a Mastery Loop training engine.",
                  "tech": ["React", "Security", "AI Training"],
