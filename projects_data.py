@@ -411,6 +411,15 @@ projects = {
                 "links": [
                     {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/code-analysis-correction-crewai", "class": "btn-primary"}
                 ]
+            },
+            {
+                "title": "AI Content Creator Agent (n8n)",
+                "description": "n8n workflow that turns Pending topics in a Google Sheet into a LinkedIn post, an X post, and a 150-200 word blog summary: it researches each topic with Tavily, writes with OpenAI, and saves the results back to the same row. Prompts forbid invented facts and treat search results as untrusted text; already-completed and blank rows are never processed.",
+                "tech": ["n8n", "Tavily", "OpenAI", "Google Sheets"],
+                "icon": "fas fa-pen-nib",
+                "links": [
+                    {"label": "View on GitHub", "url": "https://github.com/mwill20/AGENTs/tree/main/content-creator-agent-n8n", "class": "btn-primary"}
+                ]
             }
         ]
     },
